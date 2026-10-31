@@ -1,15 +1,15 @@
 # Plesir — Dokumen Arsitektur Teknis
 
-**Versi:** 1.1 — draft teknis untuk MVP  
-**Tanggal:** 29 Oktober 2026  
-**Sumber kebutuhan:** `prd.md` versi 1.2  
+**Versi:** 1.1 — draft teknis untuk MVP\
+**Tanggal:** 29 Oktober 2026\
+**Sumber kebutuhan:** `prd.md` versi 1.2\
 **Status:** Penyimpanan Firebase dan pilihan Google AI Studio dengan Gemini 3.8 Flash telah dipilih sebagai arah MVP. Penyedia data tempat/rute, wilayah deployment, pemakaian free tier untuk pengguna publik, dan anggaran masih perlu divalidasi pada Fase 0.
 
 ---
 
 ## 1. Tujuan Dokumen
 
-Dokumen ini menjabarkan arsitektur teknis Plesir untuk memenuhi kebutuhan MVP: pengguna memasukkan kota dan durasi, sistem mengumpulkan data tempat dari sumber yang dapat ditelusuri, AI memilih dan menyusun itinerary, rute dihitung menggunakan layanan pemetaan, serta rencana dapat diedit dan disimpan oleh pengguna yang login.
+Dokumen ini menjabarkan arsitektur teknis Plesir untuk memenuhi kebutuhan MVP: pengguna memasukkan kota dan rentang tanggal perjalanan, sistem mengumpulkan data tempat dari sumber yang dapat ditelusuri, AI memilih dan menyusun itinerary, rute dihitung menggunakan layanan pemetaan, serta rencana dapat diedit dan disimpan oleh pengguna yang login.
 
 Dokumen ini juga menjelaskan fitur prompt bahasa natural untuk **merevisi itinerary**. Fitur tersebut bukan fitur yang mengizinkan pengguna atau AI mengubah source code website Plesir.
 
@@ -46,8 +46,8 @@ Arsitektur berpegang pada prinsip berikut:
 MVP sebaiknya memusatkan usaha pada:
 
 - Satu kawasan pilot: Malang Raya.
-- Rencana 1–5 hari, satu kawasan per perjalanan.
-- Form wajib hanya kota dan jumlah hari.
+- Rencana 1–5 hari, satu kawasan per perjalanan; durasi dihitung dari rentang tanggal.
+- Form wajib hanya kota dan rentang tanggal berangkat–pulang (maksimal 5 hari).
 - Empat kategori utama: penginapan, makan, kafe/kopi, dan wisata.
 - Edit dasar yang deterministik: ganti, hapus, susun ulang, dan pin.
 - Login opsional dan penyimpanan riwayat.
@@ -62,24 +62,24 @@ Popularitas berbasis artikel, peta mini, berbagi publik, PDF, dan dukungan banya
 
 ```mermaid
 flowchart LR
-    U[Pengguna / Browser] --> WEB[Next.js Web App\nFirebase App Hosting]
+    U[Pengguna / Browser] --> WEB[Next.js Web App<br/>Firebase App Hosting]
     WEB --> AUTH[Firebase Authentication]
     WEB -->|Callable HTTPS + Auth + App Check| API[Cloud Functions Gen 2]
     WEB -->|Listen status yang diizinkan| FS[(Cloud Firestore)]
 
     API -->|Buat job / validasi input| FS
-    API -->|Enqueue| Q[Firebase Task Queue\nCloud Tasks]
-    Q --> WORKER[Task Queue Function\nPipeline generasi/revisi]
+    API -->|Enqueue| Q[Firebase Task Queue<br/>Cloud Tasks]
+    Q --> WORKER[Task Queue Function<br/>Pipeline generasi/revisi]
     WORKER -->|Baca/tulis menggunakan Admin SDK| FS
     WORKER --> PLACES[Places API]
     WORKER --> ROUTES[Routes API]
-    WORKER --> AI[Gemini 3.8 Flash\nGemini Developer API]
-    WORKER --> SEARCH[Web Search Provider\nopsional, setelah evaluasi]
+    WORKER --> AI[Gemini 3.8 Flash<br/>Gemini Developer API]
+    WORKER --> SEARCH[Web Search Provider<br/>opsional, setelah evaluasi]
     WORKER --> SECRETS[Secret Manager]
 
     API --> OBS[Cloud Logging / Error Reporting]
     WORKER --> OBS
-    WEB --> ANALYTICS[Firebase Analytics / GA4\nEvent tanpa PII berlebih]
+    WEB --> ANALYTICS[Firebase Analytics / GA4<br/>Event tanpa PII berlebih]
 ```
 
 ### 3.1 Pembagian tanggung jawab
@@ -102,9 +102,9 @@ flowchart LR
 
 Tanggung jawab frontend:
 
-- Beranda dan form kota/durasi.
+- Beranda dan form kota/rentang tanggal.
 - Panel preferensi opsional.
-- Autocomplete kota, validasi input, dan batas 1–5 hari.
+- Autocomplete kota, validasi tanggal (tidak boleh lampau, pulang tidak sebelum berangkat), dan batas rentang 1–5 hari.
 - Layar progres yang mengikuti status job Firestore.
 - Halaman hasil: ringkasan asumsi, kategori rekomendasi, itinerary harian, sumber, peringatan, dan tautan Maps.
 - Edit itinerary: ganti, hapus, susun ulang, pin, revisi natural language, dan undo.
@@ -157,9 +157,9 @@ Pilihan MVP adalah **Gemini 3.8 Flash melalui Gemini Developer API**.
 
 ### 5.1 Alur pengguna dan sistem
 
-1. Pengguna mengisi kota dan durasi. Preferensi lain opsional.
+1. Pengguna mengisi kota dan rentang tanggal. Preferensi lain opsional.
 2. Frontend memvalidasi field wajib dan mengirim permintaan ke `startPlanGeneration`.
-3. Function memverifikasi Firebase Auth, App Check, bentuk payload, batas durasi, kuota harian, dan `idempotencyKey`.
+3. Function memverifikasi Firebase Auth, App Check, bentuk payload, validasi rentang tanggal (termasuk tanggal lampau), kuota harian, dan `idempotencyKey`.
 4. Function membuat dokumen job dengan status `queued`, lalu memasukkan job ke task queue.
 5. Frontend menerima `jobId`, membuka layar progres, dan berlangganan ke status job milik pengguna.
 6. Worker menormalisasi input serta mengisi default dari PRD. Asumsi default dibuat eksplisit pada hasil.
@@ -389,6 +389,8 @@ users/{uid}/plans/{planId}
     cityId?: string
     regionLabel?: string
   durationDays: number
+  travelStartDate: string
+  travelEndDate: string
   preferences: object
   assumptions: string[]
   selectedBasePlaceId?: string
@@ -607,7 +609,7 @@ Untuk semua request perubahan plan, gunakan `expectedVersion` dan tangani konfli
 | Kondisi | Perilaku sistem |
 |---|---|
 | Kota tidak dikenal/ambigu | Minta pengguna memilih area yang didukung sebelum job mahal berjalan. |
-| Durasi di luar 1–5 hari | Validasi di frontend dan backend; tidak enqueue job. |
+| Rentang tanggal di luar 1–5 hari atau tanggal lampau | Validasi di frontend dan backend; tidak enqueue job. |
 | Kandidat tidak cukup | Tampilkan hasil parsial, jelaskan kategori yang kurang, tawarkan memperluas area atau mengubah preferensi. |
 | Places gagal | Retry terbatas; gunakan hasil parsial hanya jika ada data yang masih valid dan diperbolehkan. Jangan mengarang fallback. |
 | Routes gagal | Tandai jarak/waktu tidak tersedia; jangan menggantinya dengan jarak jalan lurus tanpa label yang jelas. |
@@ -672,7 +674,7 @@ Jangan masukkan email, prompt teks lengkap, alamat pengguna, atau informasi sens
 
 Siapkan minimal 30 skenario Malang Raya dari PRD, mencakup:
 
-- Kota/durasi dan input minimal.
+- Kota/rentang tanggal dan input minimal.
 - Satu hingga lima hari.
 - Tanggal kerja/akhir pekan bila tersedia.
 - Preferensi keluarga, alam, kuliner, halal, vegetarian, level harga, moda, dan titik awal.
@@ -730,7 +732,7 @@ Prompt sistem, schema output, jumlah kandidat, batas kuota, serta aturan scoring
 
 ### Fase 1 — Vertical slice prototipe
 
-- Form minimal kota + durasi.
+- Form minimal kota + rentang tanggal.
 - Pipeline generate satu rencana end-to-end.
 - Status progres di Firestore.
 - Hasil 4 kategori, satu itinerary harian atau multi-hari sesuai durasi, data sumber, disclaimer, dan Maps URLs.

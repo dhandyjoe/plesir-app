@@ -13,7 +13,7 @@ Instruksi ini berlaku untuk seluruh repository. Ikuti permintaan pengguna dan in
 
 ### Ponytail — semua pekerjaan coding
 
-Untuk menulis, memperbaiki, merefaktor, atau meninjau kode, wajib gunakan skill **Ponytail** yang dipasang di `.agents/skills/ponytail/SKILL.md`. Sumber: [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail). Jika runtime tidak memuat skill otomatis, baca file tersebut dan ikuti instruksinya; jangan mengaku telah memuat skill bila belum membacanya.
+Untuk menulis, memperbaiki, merefaktor, atau meninjau kode, wajib gunakan skill **Ponytail** yang dipasang di `.claude/skills/ponytail/SKILL.md`. Sumber: [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail). Jika runtime tidak memuat skill otomatis, baca file tersebut dan ikuti instruksinya; jangan mengaku telah memuat skill bila belum membacanya.
 
 - Baca kode dan alur yang terdampak sebelum mengedit; cari pemanggil, test, fixture, konfigurasi, dan ekspor terkait.
 - Pilih perubahan terkecil yang menyelesaikan seluruh permintaan. Utamakan pola atau helper yang sudah ada, fitur platform, dan dependensi yang sudah terpasang. Jangan menambah abstraksi, opsi, atau dependensi tanpa kebutuhan yang jelas.
@@ -24,7 +24,7 @@ Untuk menulis, memperbaiki, merefaktor, atau meninjau kode, wajib gunakan skill 
 
 ### Taste Skill — semua pekerjaan UI/frontend
 
-Saat membuat, mendesain ulang, merapikan, atau meninjau halaman publik maupun layar aplikasi, wajib gunakan skill **`design-taste-frontend`** yang dipasang di `.agents/skills/design-taste-frontend/SKILL.md`. Sumber: [Leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill). Baca skill tersebut sebelum mulai dan ikuti panduan lengkapnya yang relevan; jangan mengandalkan ringkasan ini sebagai pengganti skill.
+Saat membuat, mendesain ulang, merapikan, atau meninjau halaman publik maupun layar aplikasi, wajib gunakan skill **`design-taste-frontend`** yang dipasang di `.claude/skills/design-taste-frontend/SKILL.md`. Sumber: [Leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill). Baca skill tersebut sebelum mulai dan ikuti panduan lengkapnya yang relevan; jangan mengandalkan ringkasan ini sebagai pengganti skill.
 
 - Tentukan apakah pekerjaan berupa halaman yang dibaca/discroll atau layar aplikasi yang dipakai untuk bekerja; gunakan alur Taste Skill yang sesuai. Aturan halaman marketing tidak otomatis berlaku untuk dashboard atau layar aplikasi.
 - Baca UI dan desain yang sudah ada. Pertahankan stack, perilaku, konten, brand, dan bagian yang berfungsi; jangan migrasi framework atau styling library sebagai bagian dari pekerjaan visual.
@@ -33,6 +33,15 @@ Saat membuat, mendesain ulang, merapikan, atau meninjau halaman publik maupun la
 - Periksa hasil pada ukuran layar yang relevan dan state penting. Jalankan lint/inspector/screenshot workflow milik skill jika tool dan dependensinya tersedia. Jangan mengklaim pemeriksaan visual yang tidak dilakukan; laporkan blocker bila tidak dapat dijalankan.
 
 Kedua skill berjalan bersama: Ponytail mengarahkan scope dan implementasi, Taste Skill mengarahkan kualitas visual UI.
+
+### Caveman — gaya balasan chat yang ringkas
+
+Untuk balasan di chat, gunakan skill **Caveman** yang dipasang di `.claude/skills/caveman/SKILL.md` (varian `.claude/skills/ultracave/` dan `.claude/skills/megacave/` hanya dipakai bila diminta eksplisit lewat `/ultracave`, `/megacave`, `/caveman ultra`, atau `/caveman wenyan`). Sumber: [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) v4.0.1, lisensi Apache-2.0. Jika runtime tidak memuat skill otomatis, baca file tersebut dan ikuti instruksinya.
+
+- Caveman hanya mengatur cara balasan dibaca; Ponytail tetap mengatur berapa banyak kode yang ditulis.
+- Tetap gunakan Bahasa Indonesia. Kode, perintah, path, angka, dan pesan error tetap verbatim.
+- Jangan pakai gaya caveman untuk apa pun yang disimpan di luar chat: kode, komentar, commit, dokumen, PR, issue, dan memori. Peringatan keamanan, konfirmasi aksi yang tidak dapat dibatalkan, dan pertanyaan ke pengguna ditulis dengan kalimat lengkap.
+- Berhenti bila pengguna meminta "stop caveman" atau "normal mode".
 
 ## Batasan produk, data, dan keamanan
 
@@ -65,3 +74,13 @@ Jangan menjalankan perintah destruktif atau membuang perubahan yang sudah ada. J
 ## Format laporan akhir
 
 Jawab ringkas dalam Bahasa Indonesia. Sebutkan hasil dan file yang berubah, pemeriksaan yang benar-benar dijalankan beserta hasilnya, pemeriksaan yang tidak dijalankan, serta risiko atau keputusan yang masih diperlukan.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

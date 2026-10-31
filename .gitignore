@@ -13,6 +13,7 @@ node_modules/
 /build/
 coverage/
 *.tsbuildinfo
+functions/lib/
 
 # Local environment and credentials
 .env

@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'Aktifkan skill caveman (.claude/skills/caveman/SKILL.md) untuk balasan chat. Tetap Bahasa Indonesia; kode, komentar, commit, dan dokumen tidak pakai gaya caveman. Berhenti bila pengguna bilang \"stop caveman\" atau \"normal mode\".'"
+          }
+        ]
+      }
+    ]
+  }
+}

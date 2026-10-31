@@ -1,0 +1,37 @@
+{
+  "name": "plesir-web",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24.12"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "functions:build": "npm --prefix functions run build",
+    "functions:typecheck": "npm --prefix functions run typecheck",
+    "check": "npm run lint && npm run typecheck && npm run functions:typecheck && npm run build && npm run functions:build"
+  },
+  "dependencies": {
+    "firebase": "^13.1.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "firebase-tools": "^15.34.2",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "@grpc/grpc-js": "^1.13.6"
+  }
+}

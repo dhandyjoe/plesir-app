@@ -1,0 +1,10 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Akses dibuka hanya setelah aturan per collection dan pengujian disiapkan.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

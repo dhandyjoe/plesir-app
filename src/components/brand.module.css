@@ -1,0 +1,33 @@
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.brandMark {
+  width: var(--brand-mark-size, 2rem);
+  height: var(--brand-mark-size, 2rem);
+  flex: none;
+}
+
+.brandName {
+  color: var(--color-primary);
+  font-size: var(--brand-name-size, 1.05rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.brandSparkle {
+  display: flex;
+  margin-left: -0.3rem;
+  color: var(--color-primary-container);
+}
+
+.brandSparkle svg {
+  width: 0.72rem;
+  height: 0.72rem;
+}
+
