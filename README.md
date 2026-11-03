@@ -61,7 +61,7 @@ npx firebase deploy --only functions
 
 Aplikasi butuh server (route `/api/*`, job `after()`, `firebase-admin`), jadi tidak bisa di GitHub Pages. Repo dihubungkan ke Vercel; tiap push ke `main` otomatis deploy.
 
-- Node.js 24.x di Settings → General.
+- Node.js 24.x di Settings → General. `engines.node` di `package.json` dipin `24.x` dan mengalahkan setting dashboard; rentang terbuka (`>=24.12`) membuat Vercel memilih 26.x, dan di sana `firebase-admin/auth` gagal dimuat (`ERR_REQUIRE_ESM` dari `jwks-rsa` → `jose`).
 - Environment Variables: empat `NEXT_PUBLIC_FIREBASE_*`, `GEOAPIFY_API_KEY`, `GEMINI_API_KEY`, dan `FIREBASE_SERVICE_ACCOUNT` (isi JSON service account; menggantikan `GOOGLE_APPLICATION_CREDENTIALS`).
 - Domain Vercel ditambahkan di Firebase Console → Authentication → Settings → Authorized domains.
 - Route yang menjalankan Gemini di `after()` memakai `maxDuration = 300` (batas paket Hobby).
