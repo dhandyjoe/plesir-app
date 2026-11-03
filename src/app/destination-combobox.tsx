@@ -8,7 +8,6 @@ import {
   type KeyboardEvent,
   type RefObject,
 } from "react";
-import { ExploreIcon } from "@/components/icons";
 import styles from "./page.module.css";
 
 export type DestinationOption = {
@@ -133,9 +132,6 @@ export function DestinationCombobox({
 
   return (
     <div className={styles.inputShell}>
-      <span className={styles.inputIcon} aria-hidden="true">
-        <ExploreIcon />
-      </span>
       <input
         ref={inputRef}
         className={styles.input}

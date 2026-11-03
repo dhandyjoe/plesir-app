@@ -22,7 +22,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Isi konfigurasi Firebase Web SDK di `.env.local`. Nilai `NEXT_PUBLIC_FIREBASE_*` adalah identifier klien, bukan secret backend. API key Gemini, Places, dan Routes tidak boleh diletakkan di environment frontend.
+Isi konfigurasi Firebase Web SDK di `.env.local`. Nilai `NEXT_PUBLIC_FIREBASE_*` adalah identifier klien, bukan secret backend. API key Gemini, Geoapify (`GEOAPIFY_API_KEY`), dan provider rute hanya untuk server; jangan diletakkan di environment frontend.
 
 Pemeriksaan:
 
@@ -31,6 +31,15 @@ npm run check
 ```
 
 Perintah tersebut menjalankan lint, typecheck frontend, typecheck Functions, build Next.js, dan build Functions.
+
+Unit test (`node:test`, Node 24.12+, tanpa dependensi tambahan; belum termasuk dalam `npm run check`):
+
+```bash
+node --test "src/**/*.test.mjs"
+node --test --experimental-test-coverage "src/**/*.test.mjs"   # dengan coverage
+```
+
+Test mencakup logika murni di `src/lib` dan `src/app/rundown`. Kode server (`src/lib/server`, `/api/*`) serta komponen React belum dites.
 
 ## Backend dan Firebase
 
@@ -47,6 +56,15 @@ npx firebase deploy --only functions
 - Project Firebase belum dikonfigurasi di repository ini; `.firebaserc` dibuat saat `firebase use --add`.
 - Firebase App Hosting belum diaktifkan. App Hosting memerlukan paket Blaze dan keputusan region sebelum deployment.
 - Proyek ini memakai satu environment. Pengujian dapat mengubah data nyata; gunakan data uji untuk automated test dan jangan menaruh data pribadi di log.
+
+## Deploy (Vercel)
+
+Aplikasi butuh server (route `/api/*`, job `after()`, `firebase-admin`), jadi tidak bisa di GitHub Pages. Repo dihubungkan ke Vercel; tiap push ke `main` otomatis deploy.
+
+- Node.js 24.x di Settings → General.
+- Environment Variables: empat `NEXT_PUBLIC_FIREBASE_*`, `GEOAPIFY_API_KEY`, `GEMINI_API_KEY`, dan `FIREBASE_SERVICE_ACCOUNT` (isi JSON service account; menggantikan `GOOGLE_APPLICATION_CREDENTIALS`).
+- Domain Vercel ditambahkan di Firebase Console → Authentication → Settings → Authorized domains.
+- Route yang menjalankan Gemini di `after()` memakai `maxDuration = 300` (batas paket Hobby).
 
 ## Struktur
 

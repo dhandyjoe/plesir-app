@@ -141,7 +141,7 @@ Saat saya akan pergi ke kota yang belum saya kenal, saya ingin cukup menyebut ko
 | Preferensi makanan | Kuliner khas daerah dan tempat populer, ditambah kafe dan kopi; label diet hanya bila datanya diketahui |
 | Tempo | Santai (4–5 aktivitas per hari) |
 | Moda transportasi | Mobil (pribadi, sewa, atau taksi/ojek online); jarak dan waktu dihitung untuk mobil |
-| Jam aktivitas | 08:00–21:00 |
+| Jam aktivitas | 07:00–21:00 |
 | Level harga | Menengah, dengan variasi opsi hemat |
 
 ### FR-2 Riset dan Rekomendasi (Must)
@@ -172,7 +172,7 @@ Aturan: sistem tidak boleh menyatakan suatu tempat “sedang ramai sekarang” t
   - Maksimal 4–5 aktivitas utama per hari pada tempo santai dan 6 pada tempo padat.
   - Slot makan siang sekitar 11:30–13:30 dan makan malam sekitar 18:00–20:00; kafe/kopi diletakkan sebagai jeda sore atau pagi.
   - Lokasi dikelompokkan berdasarkan kedekatan geografis agar tidak bolak-balik.
-  - Jam buka dan hari tutup dipertimbangkan jika datanya tersedia; jika tidak, ditandai “jam buka belum terverifikasi”.
+  - Jam buka dan hari tutup dipertimbangkan jika datanya tersedia; jika tidak ada data, tempat tetap boleh dipilih tanpa penanda khusus (keputusan v1.5: penanda per-tempat dihapus karena terlalu bising; pengingat umum "cek ulang jadwal dan jam buka" tetap tampil di halaman rundown).
   - Ada waktu cadangan (buffer) sekitar 15 menit antarlokasi.
 - **FR-4.3** Hari pertama dan terakhir memperhitungkan titik awal dan waktu tiba/pulang bila diisi pengguna.
 - **FR-4.4** Jarak dan waktu tempuh dihitung dari layanan rute sesuai moda, bukan sekadar jarak garis lurus. Bila yang tersedia hanya jarak garis lurus, tampilkan “perkiraan” dan jelaskan.
@@ -201,13 +201,13 @@ Aturan: sistem tidak boleh menyatakan suatu tempat “sedang ramai sekarang” t
 
 ### FR-7 Login dan Riwayat Destinasi (Must)
 
-- **FR-7.1** Login bersifat opsional. Pengguna tamu dapat membuat dan melihat rencana tanpa login. Login diperlukan untuk menyimpan riwayat dan mengaksesnya dari berbagai perangkat.
-- **FR-7.2** Metode login MVP (usulan): login dengan akun Google dan tautan masuk lewat email tanpa kata sandi. Keputusan final ada di Pertanyaan Terbuka. Pengguna dapat keluar dan menghapus akunnya sendiri.
+- **FR-7.1** Login bersifat opsional. Pengguna tamu dapat membuat dan melihat rencana tanpa login. Login wajib untuk mengedit (prompt revisi, terapkan, batalkan) dan menyimpan rundown, serta untuk mengakses riwayat dari berbagai perangkat; pengguna tamu yang mencoba melakukannya diarahkan ke halaman login lalu kembali ke rundown yang sama.
+- **FR-7.2** Metode login MVP: akun Google dan email + kata sandi (Firebase Authentication), dengan validasi di setiap form dan fitur lupa kata sandi lewat email. Pengguna dapat keluar. Penghapusan akun mandiri tidak termasuk MVP; permintaan penghapusan akun dan data ditangani manual oleh pengelola lewat kontak di kebijakan privasi.
 - **FR-7.3** Bagi pengguna yang login, setiap rencana yang berhasil dibuat otomatis masuk ke Riwayat (kota, jumlah hari, tanggal dibuat, ringkasan). Pengguna tamu ditawari login setelah rencana tampil, dan rencana yang baru dibuat langsung tersimpan ke akun begitu login berhasil.
 - **FR-7.4** Halaman Riwayat menampilkan rencana terbaru di atas, dengan filter per kota. Aksi per rencana: buka, ganti nama, duplikat (misal untuk rentang tanggal berbeda), dan hapus.
 - **FR-7.5** Rencana tersimpan memuat rundown terakhir beserta penyesuaian pengguna (lokasi yang diganti, dihapus, atau dikunci) dan waktu pembuatan. Saat dibuka kembali, sistem menampilkan “Terakhir diperiksa” dan menawarkan “Segarkan informasi” untuk memeriksa ulang jam buka, status, dan harga, dengan tunduk pada batas penggunaan.
 - **FR-7.6** Sistem hanya menyimpan yang diperlukan: identitas tempat, urutan, dan catatan pengguna. Detail konten dari penyedia data diambil ulang sesuai syarat penggunaan penyedia, bukan disalin permanen.
-- **FR-7.7** Pengguna dapat menghapus satu rencana, seluruh riwayat, atau akunnya. Penghapusan berlaku permanen setelah masa pemulihan singkat (usulan 30 hari untuk cadangan sistem).
+- **FR-7.7** Pengguna dapat menghapus satu rencana atau seluruh riwayat. Penghapusan berlaku permanen setelah masa pemulihan singkat (usulan 30 hari untuk cadangan sistem).
 - **FR-7.8** (Should) Rencana dapat dibagikan lewat tautan unik yang tidak dapat ditebak; pemilik dapat mencabut tautan kapan saja.
 - **FR-7.9** (Should) Pengguna login dapat menandai tempat favorit dari rekomendasi, dan tempat itu muncul di Riwayat.
 
@@ -221,7 +221,7 @@ Aturan: sistem tidak boleh menyatakan suatu tempat “sedang ramai sekarang” t
 
 - **FR-8.1** Setiap rekomendasi menampilkan sumber dan “terakhir diperiksa” bila tersedia.
 - **FR-8.2** Halaman hasil menampilkan penafian yang jelas bahwa jarak dan waktu adalah estimasi, serta jam buka, harga, ulasan, dan status tempat dapat berubah.
-- **FR-8.3** Jika informasi tidak tersedia atau kurang meyakinkan, sistem menyatakan hal itu secara eksplisit, misalnya “Jam buka belum terverifikasi, cek ulang sebelum berangkat”.
+- **FR-8.3** Jika informasi tidak tersedia atau kurang meyakinkan, sistem menyatakan hal itu secara eksplisit, misalnya “Pilihan tempat makan terbatas; jadwal makan mungkin tidak lengkap”. Jam buka yang kosong tidak diberi catatan per-tempat; pengingat umum di halaman rundown sudah cukup.
 - **FR-8.4** Sistem menandai rekomendasi dengan keyakinan rendah secara visual.
 
 ### FR-9 Umpan Balik (Should)
@@ -274,7 +274,7 @@ Bobot awal ditetapkan tim dan disetel berdasarkan umpan balik pilot.
 
 | Kebutuhan data | Kandidat sumber | Catatan |
 | --- | --- | --- |
-| Tempat, alamat, koordinat, rating, jumlah ulasan, jam buka, level harga | Google Places API atau penyedia data tempat setara | Periksa syarat penggunaan: batasan penyimpanan (caching) dan atribusi |
+| Tempat, alamat, koordinat, rating, jumlah ulasan, jam buka, level harga | Geoapify Places API (data OpenStreetMap), dipilih 2 November 2026 karena billing Google Cloud tidak tersedia | Gratis 3.000 credit/hari tanpa kartu; wajib atribusi Geoapify dan OpenStreetMap. Rating, jumlah ulasan, dan level harga **tidak tersedia**; jam buka hanya sebagian. Foto hanya tersedia untuk tempat yang bertag Wikimedia di OSM (dari Wikimedia Commons, dengan atribusi); tempat lain memakai placeholder. Jarak dan waktu berkendara dari penginapan dihitung Geoapify Route Matrix |
 | Jarak dan waktu tempuh per moda | Layanan rute seperti Google Routes API | Biaya per permintaan perlu dimodelkan; hasil rute adalah estimasi |
 | Tautan lokasi dan rute | Google Maps URLs | Tidak memerlukan kunci API; ada batas jumlah titik singgah |
 | Banyak dibicarakan | Pencarian web terpercaya (artikel, media, blog) | Sumber dan tanggal wajib disimpan |
@@ -292,7 +292,7 @@ Bobot awal ditetapkan tim dan disetel berdasarkan umpan balik pilot.
 | Platform | Web responsif mobile-first di plesir.app; peramban modern versi terbaru (Chrome, Safari, Edge, Firefox) |
 | Bahasa | Bahasa Indonesia; bahasa lain setelah MVP |
 | Aksesibilitas | Mengacu WCAG 2.1 AA untuk kontras, navigasi keyboard, dan label |
-| Privasi | Kumpulkan data minimum; tidak perlu izin lokasi GPS pada MVP; patuhi UU Pelindungan Data Pribadi; sediakan kebijakan privasi, penghapusan rencana, serta penghapusan akun dan riwayat; simpan hanya email dan profil dasar dari penyedia login |
+| Privasi | Kumpulkan data minimum; tidak perlu izin lokasi GPS pada MVP; patuhi UU Pelindungan Data Pribadi; sediakan kebijakan privasi, penghapusan rencana dan riwayat (penghapusan akun lewat permintaan manual); simpan hanya email dan profil dasar dari penyedia login |
 | Keamanan | Pembatasan laju (rate limit), perlindungan dari penyalahgunaan, kunci API tidak terekspos di klien, autentikasi lewat penyedia login tepercaya tanpa menyimpan kata sandi sendiri, sesi aman, dan riwayat hanya dapat diakses pemiliknya |
 | Biaya | Karena aplikasi gratis, biaya adalah batasan desain utama: tetapkan batas biaya per rencana (LLM, data tempat, rute) dan anggaran bulanan setelah uji biaya; gunakan cache yang diizinkan, batas penggunaan wajar, dan model AI berbiaya efisien untuk tahap yang sederhana |
 | Observabilitas | Catat kegagalan penyedia data, latensi per tahap, dan biaya per rencana |
@@ -318,7 +318,7 @@ Bobot awal ditetapkan tim dan disetel berdasarkan umpan balik pilot.
 | Edit dan revisi | Ganti, hapus, kunci, panel “Sesuaikan rencana”, kolom revisi bahasa natural |
 | Bagikan | Tautan, salin, dan tombol hapus rencana |
 | Batas penggunaan | Pesan jelas saat batas harian tercapai dan kapan bisa mencoba lagi |
-| Login dan akun | Masuk dengan Google atau tautan email, tawaran login setelah rencana tampil, keluar, dan hapus akun |
+| Login dan akun | Masuk dengan Google atau email + kata sandi, lupa kata sandi, tawaran login saat tamu mengedit/menyimpan, dan keluar |
 | Riwayat | Daftar rencana tersimpan dengan filter kota; aksi buka, ganti nama, duplikat, hapus; tombol “Segarkan informasi”; keadaan kosong yang mengajak membuat rencana pertama |
 
 **State yang wajib dirancang:** kosong, memuat, galat, data sebagian, tidak ada hasil, dan offline. Desain prioritas mobile karena penggunaan utama saat bepergian.
@@ -371,7 +371,7 @@ Penyedia data tempat dan rute, layanan model bahasa, penyedia login, basis data 
 | Penyalahgunaan (spam permintaan) | Lonjakan biaya | Rate limit, deteksi anomali |
 | Cakupan data tidak merata di luar kota besar | Kualitas turun | Audit dimulai dari kawasan pilot, tampilkan label beta untuk wilayah yang belum diaudit |
 | Input minimal membuat hasil terlalu generik | Rekomendasi kurang pas dengan selera pengguna | Default cerdas, asumsi terlihat di ringkasan, panel “Sesuaikan rencana”, revisi bahasa natural, uji default di prototipe |
-| Data akun dan riwayat (data pribadi) bocor atau disalahgunakan | Pelanggaran privasi dan hilangnya kepercayaan | Data minimum, penyedia login tepercaya tanpa kata sandi sendiri, akses hanya pemilik, fitur hapus akun dan riwayat, kepatuhan UU PDP |
+| Data akun dan riwayat (data pribadi) bocor atau disalahgunakan | Pelanggaran privasi dan hilangnya kepercayaan | Data minimum, penyedia login tepercaya tanpa kata sandi sendiri, akses hanya pemilik, fitur hapus rencana dan riwayat, penghapusan akun lewat permintaan manual, kepatuhan UU PDP |
 | Penyimpanan riwayat melanggar syarat penyedia data tempat | Fitur riwayat terhambat atau akses data dicabut | Simpan identitas tempat, urutan, dan catatan pengguna; ambil ulang detail dari penyedia; tinjau syarat penggunaan sejak Fase 0 |
 
 ## 15. Rencana Rilis (Indikatif)

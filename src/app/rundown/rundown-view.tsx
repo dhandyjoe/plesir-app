@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   useEffect,
   useMemo,
@@ -10,7 +11,9 @@ import {
   useSyncExternalStore,
   type KeyboardEvent,
   type PointerEvent,
+  type ReactNode,
 } from "react";
+import { AccountMenu } from "@/components/account-menu";
 import { Brand } from "@/components/brand";
 import {
   AccountIcon,
@@ -23,7 +26,6 @@ import {
   CloseIcon,
   DirectionsIcon,
   FlagIcon,
-  GridIcon,
   HotelIcon,
   LocationIcon,
   MapIcon,
@@ -34,32 +36,61 @@ import {
   SparkleIcon,
 } from "@/components/icons";
 import { SiteFooter } from "@/components/site-footer";
-import {
-  MOCK_RUNDOWN,
-  mapsRouteUrl,
-  mapsStopUrl,
-  type RundownStop,
-} from "./mock-rundown";
+import { SiteNav } from "@/components/site-nav";
+import { loginHref } from "@/lib/auth-form";
+import { useAuthUser } from "@/lib/firebase/auth";
+import type { ItineraryView } from "@/lib/itinerary";
+import { formatLeg } from "@/lib/route";
+import { mapsRouteUrl, mapsStopUrl, type Marker, type RundownDay, type RundownStop } from "@/lib/rundown";
 import { buildRoad, CARD_H, ICON, MARKER_W } from "./road-layout";
+import { LeaveDialog } from "./leave-dialog";
+import { LoginDialog, SAVED_PATH, type LoginReason } from "./login-dialog";
+import { RevisionPanel } from "./revision-panel";
 import styles from "./rundown.module.css";
+import { useRevision } from "./use-revision";
 
-function dayCount(start: string, end: string) {
-  const [sy, sm, sd] = start.split("-").map(Number);
-  const [ey, em, ed] = end.split("-").map(Number);
-  return Math.round((Date.UTC(ey, em - 1, ed) - Date.UTC(sy, sm - 1, sd)) / 86_400_000) + 1;
+/** Penginapan jadi tautan ke Google Maps; marker tanpa koordinat (placeholder) tetap teks biasa. */
+function MarkerBody({ marker, children }: { marker: Marker; children: ReactNode }) {
+  if (marker.lat == null || marker.lng == null) return children;
+  return (
+    <a className={styles.markerLink} href={mapsStopUrl(marker)} target="_blank" rel="noopener noreferrer">
+      {children}
+      <span className={styles.srOnly}> (buka di Google Maps)</span>
+    </a>
+  );
 }
 
-const NARROW = "(max-width: 47.999rem)";
+/** Foto dengan atribusi berasal dari Wikimedia Commons; tanpa itu ilustrasi mock. */
+const photoLabel = (stop: RundownStop) => (stop.photoCredit ? "Foto: Wikimedia" : "Ilustrasi AI");
+
+const NARROW ="(max-width: 47.999rem)";
 const subscribeNarrow = (cb: () => void) => {
   const mq = window.matchMedia(NARROW);
   mq.addEventListener("change", cb);
   return () => mq.removeEventListener("change", cb);
 };
 
-type Props = { city: string; start: string; end: string; seed: number };
+type Props = {
+  dest: string;
+  city: string;
+  start: string;
+  end: string;
+  seed: number;
+  days: RundownDay[];
+  warnings: string[];
+  /** Itinerary tersimpan bila halaman dibuka dengan ?plan=. */
+  saved: ItineraryView | null;
+  attribution: string;
+};
 
-export function RundownView({ city, start, end, seed }: Props) {
-  const totalDays = dayCount(start, end);
+export function RundownView({ dest, city, start, end, seed, days: initialDays, warnings: initialWarnings, saved, attribution }: Props) {
+  const user = useAuthUser();
+  const revision = useRevision({ dest, start, end, days: initialDays, warnings: initialWarnings, saved });
+  const { days } = revision;
+  // shortcut: rencana lama masih menyimpan warning ini; hapus filter bila job/itinerary lama sudah kedaluwarsa semua.
+  const warnings = revision.warnings.filter((warning) => !warning.startsWith("Jam buka belum terverifikasi"));
+  const working = revision.status.kind === "working";
+  const totalDays = days.length;
   const nights = totalDays - 1;
 
   const [day, setDay] = useState(0);
@@ -79,15 +110,21 @@ export function RundownView({ city, start, end, seed }: Props) {
   const shiftBy = Math.max(size - 1, 1);
 
   const [selected, setSelected] = useState<RundownStop | null>(null);
-  const [notice, setNotice] = useState("");
+  const [notice, setNotice] = useState<{ title: string; message: string; saved?: boolean } | null>(null);
+  const [saving, setSaving] = useState(false);
   const [prompt, setPrompt] = useState("");
+  const [loginReason, setLoginReason] = useState<LoginReason | null>(null);
+  const here = loginHref(usePathname(), useSearchParams().toString());
+  // 401 dari server (mis. sesi habis) juga membuka dialog yang sama.
+  const dialogReason = loginReason ?? (revision.status.kind === "login" ? "edit" : null);
+  const canSend = !working && prompt.trim().length >= 3;
 
   const viewportRef = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; y: number; left: number; top: number } | null>(null);
   const detailRef = useRef<HTMLDialogElement>(null);
   const noticeRef = useRef<HTMLDialogElement>(null);
 
-  const data = MOCK_RUNDOWN[day];
+  const data = days[day];
   // Seed berbeda tiap hari agar bentuk jalan Hari 1, 2, dst. tidak sama.
   const road = useMemo(
     () => buildRoad(data?.stops.length ?? 0, seed + day * 7919),
@@ -142,9 +179,24 @@ export function RundownView({ city, start, end, seed }: Props) {
     detailRef.current?.showModal();
   }
 
-  function showNotice(message: string) {
-    setNotice(message);
+  function showNotice(next: NonNullable<typeof notice>) {
+    setNotice(next);
     noticeRef.current?.showModal();
+  }
+
+  async function save() {
+    if (user === null) return setLoginReason("save");
+    setSaving(true);
+    const result = await revision.save();
+    setSaving(false);
+    if (result.ok) {
+      showNotice({
+        title: "Rundown tersimpan",
+        message: `Rundown ${city} ada di Rundown Tersimpan dan tidak kedaluwarsa. Kamu tetap bisa mengubahnya lewat instruksi AI.`,
+        saved: true,
+      });
+    } else if (result.unauthorized) setLoginReason("save");
+    else showNotice({ title: "Belum bisa menyimpan", message: result.error });
   }
 
   return (
@@ -153,40 +205,30 @@ export function RundownView({ city, start, end, seed }: Props) {
         <div className={styles.headerInner}>
           <Brand />
 
-          <nav className={styles.nav} aria-label="Menu utama">
-            <Link className={`${styles.navItem} ${styles.navItemActive}`} href="/">
-              <GridIcon />
-              Main Menu
-            </Link>
-            <button
-              className={styles.navItem}
-              type="button"
-              onClick={() => showNotice("Daftar rundown tersimpan belum tersedia di versi ini.")}
-            >
-              <BookmarkIcon />
-              Rundown Tersimpan
-            </button>
-          </nav>
+          <SiteNav />
 
           <div className={styles.headerActions}>
             <button
               className={styles.secondaryAction}
               type="button"
-              onClick={() => showNotice("Menyimpan rundown belum tersedia di versi ini.")}
-              aria-label="Simpan Rundown"
+              onClick={save}
+              disabled={saving}
+              aria-label={revision.saved ? "Rundown tersimpan" : "Simpan Rundown"}
             >
-              <SaveIcon />
-              <span className={styles.hideOnMobile}>Simpan Rundown</span>
+              {revision.saved ? <BookmarkIcon /> : <SaveIcon />}
+              <span className={styles.hideOnMobile}>
+                {revision.saved ? "Tersimpan" : saving ? "Menyimpan…" : "Simpan Rundown"}
+              </span>
             </button>
-            <button
+            <AccountMenu
               className={styles.primaryAction}
-              type="button"
-              onClick={() => showNotice("Fitur akun belum tersedia pada tahap ini. Kamu tetap bisa melihat rundown sebagai tamu.")}
-              aria-label="Masuk atau daftar"
-            >
-              <AccountIcon />
-              <span className={styles.hideOnMobile}>Masuk / Daftar</span>
-            </button>
+              guest={
+                <>
+                  <AccountIcon />
+                  <span className={styles.hideOnMobile}>Masuk / Daftar</span>
+                </>
+              }
+            />
           </div>
         </div>
       </header>
@@ -204,9 +246,13 @@ export function RundownView({ city, start, end, seed }: Props) {
               {totalDays} Hari {nights > 0 ? `${nights} Malam` : ""}
             </span>
           </div>
-          <p className={styles.subtitle}>
-            Alur perjalanan horizontal disesuaikan dengan estimasi rute tercepat.
-          </p>
+          {warnings.length > 0 && (
+            <ul className={styles.warnings} aria-label="Catatan data">
+              {warnings.map((warning) => (
+                <li key={warning}>{warning}</li>
+              ))}
+            </ul>
+          )}
 
           <div className={styles.dayTabs}>
             {paged && (
@@ -223,7 +269,7 @@ export function RundownView({ city, start, end, seed }: Props) {
             <div className={styles.dayList} role="tablist" aria-label="Pilih hari">
               {Array.from({ length: last - first }, (_, i) => {
                 const index = first + i;
-                const title = MOCK_RUNDOWN[index]?.title;
+                const title = days[index]?.title;
                 const active = index === day;
                 return (
                   <button
@@ -260,6 +306,7 @@ export function RundownView({ city, start, end, seed }: Props) {
               </button>
             )}
           </div>
+          <p className={styles.attribution}>{attribution}</p>
         </section>
 
         <div className={styles.canvasArea}>
@@ -293,23 +340,25 @@ export function RundownView({ city, start, end, seed }: Props) {
                     className={`${styles.marker} ${styles.markerStart}`}
                     style={{ left: 0, top: road.startY - ICON / 2, width: MARKER_W }}
                   >
-                    {data.startMarker.time && (
-                      <span className={styles.markerTime}>{data.startMarker.time}</span>
-                    )}
-                    <span className={styles.markerIcon}>
-                      {data.startMarker.photo ? (
-                        <Image src={data.startMarker.photo} alt="" width={48} height={48} />
-                      ) : (
-                        <LocationIcon />
+                    <MarkerBody marker={data.startMarker}>
+                      {data.startMarker.time && (
+                        <span className={styles.markerTime}>{data.startMarker.time}</span>
                       )}
-                      <span className={styles.markerBadge}>1</span>
-                    </span>
-                    <span className={styles.markerLabel}>Start Point</span>
-                    <span className={styles.markerPlace}>{data.startMarker.place}</span>
+                      <span className={styles.markerIcon}>
+                        {data.startMarker.photo ? (
+                          <Image src={data.startMarker.photo} alt="" width={48} height={48} />
+                        ) : (
+                          <LocationIcon />
+                        )}
+                        <span className={styles.markerBadge}>1</span>
+                      </span>
+                      <span className={styles.markerLabel}>Start Point</span>
+                      <span className={styles.markerPlace}>{data.startMarker.place}</span>
+                    </MarkerBody>
                   </li>
 
                   {data.stops.map((stop, index) => (
-                    <li key={stop.name}>
+                    <li key={stop.placeId ?? stop.name}>
                       <button
                         className={styles.card}
                         style={{ left: road.cards[index].x, top: road.cards[index].cy - CARD_H / 2 }}
@@ -327,11 +376,15 @@ export function RundownView({ city, start, end, seed }: Props) {
                         <span className={styles.photo}>
                           {stop.photo ? (
                             <>
+                              {/* alt kosong: nama tempat sudah dibaca dari teks kartu yang sama. */}
                               <Image src={stop.photo} alt="" fill sizes="288px" />
-                              <span className={styles.photoLabel}>Ilustrasi AI</span>
+                              <span className={styles.photoLabel}>{photoLabel(stop)}</span>
                             </>
                           ) : (
-                            <LocationIcon />
+                            <span className={styles.photoEmpty}>
+                              <LocationIcon />
+                              Foto belum tersedia
+                            </span>
                           )}
                           <span className={styles.categoryChip}>{stop.category}</span>
                         </span>
@@ -352,17 +405,17 @@ export function RundownView({ city, start, end, seed }: Props) {
                   ))}
 
                   {road.segments.map((segment, i) => {
-                    const label = i === 0 ? data.startMarker.toFirst : data.stops[i - 1]?.toNext;
+                    const leg = i < data.stops.length ? data.stops[i].fromPrev : data.finishMarker.fromPrev;
                     return (
-                      label && (
+                      leg && (
                         <li
                           key={`chip-${i}`}
                           className={styles.chip}
                           style={{ left: segment.midX, top: segment.midY }}
                         >
                           <CarIcon />
-                          {label}
-                          <span className={styles.srOnly}> (estimasi)</span>
+                          {formatLeg(leg)}
+                          <span className={styles.srOnly}> (estimasi berkendara)</span>
                         </li>
                       )
                     );
@@ -372,17 +425,19 @@ export function RundownView({ city, start, end, seed }: Props) {
                     className={`${styles.marker} ${styles.markerFinish}`}
                     style={{ left: road.finishX, top: road.endY - ICON / 2, width: MARKER_W }}
                   >
-                    {data.finishMarker.time && (
-                      <span className={styles.markerTime}>{data.finishMarker.time}</span>
-                    )}
-                    <span className={styles.markerIcon}>
-                      <HotelIcon />
-                      <span className={styles.markerBadge}>
-                        <FlagIcon />
+                    <MarkerBody marker={data.finishMarker}>
+                      {data.finishMarker.time && (
+                        <span className={styles.markerTime}>{data.finishMarker.time}</span>
+                      )}
+                      <span className={styles.markerIcon}>
+                        <HotelIcon />
+                        <span className={styles.markerBadge}>
+                          <FlagIcon />
+                        </span>
                       </span>
-                    </span>
-                    <span className={styles.markerLabel}>Rest &amp; Selesai</span>
-                    <span className={styles.markerPlace}>{data.finishMarker.place}</span>
+                      <span className={styles.markerLabel}>Rest &amp; Selesai</span>
+                      <span className={styles.markerPlace}>{data.finishMarker.place}</span>
+                    </MarkerBody>
                   </li>
                 </ol>
               </div>
@@ -393,11 +448,22 @@ export function RundownView({ city, start, end, seed }: Props) {
         </div>
 
         <div className={styles.promptDock}>
+            <RevisionPanel
+              status={revision.status}
+              canUndo={revision.canUndo}
+              onApply={async () => {
+                if (await revision.apply()) setPrompt("");
+              }}
+              onDismiss={revision.dismiss}
+              onUndo={revision.undo}
+            />
             <form
               className={styles.promptBar}
               onSubmit={(event) => {
                 event.preventDefault();
-                showNotice("Revisi rundown lewat prompt belum tersedia di versi ini. Instruksimu belum dikirim ke mana pun.");
+                if (!canSend) return;
+                if (user === null) setLoginReason("edit");
+                else revision.submit(prompt.trim());
               }}
             >
               <span className={styles.promptIcon} aria-hidden="true">
@@ -409,8 +475,9 @@ export function RundownView({ city, start, end, seed }: Props) {
                 value={prompt}
                 onChange={(event) => setPrompt(event.target.value)}
                 maxLength={300}
+                disabled={working}
                 aria-label="Instruksi untuk mengubah rencana"
-                placeholder="Tulis instruksi untuk ubah rencana destinasi... (misal: ganti makan siang, tambah spot kopi)"
+                placeholder="Tulis instruksi untuk ubah rencana destinasi... (misal: ganti makan siang hari 2 dengan kafe)"
               />
               {data && (
                 <a
@@ -425,7 +492,7 @@ export function RundownView({ city, start, end, seed }: Props) {
                   </span>
                 </a>
               )}
-              <button className={styles.generateButton} type="submit">
+              <button className={styles.generateButton} type="submit" disabled={!canSend}>
                 <SendIcon />
                 <span className={styles.hideOnMobile}>Generate</span>
                 <span className={styles.srOnly}>Kirim instruksi</span>
@@ -450,11 +517,14 @@ export function RundownView({ city, start, end, seed }: Props) {
             <div className={styles.detailPhoto}>
               {selected.photo ? (
                 <>
-                  <Image src={selected.photo} alt="" fill sizes="448px" />
-                  <span className={styles.photoLabel}>Ilustrasi AI</span>
+                  <Image src={selected.photo} alt={`Foto ${selected.name}`} fill sizes="448px" />
+                  <span className={styles.photoLabel}>{photoLabel(selected)}</span>
                 </>
               ) : (
-                <LocationIcon />
+                <span className={styles.photoEmpty}>
+                  <LocationIcon />
+                  Foto belum tersedia
+                </span>
               )}
               <span className={styles.detailCategory}>{selected.category}</span>
               <button
@@ -476,10 +546,18 @@ export function RundownView({ city, start, end, seed }: Props) {
                 <LocationIcon />
                 {selected.address}
               </p>
+              {selected.photoCredit && (
+                <p className={styles.photoCredit}>
+                  Foto: {selected.photoCredit.author} · {selected.photoCredit.license} ·{" "}
+                  <a href={selected.photoCredit.source} target="_blank" rel="noopener noreferrer">
+                    Sumber di Wikimedia Commons
+                  </a>
+                </p>
+              )}
               <div className={styles.detailNote}>
                 <p>
                   <BrainIcon />
-                  Catatan Algoritma plesir.app
+                  Catatan AI plesir.app
                 </p>
                 <p>{selected.note}</p>
               </div>
@@ -506,6 +584,17 @@ export function RundownView({ city, start, end, seed }: Props) {
         )}
       </dialog>
 
+      <LeaveDialog active={!revision.saved} />
+
+      <LoginDialog
+        reason={dialogReason}
+        href={here}
+        onClose={() => {
+          setLoginReason(null);
+          if (revision.status.kind === "login") revision.dismiss();
+        }}
+      />
+
       <dialog
         ref={noticeRef}
         className={`${styles.dialog} ${styles.noticeDialog}`}
@@ -514,15 +603,22 @@ export function RundownView({ city, start, end, seed }: Props) {
           if (event.target === event.currentTarget) noticeRef.current?.close();
         }}
       >
-        <h2 id="notice-title">Belum tersedia</h2>
-        <p>{notice}</p>
-        <button
-          className={styles.closeButton}
-          type="button"
-          onClick={() => noticeRef.current?.close()}
-        >
-          Kembali
-        </button>
+        <h2 id="notice-title">{notice?.title}</h2>
+        <p>{notice?.message}</p>
+        <div className={styles.noticeActions}>
+          {notice?.saved && (
+            <Link className={styles.primaryLink} href={SAVED_PATH}>
+              Lihat Rundown Tersimpan
+            </Link>
+          )}
+          <button
+            className={styles.closeButton}
+            type="button"
+            onClick={() => noticeRef.current?.close()}
+          >
+            Kembali
+          </button>
+        </div>
       </dialog>
     </div>
   );

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import { SiteFooter } from "@/components/site-footer";
-import styles from "../login/login.module.css";
-import { RundownBackdrop } from "../login/rundown-backdrop";
+import { AuthShell } from "../login/auth-shell";
 import { RegisterForm } from "./register-form";
 
 export const metadata: Metadata = {
@@ -11,14 +9,14 @@ export const metadata: Metadata = {
 
 export default function RegisterPage() {
   return (
-    <div className={styles.page}>
-      <RundownBackdrop />
-
-      <main className={styles.main}>
-        <RegisterForm />
-      </main>
-
-      <SiteFooter className={styles.footer} />
-    </div>
+    <AuthShell
+      asideTitle={
+        <>
+          Sebut kotanya, <span>AI susun rutenya.</span>
+        </>
+      }
+    >
+      <RegisterForm />
+    </AuthShell>
   );
 }

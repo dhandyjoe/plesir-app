@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   useEffect,
@@ -8,6 +7,7 @@ import {
   useState,
   type FormEvent,
 } from "react";
+import { AccountMenu } from "@/components/account-menu";
 import { Brand } from "@/components/brand";
 import { DateRangePicker } from "@/components/date-range-picker";
 import {
@@ -22,7 +22,8 @@ import {
   type DestinationOption,
 } from "./destination-combobox";
 import { SiteFooter } from "@/components/site-footer";
-import { formatDateRange, localDateString } from "@/lib/calendar";
+import { SiteNav } from "@/components/site-nav";
+import { formatDateRange, localDateString, MAX_TRIP_DAYS, rangeInDays } from "@/lib/calendar";
 import styles from "./page.module.css";
 
 // ID Wikidata sama dengan src/data/destinations.json.
@@ -121,6 +122,8 @@ export default function Home() {
       nextErrors.dates = "Pilih tanggal selesai perjalanan.";
     } else if (travelEnd < travelStart) {
       nextErrors.dates = "Tanggal selesai tidak boleh sebelum tanggal mulai.";
+    } else if (rangeInDays(travelStart, travelEnd) > MAX_TRIP_DAYS) {
+      nextErrors.dates = `Rentang perjalanan maksimal ${MAX_TRIP_DAYS} hari.`;
     }
 
     if (!destination || Object.keys(nextErrors).length > 0) {
@@ -169,26 +172,42 @@ export default function Home() {
         <div className={`${styles.shell} ${styles.headerInner}`}>
           <Brand />
 
-          <Link
+          <SiteNav />
+
+          <AccountMenu
             className={styles.loginButton}
-            href="/login"
-            aria-label="Masuk atau daftar"
-          >
-            <AccountIcon />
-            <span className={styles.loginLabelDesktop} aria-hidden="true">
-              Masuk / Daftar
-            </span>
-            <span className={styles.loginLabelMobile} aria-hidden="true">
-              Masuk
-            </span>
-          </Link>
+            guest={
+              <>
+                <AccountIcon />
+                <span className={styles.loginLabelDesktop} aria-hidden="true">
+                  Masuk / Daftar
+                </span>
+                <span className={styles.loginLabelMobile} aria-hidden="true">
+                  Masuk
+                </span>
+              </>
+            }
+          />
         </div>
       </header>
 
       <main className={styles.main}>
-        <div className={styles.ambientTop} aria-hidden="true" />
-        <div className={styles.ambientLeft} aria-hidden="true" />
-        <div className={styles.ambientRight} aria-hidden="true" />
+        <div className={styles.dots} aria-hidden="true" />
+        <svg
+          className={styles.route}
+          viewBox="0 0 1200 520"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path d="M60 440C200 330 120 150 300 120S560 250 780 170 1060 40 1140 110" />
+          <circle className={styles.pulse} cx="60" cy="440" r="7" />
+          <circle
+            className={`${styles.pulse} ${styles.pulseAlt}`}
+            cx="1140"
+            cy="110"
+            r="7"
+          />
+        </svg>
 
         <div className={`${styles.shell} ${styles.mainShell}`}>
           <section className={styles.hero} aria-labelledby="page-title">
@@ -251,23 +270,6 @@ export default function Home() {
                       describedBy={errors.city ? "city-error" : undefined}
                     />
 
-                    <div className={styles.suggestions}>
-                      <span className={styles.suggestionLabel}>
-                        Cepat:
-                      </span>
-                      {QUICK_DESTINATIONS.map((option) => (
-                        <button
-                          key={option.id}
-                          className={styles.suggestionChip}
-                          type="button"
-                          onClick={() => selectDestination(option)}
-                        >
-                          <LocationIcon />
-                          {option.label}
-                        </button>
-                      ))}
-                    </div>
-
                     {errors.city && (
                       <p className={styles.error} id="city-error">
                         {errors.city}
@@ -294,13 +296,7 @@ export default function Home() {
                       aria-expanded={isCalendarOpen}
                       aria-labelledby="date-range-label travel-range-value"
                       data-invalid={Boolean(errors.dates)}
-                      aria-describedby={
-                        errors.dates
-                          ? "dates-error"
-                          : rangeLabel
-                            ? undefined
-                            : "date-hint"
-                      }
+                      aria-describedby={errors.dates ? "dates-error" : undefined}
                       onClick={() => setIsCalendarOpen(true)}
                     >
                       <span
@@ -311,14 +307,7 @@ export default function Home() {
                       >
                         {rangeLabel || "Pilih rentang tanggal"}
                       </span>
-                      <CalendarIcon />
                     </button>
-
-                    {!errors.dates && !rangeLabel && (
-                      <p className={styles.hint} id="date-hint">
-                        Hari ini atau setelahnya.
-                      </p>
-                    )}
 
                     {errors.dates && (
                       <p className={styles.error} id="dates-error">
@@ -326,26 +315,39 @@ export default function Home() {
                       </p>
                     )}
                   </div>
-                </div>
 
-                <div className={styles.actions}>
                   <button className={styles.submitButton} type="submit">
                     <ExploreIcon />
                     <span>Buat Rencana</span>
                   </button>
-
-                  {status && (
-                    <p
-                      className={`${styles.status} ${
-                        status.tone === "error" ? styles.statusError : ""
-                      }`}
-                      role="status"
-                    >
-                      {status.message}
-                    </p>
-                  )}
                 </div>
+
+                {status && (
+                  <p
+                    className={`${styles.status} ${
+                      status.tone === "error" ? styles.statusError : ""
+                    }`}
+                    role="status"
+                  >
+                    {status.message}
+                  </p>
+                )}
               </form>
+            </div>
+
+            <div className={styles.suggestions}>
+              <span className={styles.suggestionLabel}>Lagi populer:</span>
+              {QUICK_DESTINATIONS.map((option) => (
+                <button
+                  key={option.id}
+                  className={styles.suggestionChip}
+                  type="button"
+                  onClick={() => selectDestination(option)}
+                >
+                  <LocationIcon />
+                  {option.label}
+                </button>
+              ))}
             </div>
           </section>
         </div>

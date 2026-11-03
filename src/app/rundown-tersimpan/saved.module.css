@@ -1,0 +1,900 @@
+/*
+ * Rundown Tersimpan: kanvas selebar header (maks 80rem, margin 2rem desktop / 1rem phone) dengan satu gutter 16px.
+ * Desktop: perjalanan berikutnya 7fr foto + 5fr isi; kartu lain dua kolom (2 × 632 + 16 = 1280).
+ */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.main {
+  flex: 1;
+  width: min(calc(100% - 2rem), 80rem);
+  margin-inline: auto;
+  padding: 2rem 0 4rem;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Animasi masuk dan elemen yang bergerak */
+@keyframes rise {
+  from {
+    opacity: 0;
+    translate: 0 1rem;
+  }
+}
+
+@keyframes grow {
+  from {
+    scale: 0 1;
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    scale: 0.6;
+  }
+  70% {
+    opacity: 1;
+    scale: 1.08;
+  }
+}
+
+@keyframes dotIn {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+/* Judul */
+.titleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) 50ms backwards;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.lead {
+  margin: 0.5rem 0 0;
+  color: var(--color-on-surface-variant);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.titleActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.meter {
+  width: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.meterText {
+  color: var(--color-on-surface-variant);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.meterTrack {
+  height: 0.375rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--color-surface-container-high);
+}
+
+.meterFill {
+  min-width: 0.625rem;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--color-primary);
+  transform-origin: left center;
+  animation: grow 900ms cubic-bezier(0.2, 0.7, 0.2, 1) 400ms backwards;
+}
+
+/* Bagian */
+.section {
+  margin-top: 3rem;
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) 170ms backwards;
+}
+
+.section ~ .section {
+  animation-delay: 290ms;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0 0 1rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.sectionCount {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: var(--color-surface-container);
+  color: var(--color-on-surface);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.grid > li {
+  display: flex;
+}
+
+/* Perjalanan berikutnya */
+.featured,
+.ticket {
+  overflow: hidden;
+  border: 1px solid var(--color-surface-container-high);
+  background: var(--color-surface-container-lowest);
+  transition:
+    box-shadow 200ms ease,
+    translate 200ms ease;
+}
+
+.featured:hover,
+.ticket:hover {
+  translate: 0 -2px;
+  box-shadow: 0 20px 40px -24px color-mix(in srgb, var(--color-primary) 35%, transparent); /* taste-skill-ignore shadow: hover lift */
+}
+
+.featured {
+  display: grid;
+  border-radius: 1.75rem;
+}
+
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+  padding: 1.25rem;
+}
+
+.featuredCity {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-height: 1.875rem;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  background: var(--color-surface-container-low);
+  color: var(--color-on-surface-variant);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.chip svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--color-primary);
+}
+
+.meta {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  font-size: 0.875rem;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown {
+  display: flex;
+  align-items: baseline;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 1rem 1.375rem;
+  border-radius: 1.25rem;
+  background: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed-variant);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.countdownValue {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  transform-origin: left bottom;
+  animation: pop 700ms cubic-bezier(0.2, 0.7, 0.2, 1) 450ms backwards;
+}
+
+/* Kartu tiket */
+.ticket {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+}
+
+.ticketMain {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.ticketBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  padding-top: 0.25rem;
+}
+
+.ticketCity {
+  margin: 0;
+  overflow: hidden;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticketFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding: 0.375rem 0.75rem 0.375rem 1rem;
+  border-top: 1px solid var(--color-surface-container);
+}
+
+.status,
+.statusMuted {
+  align-self: flex-start;
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.status {
+  padding: 0.125rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-primary-fixed);
+  color: var(--color-on-primary-fixed-variant);
+}
+
+.statusMuted {
+  color: var(--color-on-surface-variant);
+  font-weight: 500;
+}
+
+.ticketPast .cover img {
+  filter: grayscale(1);
+}
+
+/* Sampul */
+.cover,
+.coverLarge {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-primary-container);
+}
+
+.cover {
+  width: 5.5rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+}
+
+.coverLarge {
+  aspect-ratio: 16 / 9;
+}
+
+.cover img,
+.coverLarge img {
+  object-fit: cover;
+  transition: scale 600ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.featured:hover .coverLarge img,
+.ticket:hover .cover img {
+  scale: 1.04;
+}
+
+.coverInitial {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-on-primary-fixed-variant);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.coverLarge .coverInitial {
+  font-size: 5rem;
+  letter-spacing: -0.04em;
+}
+
+.coverLoading {
+  background: var(--color-surface-container-high);
+}
+
+.credit,
+.creditOverlay {
+  margin: 0;
+  overflow: hidden;
+  color: var(--color-on-surface-variant);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.credit {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.creditOverlay {
+  position: absolute;
+  z-index: 1;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: calc(100% - 2rem);
+  padding: 0.375rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-surface-container-lowest) 92%, transparent);
+}
+
+.credit a,
+.creditOverlay a {
+  color: inherit;
+}
+
+/* Strip hari: satu titik per tempat */
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stripDay {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stripStrong .stripDay {
+  min-height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 1px solid var(--color-surface-container-high);
+  border-radius: 999px;
+  gap: 0.625rem;
+}
+
+.stripLabel {
+  color: var(--color-on-surface);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.dots {
+  display: inline-flex;
+  gap: 0.1875rem;
+}
+
+.dots i {
+  width: 0.4375rem;
+  height: 0.4375rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: dotIn 350ms cubic-bezier(0.2, 0.7, 0.2, 1) calc(450ms + var(--n, 0) * 50ms) backwards;
+}
+
+.stripStrong .dots i {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Aksi */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.actionsCompact {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.primary,
+.secondary,
+.danger {
+  min-height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: 0;
+  border-radius: 0.875rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.secondary {
+  background: var(--color-surface-container-high);
+  color: var(--color-on-surface);
+}
+
+.secondary:hover {
+  background: var(--color-surface-container-highest, #d8e3f4);
+}
+
+.danger {
+  background: var(--color-error);
+  color: #ffffff;
+}
+
+.danger:hover {
+  background: #93000a;
+}
+
+.primary:active,
+.secondary:active,
+.danger:active {
+  transform: scale(0.98);
+}
+
+.primary svg,
+.open svg {
+  width: 1rem;
+  height: 1rem;
+  transition: translate 200ms ease;
+}
+
+.primary:hover svg,
+.open:hover svg {
+  translate: 0.25rem 0;
+}
+
+.plus {
+  display: flex;
+  transition: rotate 300ms ease;
+}
+
+.plus svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.primary:hover .plus {
+  rotate: 90deg;
+}
+
+.primary:hover .plus svg {
+  translate: none;
+}
+
+.open,
+.delete {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0 0.875rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: none;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.open {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.open:hover,
+.delete:hover {
+  background: var(--color-surface-container-low);
+}
+
+.delete {
+  color: var(--color-on-surface-variant);
+}
+
+.delete:hover {
+  color: var(--color-error);
+}
+
+.actions .delete {
+  min-height: 3rem;
+  padding: 0 1.125rem;
+  border-radius: 0.875rem;
+  font-size: 0.9375rem;
+}
+
+.delete svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+:is(.primary, .secondary, .danger, .open, .delete, .credit a):focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+:is(.primary, .secondary, .danger):disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+/* Panel ajakan (tamu dan daftar kosong) */
+.gate {
+  display: grid;
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: 1.25rem;
+  background: var(--color-surface-container-low);
+}
+
+.gateArt {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: var(--color-primary-container);
+}
+
+.gateArt svg {
+  display: block;
+  width: min(100%, 22rem);
+  height: auto;
+}
+
+.artRoute {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 2 13;
+}
+
+.artStop {
+  fill: var(--color-primary);
+}
+
+.artStopSoft {
+  fill: var(--color-surface-container-lowest);
+  stroke: var(--color-primary);
+  stroke-width: 5;
+}
+
+.artBadge {
+  fill: var(--color-primary);
+}
+
+.artLock {
+  fill: var(--color-on-primary);
+}
+
+.artShackle {
+  fill: none;
+  stroke: var(--color-on-primary);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.gateBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.gateTitle {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.gateText {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--color-on-surface);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.gateActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Error dalam blok */
+.state {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  background: var(--color-surface-container-low);
+}
+
+.stateTitle {
+  margin: 0 0 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.stateText {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* Memuat */
+.bar {
+  display: inline-block;
+  height: 1em;
+  border-radius: 0.375rem;
+  background: var(--color-surface-container-high);
+  vertical-align: middle;
+}
+
+.barHeading {
+  width: 10rem;
+  height: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.barCity {
+  width: 55%;
+  height: 1.75rem;
+}
+
+.barCountdown {
+  width: 8rem;
+  height: 2.25rem;
+}
+
+/* Konfirmasi hapus */
+.dialog {
+  width: min(calc(100% - 2rem), 26rem);
+  padding: 1.5rem;
+  border: 0;
+  border-radius: 1.25rem;
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  box-shadow: 0 30px 90px -24px rgba(18, 28, 40, 0.42); /* taste-skill-ignore shadow: modal dialog is a real overlay */
+}
+
+.dialog::backdrop {
+  background: rgba(18, 28, 40, 0.5);
+}
+
+.dialog h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.dialog p {
+  margin: 0 0 1.25rem;
+  color: var(--color-on-surface-variant);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.dialog .dialogError {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.dialogActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (min-width: 48rem) {
+  .main {
+    width: min(calc(100% - 4rem), 80rem);
+  }
+}
+
+@media (min-width: 40rem) {
+  .ticketMain {
+    grid-template-columns: 8.25rem minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cover {
+    width: 8.25rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 56rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  .coverLarge {
+    aspect-ratio: auto;
+    min-height: 20rem;
+  }
+
+  .featuredBody {
+    padding: 2.25rem;
+  }
+
+  .featuredCity {
+    font-size: 2.125rem;
+  }
+
+  /* Panel ajakan mengisi sisa layar sampai footer, supaya tidak menyisakan blok kosong. */
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gate {
+    flex: 1;
+    grid-template-columns: 5fr 7fr;
+    min-height: 24rem;
+    max-height: 40rem;
+  }
+
+  .gateArt {
+    padding: 2.5rem;
+  }
+
+  .gateBody {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 39.999rem) {
+  .main {
+    padding-top: 1.5rem;
+  }
+
+  .primary,
+  .secondary {
+    flex: 1 1 auto;
+  }
+
+  .titleActions,
+  .meter {
+    width: 100%;
+  }
+
+  .titleRow .primary {
+    flex: 1 1 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary,
+  .secondary,
+  .danger,
+  .primary svg,
+  .open svg,
+  .plus {
+    transition: none;
+  }
+}

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { SiteFooter } from "@/components/site-footer";
+import { AuthShell } from "./auth-shell";
 import { LoginForm } from "./login-form";
-import { RundownBackdrop } from "./rundown-backdrop";
-import styles from "./login.module.css";
 
 export const metadata: Metadata = {
   title: "Masuk — plesir.app",
@@ -11,14 +9,14 @@ export const metadata: Metadata = {
 
 export default function LoginPage() {
   return (
-    <div className={styles.page}>
-      <RundownBackdrop />
-
-      <main className={styles.main}>
-        <LoginForm />
-      </main>
-
-      <SiteFooter className={styles.footer} />
-    </div>
+    <AuthShell
+      asideTitle={
+        <>
+          Rundown-mu masih di sini. <span>Tinggal lanjut jalan.</span>
+        </>
+      }
+    >
+      <LoginForm />
+    </AuthShell>
   );
 }

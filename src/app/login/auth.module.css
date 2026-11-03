@@ -1,0 +1,479 @@
+/* Layout dua kolom halaman Login dan Register: form kiri, panel ilustrasi kanan (disembunyikan di layar sempit) */
+.split {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  background: var(--color-surface);
+}
+
+.formSide {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 1rem 0;
+}
+
+.splitBrand {
+  align-self: flex-start;
+}
+
+.formMain {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  place-items: center;
+  padding-block: 1rem;
+}
+
+.panel {
+  width: min(100%, 26.25rem);
+}
+
+.heading {
+  margin: 0;
+  color: var(--color-on-surface);
+  font-size: var(--type-headline-lg-mobile);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.subtitle {
+  margin: 0.625rem 0 1.75rem;
+  color: var(--color-secondary);
+  font-size: var(--type-body-lg);
+  line-height: 1.55;
+}
+
+.aside {
+  display: none;
+}
+
+.asidePanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  overflow: hidden;
+  padding: 3.5rem;
+  border-radius: 2rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  animation: panelIn 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  border: 1px solid color-mix(in srgb, var(--color-on-primary) 20%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-on-primary) 12%, transparent);
+  font-size: var(--type-body-sm);
+  font-weight: 600;
+}
+
+.badge svg {
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--color-primary-fixed);
+  animation: twinkle 2.4s ease-in-out infinite;
+}
+
+.asideTitle {
+  margin: 1.25rem 0 0;
+  font-size: var(--type-display-mobile);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.asideTitle span {
+  display: block;
+  color: var(--color-primary-fixed);
+}
+
+.stage {
+  position: relative;
+  height: 22.5rem;
+}
+
+.stageRoute {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stageRoute path {
+  stroke: color-mix(in srgb, var(--color-on-primary) 45%, transparent);
+  stroke-width: 2;
+  stroke-dasharray: 2 9;
+  stroke-linecap: round;
+  animation: dash 4s linear infinite;
+}
+
+.photoCard {
+  position: absolute;
+  margin: 0;
+  padding: 0.5rem 0.5rem 0.875rem;
+  border-radius: 1.375rem;
+  background: var(--color-surface-container-lowest);
+  box-shadow: 0 1.5rem 3rem -1.25rem color-mix(in srgb, var(--color-on-surface) 45%, transparent);
+}
+
+.photoCardA {
+  top: 0;
+  left: 0;
+  width: 18.75rem;
+  rotate: -3deg;
+  animation: floatA 6s ease-in-out infinite;
+}
+
+.photoCardB {
+  top: 7.5rem;
+  right: 0;
+  width: 15rem;
+  rotate: 3deg;
+  animation: floatB 7s ease-in-out 0.5s infinite;
+}
+
+.photoFrame {
+  position: relative;
+  height: 10.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: var(--color-primary-fixed);
+}
+
+.photoCardB .photoFrame {
+  height: 9.25rem;
+}
+
+.photoFrame img {
+  object-fit: cover;
+}
+
+.photoCard figcaption {
+  display: grid;
+  gap: 0.125rem;
+  padding: 0.625rem 0.5rem 0;
+}
+
+.photoCard strong {
+  color: var(--color-on-surface);
+  font-size: var(--type-body-md);
+}
+
+.photoCard figcaption span {
+  color: var(--color-secondary);
+  font-size: var(--type-label-md);
+}
+
+.credit {
+  margin: 0;
+  color: var(--color-primary-container);
+  font-size: var(--type-label-md);
+}
+
+.credit a {
+  color: inherit;
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    scale: 0.98;
+  }
+}
+
+@keyframes floatA {
+  50% {
+    translate: 0 -0.625rem;
+  }
+}
+
+@keyframes floatB {
+  50% {
+    translate: 0 0.5rem;
+  }
+}
+
+@keyframes twinkle {
+  50% {
+    opacity: 0.7;
+    scale: 0.8;
+    rotate: 20deg;
+  }
+}
+
+@media (min-width: 40rem) {
+  .heading {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .formSide {
+    padding: 2rem 3rem 0;
+  }
+}
+
+@media (min-width: 60rem) {
+  .split {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .aside {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    display: flex;
+    padding: 1rem;
+  }
+
+  .asideTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .asidePanel,
+  .badge svg,
+  .stageRoute path,
+  .photoCard {
+    animation: none;
+  }
+}
+
+.googleButton {
+  width: 100%;
+  min-height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  border: 1px solid var(--color-surface-container-high);
+  border-radius: 0.875rem;
+  background: var(--color-surface-container);
+  color: var(--color-on-surface);
+  font-size: var(--type-body-md);
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.googleButton:hover {
+  background: var(--color-surface-container-high);
+}
+
+.googleButton:active,
+.submitButton:active {
+  transform: scale(0.99);
+}
+
+.or {
+  margin: 1.25rem 0;
+  color: var(--color-on-surface-variant);
+  font-size: var(--type-body-sm);
+  text-align: center;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-on-surface);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.textButton {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font-size: var(--type-body-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.textButton:hover {
+  text-decoration: underline;
+}
+
+.inputShell {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 50%;
+  left: 0.95rem;
+  display: flex;
+  color: var(--color-primary);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.7rem 1rem 0.7rem 2.8rem;
+  border: 1px solid var(--color-outline-variant);
+  border-radius: 0.875rem;
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  font-size: 1rem;
+  line-height: 1.5;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.passwordInput {
+  padding-right: 3rem;
+}
+
+.input::placeholder {
+  color: var(--color-outline);
+  opacity: 1;
+}
+
+.input:hover {
+  border-color: var(--color-outline);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary) 14%, transparent);
+}
+
+.eyeButton {
+  position: absolute;
+  top: 50%;
+  right: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.eyeButton:hover {
+  color: var(--color-on-surface);
+}
+
+.submitButton {
+  width: 100%;
+  min-height: 3.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 0;
+  border-radius: 0.875rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.submitButton:hover {
+  background: var(--color-primary-hover);
+}
+
+.submitButton svg {
+  transition: translate 160ms ease;
+}
+
+.submitButton:hover svg {
+  translate: 0.2rem 0;
+}
+
+.status {
+  margin: 1rem 0 0;
+  padding: 0.75rem 0.95rem;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  font-size: var(--type-body-sm);
+  line-height: 1.5;
+}
+
+.statusError {
+  background: var(--color-error-container);
+  color: var(--color-on-error-container);
+}
+
+.fieldError {
+  margin: 0.4rem 0 0;
+  color: var(--color-error);
+  font-size: var(--type-body-sm);
+  line-height: 1.4;
+}
+
+.hint {
+  margin: 0.4rem 0 0;
+  color: var(--color-on-surface-variant);
+  font-size: var(--type-body-sm);
+  line-height: 1.4;
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--color-error);
+}
+
+.submitButton:disabled,
+.googleButton:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.register {
+  margin: 1.5rem 0 0;
+  color: var(--color-on-surface-variant);
+  font-size: var(--type-body-md);
+  text-align: center;
+}
+
+.registerLink {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.registerLink:hover {
+  text-decoration: underline;
+}

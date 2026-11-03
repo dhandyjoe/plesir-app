@@ -3,7 +3,8 @@
 **Versi:** 1.1 — draft teknis untuk MVP\
 **Tanggal:** 29 Oktober 2026\
 **Sumber kebutuhan:** `prd.md` versi 1.2\
-**Status:** Penyimpanan Firebase dan pilihan Google AI Studio dengan Gemini 3.8 Flash telah dipilih sebagai arah MVP. Penyedia data tempat/rute, wilayah deployment, pemakaian free tier untuk pengguna publik, dan anggaran masih perlu divalidasi pada Fase 0.
+**Status:** Penyimpanan Firebase dan pilihan Google AI Studio dengan Gemini 3.8 Flash telah dipilih sebagai arah MVP. Penyedia data tempat/rute, wilayah deployment, pemakaian free tier untuk pengguna publik, dan anggaran masih perlu divalidasi pada Fase 0.\
+**Pembaruan 2 November 2026:** billing account Google Cloud pengelola ditutup oleh Google ("not in good standing"), sehingga project tetap di paket Spark tanpa kartu. Konsekuensinya: data tempat memakai **Geoapify** (data OpenStreetMap) alih-alih Google Places, dan backend sementara memakai **Next.js Route Handlers** alih-alih Cloud Functions/Secret Manager (keduanya butuh Blaze). Lihat Bagian 8.1 dan 11.5.
 
 ---
 
@@ -29,16 +30,17 @@ Arsitektur berpegang pada prinsip berikut:
 | Area | Rekomendasi MVP | Alasan |
 |---|---|---|
 | Frontend | Next.js + TypeScript | Cocok untuk web responsif, halaman produk, dan alur aplikasi dalam satu codebase. |
-| Hosting web | Firebase App Hosting | Dukungan framework Next.js dan integrasi dengan produk Firebase. |
-| Autentikasi | Firebase Authentication: Google, email link, dan anonymous | Sesuai kebutuhan login opsional, serta mendukung sesi tamu. |
+| Hosting web | Belum dipilih (Firebase App Hosting butuh paket Blaze) | Kandidat tanpa kartu perlu dievaluasi, termasuk batas penggunaan komersialnya. |
+| Autentikasi | Firebase Authentication: Google dan email + kata sandi | Tamu dapat menyusun rundown tanpa identitas; mengedit dan menyimpan memerlukan login. |
 | Database | Cloud Firestore | Penyimpanan profil, rencana, revisi, feedback, dan status job. |
-| Backend API | Cloud Functions for Firebase Gen 2, TypeScript | Menjaga API key dan logika tepercaya di server serta dekat dengan Firebase. |
+| Backend API | Next.js Route Handlers (`src/app/api`), TypeScript; Cloud Functions Gen 2 bila kelak memakai Blaze | Menjaga API key dan logika tepercaya di server; Firestore diakses lewat `firebase-admin` dengan service account. |
 | Proses latar belakang | Firebase task queue functions (berbasis Cloud Tasks) | Memproses generasi/revisi secara asinkron, melaporkan progres, dan menangani retry. |
 | AI | **Gemini 3.8 Flash melalui Gemini Developer API**; API key dibuat di Google AI Studio dan dipakai dari backend melalui Genkit/Google Gen AI SDK | Model cepat untuk pemilihan kandidat dan revisi terstruktur. Request tetap melewati backend agar kuota, validasi, dan data pengguna dapat dikendalikan. |
-| Data tempat | Google Places API (New), atau alternatif yang lolos spike data dan legal | Kandidat utama untuk pencarian dan detail tempat; cakupan Malang Raya perlu diuji. |
-| Jarak dan waktu | Google Routes API, atau alternatif resmi setara | Menghitung jarak dan durasi berdasarkan moda, bukan jarak garis lurus. |
+| Data tempat | Geoapify Places API (data OpenStreetMap), paket Free tanpa kartu | Nama, alamat, koordinat, kategori; tidak ada rating, jam buka parsial. Cakupan Malang Raya perlu diuji. |
+| Foto tempat | Wikimedia Commons, dirujuk lewat tag OSM (`wikimedia_commons`, `image`, `wikidata`) pada `datasource.raw` Geoapify | Gratis dan tanpa kuota. Hanya tempat yang punya tag itu yang berfoto, jadi UI selalu menyiapkan placeholder. Thumbnail 640 px disajikan lewat `next/image` (`images.remotePatterns`), atribusi (penulis, lisensi, tautan sumber) tampil di dialog detail. |
+| Jarak dan waktu | Geoapify Route Matrix, moda `drive` (`src/lib/server/routes.ts`) | Satu panggilan per rencana: penginapan → semua stop. Biaya `max(sumber, target) × min(sumber, target, 10)` kredit = jumlah stop, dari kuota Geoapify yang sama. Jarak lewat jalan, dilabeli estimasi berkendara. |
 | Proteksi | Firebase App Check, validasi server, rate limit dan kuota | Mengurangi penyalahgunaan; App Check sendiri bukan pengganti rate limit. |
-| Secret | Google Cloud Secret Manager / konfigurasi secret Firebase | API key penyedia dan secret tidak boleh berada di bundle browser atau repository. |
+| Secret | Variabel environment server (tanpa `NEXT_PUBLIC_`); Secret Manager bila memakai Blaze | API key penyedia dan secret tidak boleh berada di bundle browser atau repository. |
 | Observabilitas | Cloud Logging, Error Reporting, Firebase/Google Analytics | Memantau latensi, error, penggunaan, dan biaya per tahap. |
 
 ### 2.1 Batas MVP
@@ -71,7 +73,7 @@ flowchart LR
     API -->|Enqueue| Q[Firebase Task Queue<br/>Cloud Tasks]
     Q --> WORKER[Task Queue Function<br/>Pipeline generasi/revisi]
     WORKER -->|Baca/tulis menggunakan Admin SDK| FS
-    WORKER --> PLACES[Places API]
+    WORKER --> PLACES[Geoapify Places API]
     WORKER --> ROUTES[Routes API]
     WORKER --> AI[Gemini 3.8 Flash<br/>Gemini Developer API]
     WORKER --> SEARCH[Web Search Provider<br/>opsional, setelah evaluasi]
@@ -90,7 +92,7 @@ flowchart LR
 - **Task Queue Function** menjalankan proses yang dapat memakan waktu: pencarian data, pemilihan tempat, penyusunan rundown, kalkulasi rute, validasi, dan penyimpanan hasil.
 - **Firestore** menyimpan data akun, struktur rencana, revisi yang diperlukan untuk undo, feedback, dan status job. Bukan cache bebas untuk konten penyedia.
 - **Gemini 3.8 Flash** melalui Gemini Developer API menafsirkan intent, memilih di antara kandidat terverifikasi, dan menghasilkan alasan/rundown terstruktur. Genkit dapat digunakan sebagai SDK/orchestrator di backend. Model tidak membuat fakta tempat.
-- **Places dan Routes API** memberi data sumber. Detail yang diminta harus dibatasi dengan field mask dan ditampilkan dengan atribusi yang diwajibkan.
+- **Geoapify Places dan provider rute** memberi data sumber. Detail yang diminta harus dibatasi seperlunya dan ditampilkan dengan atribusi yang diwajibkan.
 
 ---
 
@@ -144,6 +146,7 @@ Pilihan MVP adalah **Gemini 3.8 Flash melalui Gemini Developer API**.
 - **Google AI Studio** dipakai untuk membuat dan mengelola API key serta menguji prompt. Aplikasi produksi tidak mengirim request ke halaman AI Studio; backend memanggil Gemini Developer API menggunakan key tersebut.
 - Worker Cloud Functions memanggil model melalui Genkit dengan plugin Google AI atau Google Gen AI SDK. Pilih salah satu integrasi saat implementasi dan bungkus di service internal agar SDK dapat diganti tanpa mengubah alur produk.
 - Nama model disimpan sebagai konfigurasi backend, misalnya `GEMINI_MODEL=gemini-3.8-flash`. Jangan menaruhnya di frontend atau menggunakan alias `latest` yang bisa berubah tanpa evaluasi.
+- **Fallback model (implementasi saat ini):** `generateJson()` (`src/lib/server/gemini.ts`) mencoba `GEMINI_MODEL` (default `gemini-3.5-flash-lite`, budget 450 dari 500, timeout 60 dtk, tanpa `thinkingConfig`) lalu `GEMINI_FALLBACK_MODEL` (default `gemini-3.8-flash`, budget harian 18 dari batas free tier 20, timeout 90 dtk, thinking "low"), masing-masing dengan penghitung `quotaUsage` sendiri. Flash Lite dijadikan utama karena 3.8 Flash di free tier sering antre melewati 150 dtk dan kuotanya hanya cukup < 10 rencana/hari. Pindah model bila budget internal habis, Google membalas 429/5xx, atau timeout (`shouldFallback()` di `src/lib/model-fallback.ts`); model yang timeout/5xx dilewati 10 menit (cooldown in-memory per instance). Bila semua terlewat karena kuota, `QuotaExceededError` ditampilkan sebagai pesan kuota; bila ada yang karena sibuk/timeout, hasilnya "tidak tersedia".
 - Pantau siklus hidup model dan tanggal pensiun yang diumumkan Google. Perubahan model dilakukan terencana: jalankan golden set dan evaluasi kualitas/biaya sebelum mengganti konfigurasi production.
 - API key berbeda untuk development, staging, dan production. Semua key disimpan di Secret Manager/Firebase secrets dan tidak pernah dikirim ke browser.
 - Gunakan structured output/JSON Schema untuk hasil itinerary dan `PlanPatch`. Backend tetap memvalidasi schema, `placeId`, kategori, jam, serta aturan rute sebelum menyimpan hasil.
@@ -227,7 +230,7 @@ Tahap yang tampil kepada pengguna harus berupa label produk yang jelas, bukan na
 ### 6.2 Pipeline yang disarankan
 
 1. **Normalize:** isi default (2 dewasa, tempo santai, mobil, jam 08.00–21.00, dan lainnya) dan simpan daftar asumsi yang dipakai.
-2. **Discover:** cari kandidat kategori dalam area yang relevan. Jaga radius, jumlah query, jumlah kandidat, dan field mask agar biaya terkendali.
+2. **Discover:** cari kandidat kategori dalam area yang relevan. Jaga radius, jumlah query, dan jumlah kandidat agar biaya terkendali.
 3. **Enrich:** ambil detail hanya yang diperlukan untuk kandidat terpilih/pertimbangan final.
 4. **Filter:** buang tempat yang terindikasi tutup permanen; tandai data yang tidak ada atau tidak terverifikasi.
 5. **Select:** minta Gemini memilih berdasarkan `placeId` dari allowlist kandidat.
@@ -254,7 +257,7 @@ Output AI wajib mengikuti JSON Schema yang dikontrol aplikasi dan divalidasi kem
       "reason": "Berada dekat dengan aktivitas lain hari ini."
     }
   ],
-  "warnings": ["Jam buka belum terverifikasi untuk tanggal perjalanan."]
+  "warnings": ["Pilihan tempat makan terbatas; jadwal makan mungkin tidak lengkap."]
 }
 ```
 
@@ -265,6 +268,23 @@ Output AI wajib mengikuti JSON Schema yang dikontrol aplikasi dan divalidasi kem
 Peringkat kandidat sebaiknya merupakan gabungan logika server yang dapat diuji dan pemilihan AI. Faktor yang dapat dipakai: kecocokan preferensi, kualitas dengan penyesuaian jumlah ulasan, kedekatan klaster, keragaman, kesesuaian harga jika diketahui, kelayakan jam buka, dan status operasional.
 
 Simpan penanda keyakinan berdasarkan kelengkapan/keandalan sumber, bukan “tingkat percaya diri” yang hanya dikarang model. Jika data kurang, UI menyatakannya dengan jelas.
+
+### 6.5 Implementasi saat ini (vertical slice)
+
+Karena paket Spark tidak bisa men-deploy Functions/task queue, dan Gemini free tier terukur 68–183 detik per rencana, generasi berjalan sebagai **job di server Next.js**:
+
+- `POST /api/plans` (`dest`, `start`, `end`) membuat atau memakai ulang dokumen `planJobs/{dest}_{start}_{end}` lewat transaksi Firestore (satu job per destinasi + tanggal), lalu menjalankan pipeline di `after()` setelah respons terkirim. Hasil sukses dipakai ulang 6 jam; job `running` lebih dari 6 menit dianggap macet; hasil gagal dijalankan ulang pada POST berikutnya.
+- `GET /api/plans` hanya membaca status; halaman `/rundown` memantaunya tiap 3 detik dan menampilkan layar progres, hasil, atau error.
+- Batasan: `after()` butuh proses server yang hidup selama job (dev/`next start`); di hosting serverless bergantung pada `maxDuration` (Vercel: `maxDuration = 300` di route plans dan revisi, batas paket Hobby). Dokumen job punya `expiresAt` untuk TTL policy Firestore yang belum diaktifkan.
+
+Isi pipeline (`generatePlan()`):
+
+1. `parseTrip()` memvalidasi `dest` (ID Wikidata yang ada di `destinations.json`), tanggal, dan maksimal 5 hari. Nama kota diambil dari data destinasi, bukan dari query.
+2. `getPlaces()` dipanggil untuk 4 kategori; `toCandidates()` memberi ref pendek (`w1`, `m3`, `k4`, `p5`) dan membuang tempat ganda.
+3. `buildPrompt()` mengirim nama kota, tanggal, jumlah hari, dan maksimal 12 kandidat per kategori (ref, kategori, nama, alamat, koordinat dibulatkan) ke Gemini `generateContent` dengan `thinkingLevel: "low"` dan `responseJsonSchema` dari skema zod `AiPlan`. Tidak ada data pribadi.
+4. `toRundown()` menolak ref asing/ganda, penginapan sebagai stop, jumlah hari salah, dan jam yang rusak/tumpang tindih/di luar 07:00–21:00, tempat yang tutup pada hari dan jam kunjungan menurut tag OSM `opening_hours` (`src/lib/opening-hours.ts`; data kosong atau pola asing dianggap boleh tanpa warning), dan (penyusunan awal) hari tanpa sarapan, makan siang, atau makan malam. Nama, alamat, kategori, dan koordinat diambil dari kandidat Geoapify. Bila ditolak, daftar masalah dikirim balik ke model satu kali.
+5. `enrichDays()` (`src/lib/server/enrich.ts`) menempelkan foto Wikimedia dan estimasi berkendara tiap ruas berurutan (penginapan → stop 1 → … → penginapan, satu panggilan Route Matrix 1×1 per ruas, `fromPrev`) setelah validasi; model tidak pernah menulis keduanya. Pada revisi, `carryOver()` (`src/lib/enrich.ts`) membawa foto dan jarak stop lama (jarak hanya bila penginapan sama) sehingga provider tidak dipanggil ulang. Provider gagal berarti field kosong (placeholder foto, warning "Jarak tempuh belum dapat dihitung."), tanpa nilai pengganti.
+6. `RundownView` merender hasil dengan atribusi Geoapify/OSM; label foto dan kredit Wikimedia tampil per foto.
 
 ---
 
@@ -325,19 +345,31 @@ Model hanya mengusulkan patch. Kode server memutuskan apakah patch valid dan men
 - Simpan perubahan app-owned: item sebelum/sesudah, urutan, status pin, catatan pengguna, versi, waktu, dan sumber aksi.
 - Jangan membuat snapshot permanen dari semua data Place Details untuk keperluan Undo jika ketentuan penyedia melarang penyimpanan tersebut.
 
+### 7.5 Implementasi saat ini (vertical slice)
+
+Berbeda dari rancangan 7.3, model **tidak mengusulkan patch per-operasi**. Model mengembalikan rundown utuh hasil revisi dalam bentuk `AiPlan` yang sama dengan penyusunan awal (ref kandidat), sehingga ganti/hapus/tambah/pindah/ubah jam tercakup tanpa daftar operasi tertutup. Server memvalidasi lewat `toRundown()` (allowlist ref, tanpa duplikat, jadwal 07:00–21:00) lalu menghitung perubahan secara deterministik (`diffRundown()` di `src/lib/plan.ts`) untuk preview "Sebelum → Sesudah". Semua tempat, alamat, dan koordinat tetap berasal dari kandidat Geoapify.
+
+- **Penyimpanan:** dokumen `itineraries/{uuid}` (`src/lib/itinerary.ts`, `src/lib/server/itineraries.ts`) disalin dari hasil job `planJobs` yang sukses saat pengguna mengirim prompt pertama. Berisi `days`, `version`, `history` (maks 5 langkah Undo), dan status `revision`. UUID acak adalah satu-satunya kunci akses selama login belum tersambung; URL memuat `?plan=<uuid>` agar muat ulang tetap menampilkan hasil revisi. Rencana yang disusun sebelum fitur ini (stop tanpa `placeId`) harus disusun ulang.
+- **Endpoint:** `POST /api/itineraries` (buat dari job sukses), `GET /api/itineraries/[id]` (rundown + status revisi, dipantau klien tiap 3 dtk), `POST /api/itineraries/[id]/revisions` (`prompt` ≤300 karakter + `expectedVersion`; 202), `PATCH /api/itineraries/[id]` (`apply` dengan `proposalId`, atau `undo`; keduanya wajib `expectedVersion`).
+- **Job:** revisi dimulai lewat transaksi (satu revisi aktif per itinerary, maks 20 per hari WIB) dan berjalan di `after()` seperti `plan-jobs.ts`; revisi `running` lebih dari 6 menit dianggap macet. Hasil disimpan hanya bila `requestId` masih aktif.
+- **Pipeline** (`src/lib/server/revise.ts`): kandidat dari `getPlaces()` (cache sama dengan penyusunan awal) + tempat yang sudah ada di rencana → `buildRevisionPrompt()` → Gemini (`AI_REVISION_JSON_SCHEMA`, status `ok|clarify|unsupported`) → `toRevision()`; satu retry berisi daftar masalah validasi; kuota via `reserveQuota("gemini")`.
+- **Prompt injection:** instruksi dibersihkan (`<`, `>`, baris baru dibuang, ≤300 karakter), dibungkus `<instruksi>` sebagai data, dan prompt sistem melarang mengikuti permintaan di luar rencana perjalanan. Prompt mentah tidak di-log.
+- **Terapkan/Undo:** usulan hanya diterapkan bila `version` dan `proposalId` cocok (`applyProposal`, transaksi Firestore); rundown lama masuk `history`. Tidak ada penulisan langsung dari model ke database.
+- **Batas:** belum ada rate limit per pengguna atau App Check (kepemilikan `ownerUid` sudah ada, lihat §10); jarak/waktu tempuh tetap kosong; pin lokasi belum ada (model dapat mengubah bagian yang tidak diminta, jadi semua perubahan ditampilkan di preview sebelum diterapkan).
+
 ---
 
 ## 8. Peta, Tempat, dan Rute
 
-### 8.1 Places API
+### 8.1 Data tempat (Geoapify)
 
-Gunakan Places API (New) untuk pencarian kandidat, autocomplete, dan detail yang memang diperlukan. Tentukan field mask sesempit mungkin: setiap field tambahan dapat memengaruhi SKU/biaya.
+**Implementasi saat ini (Geoapify):** `GET /api/places?destination=<id Wikidata>&category=penginapan|makan|kafe|wisata` (`src/app/api/places/route.ts`) mencari maksimal 20 tempat dalam radius 8 km (kota) atau 20 km (kabupaten) dari koordinat destinasi di `src/data/destinations.json`, lewat `src/lib/server/places.ts`. Hasil di-cache per destinasi dan kategori (`use cache`, profil `days`). UI yang menampilkan data ini wajib memuat atribusi "Powered by Geoapify · © OpenStreetMap contributors".
 
 Perhatikan hal berikut:
 
-- Atribusi/logo Google dan atribusi pihak ketiga harus mengikuti kebijakan untuk cara data ditampilkan.
+- Atribusi Geoapify dan OpenStreetMap wajib tampil di setiap UI yang menampilkan data tempat.
 - Jam buka, rating, jumlah ulasan, harga, harga kamar, dan status dapat tidak tersedia atau berubah.
-- Places tidak sama dengan sistem pemesanan hotel. Jangan menjanjikan harga/ketersediaan kamar tanpa sumber yang sesuai.
+- Data tempat (Geoapify/OSM) tidak sama dengan sistem pemesanan hotel. Jangan menjanjikan harga/ketersediaan kamar tanpa sumber yang sesuai.
 - Daftar kandidat perlu diuji manual di Malang Raya untuk akurasi nama, kategori, status, dan kelengkapan data.
 
 ### 8.2 Routes API
@@ -472,20 +504,17 @@ Revisi menyimpan perubahan yang diperlukan untuk memulihkan struktur itinerary m
 
 ### 10.1 Metode autentikasi
 
-- Google Sign-In.
-- Email link/passwordless sesuai konfigurasi Firebase Authentication.
-- Firebase Anonymous Authentication untuk sesi tamu yang memiliki identitas server-side.
+- Google Sign-In (popup).
+- Email + kata sandi, dengan atur ulang kata sandi lewat email dari Firebase. Kredensial dikelola Firebase; aplikasi tidak menyimpan password.
 
-Identitas anonim adalah detail implementasi; dari perspektif produk pengguna tetap dapat membuat rencana tanpa login atau membuat password.
+Tamu tidak punya identitas: `POST/GET /api/plans` (menyusun rundown) tetap publik. Mengedit atau menyimpan rundown wajib login.
 
-### 10.2 Migrasi rencana tamu
+### 10.2 Sesi dan kepemilikan
 
-Saat tamu login:
-
-1. Jika kredensial dapat ditautkan ke identitas anonim saat ini, hubungkan provider ke UID yang sama.
-2. Jika pengguna ternyata masuk ke akun yang sudah ada, gunakan endpoint backend khusus untuk memindahkan rencana tamu yang telah diverifikasi ke akun tersebut.
-3. Migrasi harus menggunakan bukti kepemilikan sesi tamu, idempotency, dan penanda satu kali agar pengguna tidak dapat mengklaim rencana milik UID lain.
-4. Setelah berhasil, hapus/arsipkan data anonim sesuai aturan retensi.
+1. Firebase Web SDK menyimpan sesi di browser; klien mengirim `Authorization: Bearer <ID token>` ke `/api/itineraries*` (`authFetch`, `src/lib/firebase/auth.ts`).
+2. Server memverifikasi token dengan `verifyIdToken` (`src/lib/server/auth.ts`); tanpa token valid → 401.
+3. `itineraries/{id}` menyimpan `ownerUid`; bukan pemilik atau dokumen lama tanpa `ownerUid` → 404 (bukan 403, agar keberadaan dokumen tidak bocor).
+4. Tamu yang mengedit/menyimpan diarahkan ke `/login?next=...` lalu kembali ke rundown yang sama. Tidak ada migrasi rencana tamu: rencana tamu hanya ada di cache job `planJobs`.
 
 ### 10.3 Prinsip Firestore Security Rules
 
@@ -533,15 +562,29 @@ Angka final ditetapkan setelah mengukur biaya nyata pada golden set. Jangan mene
 
 ### 11.3 Cache dan syarat data
 
-Kebijakan Places umumnya melarang penyimpanan konten API kecuali pada pengecualian yang dinyatakan. Place ID merupakan pengecualian yang dapat disimpan; syarat untuk koordinat dan data lain perlu diperiksa secara spesifik. Routes API juga memiliki kebijakan penyimpanan tersendiri.
+Syarat penyimpanan data tempat mengikuti ketentuan Geoapify dan lisensi ODbL OpenStreetMap; periksa secara spesifik sebelum menyimpan permanen. Provider rute juga memiliki kebijakan penyimpanan tersendiri.
 
 Karena itu:
 
 - Jangan menyimpan permanen rating, ulasan, jam buka, harga, status, foto, koordinat, atau rute sebelum dasar lisensinya dikonfirmasi.
-- Simpan Place ID dan data yang dibuat pengguna/struktur itinerary jika diperbolehkan.
+  - Keputusan 2 November 2026: itinerary menyimpan URL thumbnail Wikimedia beserta atribusinya (bukan file gambar; lisensi CC mengizinkan dengan atribusi) dan estimasi ruas `fromPrev` (meter, detik; dari titik sebelumnya, tampil di garis penghubung) per stop. Syarat Geoapify (`/terms-and-conditions/`) hanya mewajibkan atribusi dan tidak membahas penyimpanan hasil. Ini asumsi, belum konfirmasi tertulis dari Geoapify. Bila ternyata dilarang, hapus `fromStart` dari dokumen dan hitung saat dimuat.
+- Simpan ID tempat dan data yang dibuat pengguna/struktur itinerary jika diperbolehkan.
 - Terapkan TTL dan penghapusan otomatis untuk data sementara yang boleh di-cache dengan batas waktu.
 - Pastikan atribusi tampil sesuai kebijakan ketika data disajikan.
 - Jika kebijakan provider tidak cocok dengan riwayat yang diperlukan PRD, evaluasi provider dengan hak persistensi yang sesuai sebelum peluncuran.
+
+### 11.5 Kuota Geoapify (dua lapis)
+
+Paket Free Geoapify memberi 3.000 credit/hari tanpa kartu; 1 request Places (≤ 20 tempat) = 1 credit. Tanpa kartu tidak ada tagihan; risiko terburuk adalah layanan di-suspend bila batas sering terlampaui.
+
+1. **Lapis 1 — provider:** batas harian paket Free Geoapify.
+2. **Lapis 2 — server Plesir:** `reserveQuota("geoapify", 1)` (`src/lib/server/quota.ts`) memesan credit secara atomik di dokumen Firestore `quotaUsage/geoapify-YYYY-MM-DD` sebelum memanggil Geoapify, dengan budget 2.400 credit/hari (80%). Bila habis, API mengembalikan HTTP 429 dengan pesan Indonesia dan jam reset, tanpa memanggil Geoapify. Credit tetap terhitung walau request gagal, agar hitungan tidak pernah di bawah pemakaian nyata.
+
+Hari kuota dihitung UTC (asumsi reset Geoapify pukul 07.00 WIB); verifikasi di dashboard Geoapify. Batas per pengguna/IP (FR-10.2) belum diterapkan.
+
+### 11.6 Kuota Gemini (implementasi saat ini)
+
+`generatePlan()` memesan 1 unit `reserveQuota("gemini", 1)` (dokumen `quotaUsage/gemini-YYYY-MM-DD`) sebelum setiap panggilan Gemini, dengan batas 200 request/hari dan maksimal 2 panggilan per rencana (1 retry bila output gagal validasi). Hasil sukses disimpan di `planJobs` dan dipakai ulang 6 jam per (destinasi, tanggal) agar kunjungan ulang tidak memanggil Gemini lagi. Batas per pengguna/IP belum diterapkan.
 
 ### 11.4 Free tier dan billing Gemini Developer API
 
@@ -561,7 +604,7 @@ Google AI Studio adalah tempat developer membuat/mengelola API key dan mencoba p
 
 ### 12.1 Keamanan teknis
 
-- Kunci Places, Routes, dan Gemini Developer API (dibuat melalui Google AI Studio) berada di Secret Manager/Firebase secrets atau mekanisme secret terkelola.
+- Kunci Geoapify, provider rute, dan Gemini Developer API (dibuat melalui Google AI Studio) berada di Secret Manager/Firebase secrets atau mekanisme secret terkelola.
 - Restrict API key berdasarkan API, project, dan lingkungan; jangan memasukkan secret server ke JavaScript browser.
 - Wajibkan Auth dan App Check pada endpoint yang memulai operasi berbiaya.
 - Validasi schema, panjang prompt, kategori, ID, durasi, dan ukuran payload di backend.
@@ -660,6 +703,8 @@ Jangan masukkan email, prompt teks lengkap, alamat pengguna, atau informasi sens
 
 ### 16.1 Test otomatis
 
+> Status saat ini: unit test `node:test` (`*.test.mjs`, dijalankan dengan `node --test "src/**/*.test.mjs"`) mencakup logika murni di `src/lib` dan `src/app/rundown` (tanggal, parsing trip, validasi/diff rencana AI, jam buka, kuota, fallback model, tata letak jalan). Test integrasi provider, kepemilikan, idempotensi, concurrency, Rules, dan Emulator di bawah ini belum ada.
+
 - Unit test untuk default input, scoring kandidat, scheduler, aturan jam aktivitas, dan pembuatan Maps URL.
 - Unit test untuk schema output AI dan validator patch.
 - Test integrasi provider dengan mock/fixture; jangan membuat test rutin yang menimbulkan biaya API produksi.
@@ -718,7 +763,7 @@ Prompt sistem, schema output, jumlah kandidat, batas kuota, serta aturan scoring
 
 ### Fase 0 — Discovery dan spike
 
-- Uji Places API untuk empat kategori di Malang Raya.
+- Uji Geoapify Places API untuk empat kategori di Malang Raya.
 - Verifikasi field yang tersedia: status, jam, rating, harga/level harga, dan jenis tempat.
 - Verifikasi biaya Places, Routes, Gemini Developer API, Functions, Firestore, dan task queue untuk satu plan realistis.
 - Tinjau aturan cache, atribusi, tampilan, dan penyimpanan dari seluruh penyedia.
@@ -742,7 +787,7 @@ Prompt sistem, schema output, jumlah kandidat, batas kuota, serta aturan scoring
 
 - Ganti/hapus/susun ulang/pin.
 - Rerouting dan penjadwalan ulang untuk bagian terdampak.
-- Login Google dan email link.
+- Login Google dan email + kata sandi.
 - Riwayat, duplikat, rename, delete, dan transfer rencana tamu.
 - Undo dan test akses kepemilikan.
 
@@ -766,7 +811,7 @@ Prompt sistem, schema output, jumlah kandidat, batas kuota, serta aturan scoring
 
 Keputusan berikut perlu ditutup sebelum produksi:
 
-1. Apakah Google Places dan Routes memenuhi cakupan, aturan penyimpanan, dan anggaran pilot?
+1. Apakah Geoapify (data tempat) dan provider rute terpilih memenuhi cakupan, aturan penyimpanan, dan anggaran pilot?
 2. Apakah free tier Gemini Developer API dapat digunakan untuk pilot publik setelah evaluasi privasi, atau production perlu menggunakan tier berbayar? Provider/model awal sudah dipilih: Google AI Studio/Gemini Developer API dengan `gemini-3.8-flash`.
 3. Region Firestore dan Functions mana yang memenuhi latensi, ketersediaan, biaya, serta kebutuhan privasi?
 4. Batas penggunaan harian untuk tamu, akun login, revisi prompt, dan refresh data.
@@ -812,10 +857,7 @@ Dokumentasi dan ketentuan dapat berubah; verifikasi ulang sebelum implementasi p
 - [Gemini Developer API pricing and free tier](https://ai.google.dev/gemini-api/docs/pricing)
 - [Gemini API terms and data use](https://ai.google.dev/gemini-api/terms)
 - [Gemini API rate limits](https://ai.google.dev/gemini-api/docs/rate-limits)
-- [Places API overview](https://developers.google.com/maps/documentation/places/web-service/overview)
-- [Places API policies and attribution](https://developers.google.com/maps/documentation/places/web-service/policies)
 - [Google Maps Platform Service Specific Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms)
-- [Places API pricing/usage](https://developers.google.com/maps/documentation/places/web-service/usage-and-billing)
 - [Routes API overview](https://developers.google.com/maps/documentation/routes/overview)
 - [Routes API usage and billing](https://developers.google.com/maps/documentation/routes/usage-and-billing)
 - [Google Maps URLs](https://developers.google.com/maps/documentation/urls/get-started)

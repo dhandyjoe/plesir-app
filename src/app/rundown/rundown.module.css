@@ -38,54 +38,39 @@
   gap: var(--space-md);
 }
 
-.nav {
-  display: none;
-  align-items: center;
-  gap: 0.25rem;
-  padding: 0.25rem;
-  border: 1px solid color-mix(in srgb, var(--color-outline-variant) 30%, transparent);
-  border-radius: 0.75rem;
-  background: color-mix(in srgb, var(--color-surface-container) 70%, transparent);
+/* Desktop: nav tepat di tengah halaman (dua kolom sisi sama lebar), jadi label tombol yang berubah (Simpan → Tersimpan) tidak menggeser nav. */
+@media (min-width: 48rem) {
+  .headerInner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+
+  .headerActions {
+    justify-self: end;
+  }
 }
 
-.navItem {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
-  padding: 0.375rem 0.875rem;
-  border: 0;
-  border-radius: var(--radius-md);
-  background: transparent;
-  color: var(--color-secondary);
-  font: inherit;
-  font-size: var(--type-label-md);
-  font-weight: 500;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 160ms ease, color 160ms ease;
+/* Tablet: tombol hanya ikon supaya kolom kanan muat dalam setengah lebar header. */
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .secondaryAction {
+    width: 2.25rem;
+    padding: 0;
+  }
+
+  .primaryAction {
+    min-width: 2.25rem;
+    padding-inline: 0.5rem;
+  }
 }
 
-.navItem:hover {
-  background: var(--color-surface-container-high);
-  color: var(--color-on-surface);
-}
-
-.navItem svg,
 .secondaryAction svg,
 .primaryAction svg {
   width: 0.95rem;
   height: 0.95rem;
-}
-
-.navItemActive {
-  background: var(--color-surface-container-lowest);
-  color: var(--color-primary);
-  font-weight: 600;
-}
-
-.navItemActive:hover {
-  background: var(--color-surface-container-lowest);
-  color: var(--color-primary);
 }
 
 .headerActions {
@@ -106,6 +91,7 @@
   font: inherit;
   font-size: var(--type-label-md);
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 160ms ease;
 }
@@ -182,14 +168,6 @@
   color: var(--color-primary);
   font-size: var(--type-label-md);
   font-weight: 700;
-}
-
-.subtitle {
-  max-width: 36rem;
-  margin: 0 0 0.5rem;
-  color: var(--color-secondary);
-  font-size: var(--type-body-sm);
-  line-height: 1.5;
 }
 
 .dayStep {
@@ -378,6 +356,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.markerLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.markerLink:hover .markerPlace {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .markerTime {
@@ -601,7 +593,6 @@
 
 .categoryChip {
   position: absolute;
-  right: 0.375rem;
   bottom: 0.375rem;
   padding: 0.125rem 0.5rem;
   border-radius: var(--radius-sm);
@@ -609,6 +600,34 @@
   color: #fff;
   font-size: var(--type-label-sm);
   font-weight: 500;
+}
+
+.categoryChip {
+  right: 0.375rem;
+}
+
+.photoEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: var(--type-label-sm);
+}
+
+.photoEmpty svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.photoCredit {
+  margin: -0.5rem 0 1rem;
+  color: var(--color-secondary);
+  font-size: var(--type-label-sm);
+}
+
+.photoCredit a {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 .cardName {
@@ -995,6 +1014,22 @@
   line-height: 1.6;
 }
 
+.noticeActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.noticeActions .primaryLink {
+  margin-top: 0;
+  font-size: var(--type-label-md);
+}
+
+.secondaryAction:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
 /* Parameter tidak valid */
 .invalid {
   flex: 1;
@@ -1022,11 +1057,14 @@
 .primaryLink {
   margin-top: 0.5rem;
   padding: 0.75rem 1.25rem;
+  border: 0;
   border-radius: 0.75rem;
   background: var(--color-primary);
   color: var(--color-on-primary);
+  font: inherit;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .primaryLink:hover {
@@ -1042,10 +1080,6 @@
 @media (min-width: 48rem) {
   .headerInner {
     width: min(calc(100% - 4rem), 80rem);
-  }
-
-  .nav {
-    display: inline-flex;
   }
 
   .panHint {
@@ -1081,7 +1115,6 @@
 
 /* Layar pendek: beri ruang untuk alur kartu. */
 @media (max-height: 44rem) {
-  .subtitle,
   .sampleNote {
     display: none;
   }
@@ -1095,4 +1128,181 @@
   .main > footer {
     display: none;
   }
+}
+
+/* Catatan data dan atribusi sumber tempat (wajib untuk Geoapify/OSM) */
+.warnings {
+  max-width: 36rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  list-style: none;
+  color: var(--color-on-surface);
+  font-size: var(--type-body-sm);
+  line-height: 1.5;
+}
+
+.attribution {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  color: var(--color-secondary);
+  font-size: var(--type-label-md);
+  text-align: center;
+}
+
+/* Bar kemajuan perkiraan (penyusunan awal dan revisi) */
+.progress {
+  width: min(100%, 28rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.progressHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-on-surface);
+  font-size: var(--type-body-sm);
+  font-weight: 600;
+}
+
+.progressValue {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.progressTrack {
+  height: 0.5rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--color-surface-container-high);
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-primary);
+  transform-origin: left;
+  transition: transform 0.5s linear;
+}
+
+.revisionStrip .progress {
+  flex: 1;
+  width: auto;
+}
+
+/* Revisi rundown lewat prompt */
+.revisionStrip {
+  width: 100%;
+  max-width: 42rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-surface-container-high);
+  border-radius: 0.75rem;
+  background: var(--color-surface-container-lowest);
+  color: var(--color-on-surface);
+  font-size: var(--type-body-sm);
+  line-height: 1.5;
+  pointer-events: auto;
+}
+
+.revisionStrip p {
+  margin: 0;
+}
+
+.stripButton {
+  min-height: 2rem;
+  flex: none;
+  margin-left: auto;
+  padding: 0.25rem 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--color-surface-container);
+  color: var(--color-on-surface);
+  font: inherit;
+  font-size: var(--type-label-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stripButton:hover {
+  background: var(--color-surface-container-high);
+}
+
+.generateButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.revisionDialog {
+  /* Dirender di dalam .promptDock (pointer-events: none), yang diwariskan walau dialog tampil di top layer. */
+  pointer-events: auto;
+  width: min(calc(100% - 2rem), 30rem);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  padding: 1.5rem;
+}
+
+.revisionDialog h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.revisionSummary {
+  margin: 0 0 1rem;
+  color: var(--color-secondary);
+  font-size: var(--type-body-sm);
+  line-height: 1.6;
+}
+
+.changeList {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+  font-size: var(--type-body-sm);
+  line-height: 1.5;
+}
+
+.changeList li {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-surface-container-high);
+}
+
+.changeKind {
+  color: var(--color-secondary);
+  font-size: var(--type-label-md);
+  font-weight: 600;
+}
+
+.revisionActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.applyButton {
+  min-height: 2.75rem;
+  padding: 0.625rem 1.25rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font: inherit;
+  font-size: var(--type-label-md);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.applyButton:hover {
+  background: var(--color-primary-hover);
 }

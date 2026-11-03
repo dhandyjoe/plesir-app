@@ -66,6 +66,9 @@ export function monthCells(monthKey: string) {
   };
 }
 
+/** Batas PRD FR-1.1; juga membatasi biaya AI per rencana. */
+export const MAX_TRIP_DAYS = 5;
+
 export function rangeInDays(start: string, end: string) {
   return (
     Math.round((parseDateKey(end).getTime() - parseDateKey(start).getTime()) / 86_400_000) + 1
@@ -86,4 +89,12 @@ export function formatMonth(monthKey: string) {
 
 export function formatDayLabel(key: string) {
   return dayLabelFormatter.format(parseDateKey(key));
+}
+
+export type TripPhase = { kind: "upcoming"; days: number } | { kind: "ongoing" } | { kind: "past" };
+
+/** Posisi perjalanan terhadap `today` (kunci lokal): berapa hari lagi berangkat, sedang berjalan, atau sudah lewat. */
+export function tripPhase(start: string, end: string, today = localDateString()): TripPhase {
+  if (today < start) return { kind: "upcoming", days: rangeInDays(today, start) - 1 };
+  return today <= end ? { kind: "ongoing" } : { kind: "past" };
 }
