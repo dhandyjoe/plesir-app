@@ -11,6 +11,12 @@ test("parseTrip: parameter valid, nama kota dari daftar destinasi", () => {
   assert.equal(trip?.end, valid.end);
 });
 
+test("parseTrip: id kawasan GeoNames (G…) diterima dan namanya dari daftar", () => {
+  assert.equal(parseTrip({ ...valid, dest: "G1622846" })?.city, "Ubud");
+  assert.equal(parseTrip({ ...valid, dest: "G0" }), null);
+  assert.equal(parseTrip({ ...valid, dest: "g1622846" }), null);
+});
+
 test("parseTrip: tanggal satu hari dan tepat batas maksimum diterima", () => {
   assert.ok(parseTrip({ ...valid, end: valid.start }));
   assert.ok(parseTrip({ ...valid, end: "2026-08-21" })); // 5 hari

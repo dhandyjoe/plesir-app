@@ -28,7 +28,7 @@ node --test src/lib/calendar.test.mjs
 node --test "src/**/*.test.mjs"
 node --test --experimental-test-coverage "src/**/*.test.mjs"   # with coverage
 
-# Regenerate src/data/destinations.json from Wikidata (manual, hits network):
+# Regenerate src/data/destinations.json from Wikidata + GeoNames (manual, hits network, needs `unzip`):
 node scripts/build-destinations.mjs
 ```
 
@@ -45,7 +45,7 @@ Node 24.12+ for the frontend; Node 22 for installing/building `functions/` (matc
 - **Next.js 16 breaking changes**: APIs and conventions differ from training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any Next.js code and heed deprecation notices.
 - **Next.js 16 App Router** (`src/app`) with React 19, `cacheComponents` and `partialPrefetching` enabled in `next.config.ts`. Pages that read `searchParams` wrap the dynamic part in `<Suspense>` (see `src/app/rundown/page.tsx`).
 - **Styling**: CSS Modules per component/page plus `globals.css`; no CSS framework. Design tokens/guidance live in `DESIGN.md` ("Kinetic Horizon"). Import alias `@/*` → `src/*`.
-- **Destinations**: `src/data/destinations.json` (514 Indonesian kabupaten/kota, built from Wikidata) is served statically via `src/lib/destinations.ts` and `GET /api/destinations?q=` (zod-validated, publicly cacheable); `src/app/destination-combobox.tsx` is the client consumer.
+- **Destinations**: `src/data/destinations.json` (514 Indonesian kabupaten/kota from Wikidata, IDs `Q…`, plus ~340 Indonesian `kawasan` such as Ubud from GeoNames `cities500` with population ≥ 5.000 or a Wikivoyage article, IDs `G…`; built by `scripts/build-destinations.mjs` using the pure logic in `src/lib/destination-build.ts`, which refuses to drop any previously published ID; other countries are supported by `ENABLED_COUNTRIES` in the script but deliberately not enabled; GeoNames CC BY 4.0 credit is in `site-footer.tsx`) is served statically via `src/lib/destinations.ts` and `GET /api/destinations?q=` (zod-validated, publicly cacheable); `src/app/destination-combobox.tsx` is the client consumer.
 - **Dates**: `src/lib/calendar.ts` holds date helpers used by `src/components/date-range-picker.tsx`; trip query params are parsed in `src/app/rundown/trip.ts`.
 - **Firebase**: client SDK init in `src/lib/firebase/client.ts`; server side is Cloud Functions Gen 2 in `functions/src/index.ts` (region `asia-southeast2` is provisional). `firebase.json` builds functions in predeploy. App Hosting is not enabled and `.firebaserc` is not committed.
 - `.taste-skill/` holds screenshot/report output from the design-taste inspector; it is tooling output, not app code.

@@ -279,7 +279,7 @@ Karena paket Spark tidak bisa men-deploy Functions/task queue, dan Gemini free t
 
 Isi pipeline (`generatePlan()`):
 
-1. `parseTrip()` memvalidasi `dest` (ID Wikidata yang ada di `destinations.json`), tanggal, dan maksimal 5 hari. Nama kota diambil dari data destinasi, bukan dari query.
+1. `parseTrip()` memvalidasi `dest` (ID `Q…` Wikidata atau `G…` GeoNames yang ada di `destinations.json`), tanggal, dan maksimal 5 hari. Nama kota diambil dari data destinasi, bukan dari query.
 2. `getPlaces()` dipanggil untuk 4 kategori; `toCandidates()` memberi ref pendek (`w1`, `m3`, `k4`, `p5`) dan membuang tempat ganda.
 3. `buildPrompt()` mengirim nama kota, tanggal, jumlah hari, dan maksimal 12 kandidat per kategori (ref, kategori, nama, alamat, koordinat dibulatkan) ke Gemini `generateContent` dengan `thinkingLevel: "low"` dan `responseJsonSchema` dari skema zod `AiPlan`. Tidak ada data pribadi.
 4. `toRundown()` menolak ref asing/ganda, penginapan sebagai stop, jumlah hari salah, dan jam yang rusak/tumpang tindih/di luar 07:00–21:00, tempat yang tutup pada hari dan jam kunjungan menurut tag OSM `opening_hours` (`src/lib/opening-hours.ts`; data kosong atau pola asing dianggap boleh tanpa warning), dan (penyusunan awal) hari tanpa sarapan, makan siang, atau makan malam. Nama, alamat, kategori, dan koordinat diambil dari kandidat Geoapify. Bila ditolak, daftar masalah dikirim balik ke model satu kali.
@@ -363,7 +363,7 @@ Berbeda dari rancangan 7.3, model **tidak mengusulkan patch per-operasi**. Model
 
 ### 8.1 Data tempat (Geoapify)
 
-**Implementasi saat ini (Geoapify):** `GET /api/places?destination=<id Wikidata>&category=penginapan|makan|kafe|wisata` (`src/app/api/places/route.ts`) mencari maksimal 20 tempat dalam radius 8 km (kota) atau 20 km (kabupaten) dari koordinat destinasi di `src/data/destinations.json`, lewat `src/lib/server/places.ts`. Hasil di-cache per destinasi dan kategori (`use cache`, profil `days`). UI yang menampilkan data ini wajib memuat atribusi "Powered by Geoapify · © OpenStreetMap contributors".
+**Implementasi saat ini (Geoapify):** `GET /api/places?destination=<id destinasi, Q… atau G…>&category=penginapan|makan|kafe|wisata` (`src/app/api/places/route.ts`) mencari maksimal 20 tempat dalam radius 8 km (kota dan kawasan) atau 20 km (kabupaten) dari koordinat destinasi di `src/data/destinations.json`, lewat `src/lib/server/places.ts`. Hasil di-cache per destinasi dan kategori (`use cache`, profil `days`). UI yang menampilkan data ini wajib memuat atribusi "Powered by Geoapify · © OpenStreetMap contributors".
 
 Perhatikan hal berikut:
 

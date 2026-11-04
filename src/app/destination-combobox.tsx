@@ -3,10 +3,12 @@
 import {
   useEffect,
   useId,
+  useLayoutEffect,
   useRef,
   useState,
   type KeyboardEvent,
   type RefObject,
+  type UIEvent,
 } from "react";
 import styles from "./page.module.css";
 
@@ -30,9 +32,21 @@ type Lookup =
   | { state: "idle" }
   | { state: "loading" }
   | { state: "error" }
-  | { state: "done"; items: DestinationOption[] };
+  | { state: "done"; items: DestinationOption[]; hasMore: boolean; loadingMore: boolean };
 
 const DEBOUNCE_MS = 250;
+const LOAD_MORE_THRESHOLD_PX = 48;
+
+async function fetchPage(query: string, offset: number, signal: AbortSignal) {
+  const response = await fetch(
+    `/api/destinations?${new URLSearchParams({ q: query, offset: String(offset) })}`,
+    { signal },
+  );
+  if (!response.ok) throw new Error(String(response.status));
+  return (await response.json()) as { destinations: DestinationOption[]; hasMore: boolean };
+}
+
+const isAbort = (error: unknown) => error instanceof DOMException && error.name === "AbortError";
 
 export function DestinationCombobox({
   inputRef,
@@ -49,6 +63,9 @@ export function DestinationCombobox({
   const [active, setActive] = useState(-1);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const controller = useRef<AbortController>(undefined);
+  const menuRef = useRef<HTMLUListElement>(null);
+  const query = useRef("");
+  const loadingMore = useRef(false);
 
   useEffect(
     () => () => {
@@ -69,24 +86,49 @@ export function DestinationCombobox({
     }
 
     setLookup({ state: "loading" });
+    // Huruf kecil agar "Papua" dan "papua" memakai satu entri cache browser.
+    query.current = text.trim().toLowerCase();
     timer.current = setTimeout(async () => {
       const abort = new AbortController();
       controller.current = abort;
+      loadingMore.current = false;
       try {
-        const response = await fetch(
-          `/api/destinations?${new URLSearchParams({ q: text.trim() })}`,
-          { signal: abort.signal },
-        );
-        if (!response.ok) throw new Error(String(response.status));
-        const { destinations } = (await response.json()) as {
-          destinations: DestinationOption[];
-        };
-        setLookup({ state: "done", items: destinations });
+        const page = await fetchPage(query.current, 0, abort.signal);
+        setLookup({ state: "done", items: page.destinations, hasMore: page.hasMore, loadingMore: false });
       } catch (error) {
-        if (error instanceof DOMException && error.name === "AbortError") return;
+        if (isAbort(error)) return;
         setLookup({ state: "error" });
       }
     }, DEBOUNCE_MS);
+  }
+
+  /** Muat halaman berikutnya (10 data); gagal berarti gulir lagi untuk mencoba ulang. */
+  async function loadMore() {
+    if (lookup.state !== "done" || !lookup.hasMore || loadingMore.current) return;
+    const current = lookup;
+    const abort = new AbortController();
+    controller.current = abort;
+    loadingMore.current = true;
+    setLookup({ ...current, loadingMore: true });
+    try {
+      const page = await fetchPage(query.current, current.items.length, abort.signal);
+      setLookup({
+        state: "done",
+        items: [...current.items, ...page.destinations],
+        hasMore: page.hasMore,
+        loadingMore: false,
+      });
+    } catch (error) {
+      if (isAbort(error)) return; // pencarian baru mengambil alih state
+      setLookup({ ...current, loadingMore: false });
+    } finally {
+      loadingMore.current = false;
+    }
+  }
+
+  function handleScroll(event: UIEvent<HTMLUListElement>) {
+    const menu = event.currentTarget;
+    if (menu.scrollHeight - menu.scrollTop - menu.clientHeight < LOAD_MORE_THRESHOLD_PX) void loadMore();
   }
 
   function choose(destination: DestinationOption) {
@@ -101,6 +143,21 @@ export function DestinationCombobox({
   const items = lookup.state === "done" ? lookup.items : [];
   const showMenu = open && lookup.state !== "idle";
   const showList = showMenu && items.length > 0;
+  const hasMore = lookup.state === "done" && lookup.hasMore;
+
+  // .main memotong isinya (overflow: hidden); tanpa batas ini bagian bawah menu keluar area dan tak bisa digulir.
+  useLayoutEffect(() => {
+    const menu = menuRef.current;
+    if (!showList || !menu) return;
+    const fit = () => {
+      const bottom = Math.min(inputRef.current?.closest("main")?.getBoundingClientRect().bottom ?? Infinity, window.innerHeight);
+      const room = Math.max(bottom - menu.getBoundingClientRect().top - 8, 88);
+      menu.style.maxHeight = `min(18rem, 45dvh, ${room}px)`;
+    };
+    fit();
+    window.addEventListener("resize", fit);
+    return () => window.removeEventListener("resize", fit);
+  }, [showList, inputRef]);
 
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Escape" && open) {
@@ -111,10 +168,15 @@ export function DestinationCombobox({
 
     if (!showList) return;
 
-    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+    if (event.key === "ArrowDown" && active === items.length - 1 && hasMore) {
+      event.preventDefault();
+      void loadMore();
+    } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       event.preventDefault();
       const step = event.key === "ArrowDown" ? 1 : -1;
-      setActive((current) => (current + step + items.length) % items.length);
+      const next = (active + step + items.length) % items.length;
+      setActive(next);
+      document.getElementById(`${listId}-${next}`)?.scrollIntoView({ block: "nearest" });
     } else if (event.key === "Enter" && active >= 0) {
       event.preventDefault();
       choose(items[active]);
@@ -154,7 +216,7 @@ export function DestinationCombobox({
         onFocus={() => setOpen(true)}
         onBlur={() => setOpen(false)}
         onKeyDown={handleKeyDown}
-        placeholder="Ketik kota atau kabupaten tujuanmu..."
+        placeholder="Ketik kota, kabupaten, atau kawasan tujuanmu..."
         autoComplete="off"
         enterKeyHint="next"
         spellCheck={false}
@@ -164,12 +226,14 @@ export function DestinationCombobox({
 
       {/* onMouseDown mencegah input kehilangan fokus sebelum klik terdaftar. */}
       <ul
+        ref={menuRef}
         id={listId}
         className={styles.menu}
         role="listbox"
         aria-label="Saran kota tujuan"
         hidden={!showList}
         onMouseDown={(event) => event.preventDefault()}
+        onScroll={handleScroll}
       >
         {items.map((item, index) => (
           <li
@@ -186,6 +250,11 @@ export function DestinationCombobox({
             <span className={styles.optionMeta}>{item.province}</span>
           </li>
         ))}
+        {lookup.state === "done" && lookup.loadingMore && (
+          <li className={styles.menuMessage} role="presentation">
+            Memuat lagi…
+          </li>
+        )}
       </ul>
 
       {open && message && !showList && (
@@ -205,7 +274,7 @@ export function DestinationCombobox({
       )}
 
       <span className={styles.srOnly} role="status">
-        {showList ? `${items.length} saran kota tersedia.` : ""}
+        {showList ? `${items.length} saran kota tersedia${hasMore ? ", gulir untuk memuat lebih banyak" : ""}.` : ""}
       </span>
     </div>
   );

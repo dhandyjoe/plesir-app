@@ -1,11 +1,11 @@
 import type { NextRequest } from "next/server";
 import { z } from "zod";
-import { getDestination } from "@/lib/destinations";
+import { DESTINATION_ID, getDestination } from "@/lib/destinations";
 import { PLACES_ATTRIBUTION, PlaceCategory } from "@/lib/geoapify";
 import { getPlaces } from "@/lib/server/places";
 
 const Query = z.object({
-  destination: z.string().regex(/^Q\d+$/),
+  destination: z.string().regex(DESTINATION_ID),
   category: PlaceCategory,
 });
 
@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     return Response.json(
       {
         error:
-          "Parameter destination (ID kota/kabupaten) dan category (penginapan, makan, kafe, wisata) wajib valid.",
+          "Parameter destination (ID kota/kabupaten/kawasan) dan category (penginapan, makan, kafe, wisata) wajib valid.",
       },
       { status: 400 },
     );

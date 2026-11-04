@@ -110,7 +110,7 @@ export function PlanLoader({ dest, city, start, end, seed, planId, attribution }
 
   if (job.status === "running") {
     return (
-      <Notice title={`Menyusun rundown ${city}…`} busy>
+      <Notice title={`Menyusun rundown destinasi ke ${city}…`} busy>
         <ProgressBar
           label="Kemajuan penyusunan rundown"
           startedAt={startedAt}

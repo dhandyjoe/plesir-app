@@ -1,5 +1,5 @@
 import { MAX_TRIP_DAYS, rangeInDays } from "../../lib/calendar.ts";
-import { getDestination } from "../../lib/destinations.ts";
+import { DESTINATION_ID, getDestination } from "../../lib/destinations.ts";
 
 const DATE_KEY = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -25,7 +25,7 @@ function parseSeed(value: unknown, fallbackKey: string) {
 export function parseTrip(params: Record<string, unknown>) {
   const { dest, start, end, seed } = params;
   if (typeof dest !== "string" || typeof start !== "string" || typeof end !== "string") return null;
-  const destination = /^Q\d+$/.test(dest) ? getDestination(dest) : undefined;
+  const destination = DESTINATION_ID.test(dest) ? getDestination(dest) : undefined;
   if (!destination) return null;
   if (!isValidDate(start) || !isValidDate(end) || end < start) return null;
   if (rangeInDays(start, end) > MAX_TRIP_DAYS) return null;

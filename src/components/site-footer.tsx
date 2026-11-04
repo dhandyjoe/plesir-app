@@ -35,6 +35,20 @@ export function SiteFooter({ className = "" }: { className?: string }) {
         >
           <LinkedInIcon />
         </a>
+        <p className={styles.footerCredit}>
+          Data kota:{" "}
+          <a href="https://www.geonames.org/" target="_blank" rel="noopener noreferrer">
+            GeoNames
+          </a>{" "}
+          (
+          <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+            CC BY 4.0
+          </a>
+          ) dan{" "}
+          <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">
+            Wikidata
+          </a>
+        </p>
       </div>
     </footer>
   );

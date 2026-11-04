@@ -14,7 +14,7 @@ export type PlacesResult =
   | { ok: false; reason: "quota"; resetAt: string }
   | { ok: false; reason: "unavailable" };
 
-const RADIUS_METERS = { kota: 8_000, kabupaten: 20_000 };
+const RADIUS_METERS = { kota: 8_000, kabupaten: 20_000, kawasan: 8_000 };
 
 /**
  * Cache per (destinasi, kategori) agar request berulang tidak memakan credit.

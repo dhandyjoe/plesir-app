@@ -111,7 +111,7 @@ export default function Home() {
     if (!city.trim()) {
       nextErrors.city = "Masukkan kota tujuan dulu.";
     } else if (!destination) {
-      nextErrors.city = "Pilih kota atau kabupaten dari daftar saran.";
+      nextErrors.city = "Pilih kota, kabupaten, atau kawasan dari daftar saran.";
     }
 
     if (!travelStart) {

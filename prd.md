@@ -8,7 +8,7 @@ Plesir (plesir.app) adalah aplikasi web berbahasa Indonesia berbasis AI yang mem
 
 **Hipotesis produk:** jika pengguna cukup memasukkan kota tujuan dan rentang tanggal perjalanan lalu menerima rundown yang berbasis data terverifikasi, transparan soal sumbernya, dan bisa langsung dibuka di Google Maps, maka waktu riset turun drastis dan keyakinan memilih tempat meningkat dibanding mencari manual di banyak aplikasi.
 
-**Cakupan kota tujuan:** seluruh kota dan kabupaten di Indonesia (514 wilayah; daftar bersumber dari Wikidata), tanpa destinasi luar negeri. **Fokus validasi MVP:** kualitas data diaudit di satu kawasan pilot (usulan: Malang Raya, yaitu Kota Malang, Kota Batu, dan sebagian Kabupaten Malang); wilayah lain dapat dipilih pengguna tetapi ditandai beta sampai diaudit.
+**Cakupan kota tujuan:** seluruh kota dan kabupaten di Indonesia (514 wilayah; daftar bersumber dari Wikidata) ditambah kawasan wisata dan kota kecamatan di Indonesia seperti Ubud dan Nusa Dua (sumber GeoNames, populasi ≥ 5.000 atau punya artikel Wikivoyage), tanpa destinasi luar negeri. **Fokus validasi MVP:** kualitas data diaudit di satu kawasan pilot (usulan: Malang Raya, yaitu Kota Malang, Kota Batu, dan sebagian Kabupaten Malang); wilayah lain dapat dipilih pengguna tetapi ditandai beta sampai diaudit.
 
 **Prinsip produk (v1.1):**
 
@@ -118,7 +118,7 @@ Saat saya akan pergi ke kota yang belum saya kenal, saya ingin cukup menyebut ko
 
 ### FR-1 Input Minimal: Kota dan Rentang Tanggal (Must)
 
-- **FR-1.1** Hanya dua isian wajib: kota tujuan (dengan autocomplete) dan rentang tanggal berangkat–pulang. Tanggal berangkat harus hari ini atau setelahnya, tanggal pulang tidak boleh sebelum tanggal berangkat, dan rentang maksimal 5 hari. Tidak ada kolom wajib lain. Autocomplete menyarankan kota dan kabupaten di seluruh Indonesia dari daftar tetap (bukan provinsi, kecamatan, atau tempat), dan pengguna harus memilih salah satu saran; teks bebas yang tidak dipilih dari daftar ditolak dengan pesan yang jelas.
+- **FR-1.1** Hanya dua isian wajib: kota tujuan (dengan autocomplete) dan rentang tanggal berangkat–pulang. Tanggal berangkat harus hari ini atau setelahnya, tanggal pulang tidak boleh sebelum tanggal berangkat, dan rentang maksimal 5 hari. Tidak ada kolom wajib lain. Autocomplete menyarankan kota, kabupaten, dan kawasan di seluruh Indonesia dari daftar tetap (bukan provinsi, desa, atau tempat tunggal seperti hotel dan restoran), dan pengguna harus memilih salah satu saran; teks bebas yang tidak dipilih dari daftar ditolak dengan pesan yang jelas.
 - **FR-1.2** Semua input lain opsional. Tanggal berangkat tersedia di Main Menu; detail lain disimpan di panel “Sesuaikan rencana” pada halaman hasil: titik awal, jumlah orang dan komposisi, preferensi wisata (alam, kuliner, budaya dan sejarah, keluarga, spot foto, belanja), preferensi makanan (lokal, halal, vegetarian, kafe dan kopi), tempo (santai atau padat), moda transportasi, jam mulai dan selesai harian, level harga, dan catatan bebas. Pengguna dapat mengisi detail tersebut setelah rencana dibuat.
 - **FR-1.3** Jika input opsional kosong, AI memakai default pada tabel di bawah dan menyebutkan asumsi yang dipakai di ringkasan rencana.
 - **FR-1.4** Titik awal opsional. Jika kosong, rute hari pertama dimulai dari hotel atau penginapan rekomendasi utama. Jika diisi (stasiun, bandara, hotel, atau alamat lain), titik itu menjadi awal hari pertama dan akhir hari terakhir.
@@ -433,3 +433,4 @@ Estimasi bersifat indikatif dan perlu dikonfirmasi tim engineering.
 | 1.3 | Acuan visual Main Menu diselaraskan dengan arah Stitch “Kinetic Horizon”; input wajib tetap kota tujuan dan lama perjalanan, tanggal berangkat opsional di form utama, dan panel Sesuaikan rencana dipindahkan keluar dari Main Menu |
 | 1.4 | Input “lama perjalanan” dihapus dan diganti rentang tanggal berangkat–pulang (maksimal 5 hari); durasi dihitung dari rentang tanggal |
 | 1.5 | Cakupan kota tujuan diperluas ke seluruh kota dan kabupaten di Indonesia (514 wilayah, sumber Wikidata), tanpa luar negeri; autocomplete harus dipilih dari daftar (FR-1.1); Malang Raya tetap menjadi kawasan audit kualitas dan golden set |
+| 1.6 | Daftar kota tujuan ditambah kawasan Indonesia dari GeoNames (kind `kawasan`, ID `G…`, atribusi CC BY 4.0 di footer); larangan destinasi luar negeri tetap. Data pipeline sudah bisa membangun negara lain, tetapi belum dibuka |

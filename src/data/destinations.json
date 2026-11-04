@@ -1,9 +1,838 @@
 [
  {
+  "id": "G2082727",
+  "name": "Abepura",
+  "province": "Papua",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.596,
+  "lng": 140.632
+ },
+ {
+  "id": "G1651887",
+  "name": "Adiwerna",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.937,
+  "lng": 109.133
+ },
+ {
+  "id": "G1651852",
+  "name": "Agats",
+  "province": "Papua Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -5.545,
+  "lng": 138.135
+ },
+ {
+  "id": "G1651763",
+  "name": "Airmadidi",
+  "province": "Sulawesi Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.428,
+  "lng": 124.978
+ },
+ {
+  "id": "G1651591",
+  "name": "Amahai",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.34,
+  "lng": 128.92
+ },
+ {
+  "id": "G1651555",
+  "name": "Ambarawa",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.263,
+  "lng": 110.398
+ },
+ {
+  "id": "G1641301",
+  "name": "Amlapura",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.45,
+  "lng": 115.617
+ },
+ {
+  "id": "G11919949",
+  "name": "Amlapura city",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.449,
+  "lng": 115.606
+ },
+ {
+  "id": "G1651461",
+  "name": "Amuntai",
+  "province": "Kalimantan Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.418,
+  "lng": 115.249
+ },
+ {
+  "id": "G1651226",
+  "name": "Arjawinangun",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.645,
+  "lng": 108.41
+ },
+ {
+  "id": "G1651112",
+  "name": "Astanajapura",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.802,
+  "lng": 108.631
+ },
+ {
+  "id": "G1651103",
+  "name": "Atambua",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -9.106,
+  "lng": 124.893
+ },
+ {
+  "id": "G1650888",
+  "name": "Babat",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.113,
+  "lng": 112.164
+ },
+ {
+  "id": "G1650815",
+  "name": "Baekrajan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.767,
+  "lng": 110.854
+ },
+ {
+  "id": "G1650720",
+  "name": "Bajawa",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.785,
+  "lng": 120.974
+ },
+ {
+  "id": "G1650670",
+  "name": "Baki",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.613,
+  "lng": 110.784
+ },
+ {
+  "id": "G1650600",
+  "name": "Balai Pungut",
+  "province": "Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.059,
+  "lng": 101.291
+ },
+ {
+  "id": "G1650572",
+  "name": "Balapulang",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.049,
+  "lng": 109.101
+ },
+ {
+  "id": "G1650460",
+  "name": "Balung",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.733,
+  "lng": 113.917
+ },
+ {
+  "id": "G1650434",
+  "name": "Bambanglipuro",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.95,
+  "lng": 110.283
+ },
+ {
+  "id": "G1215498",
+  "name": "Bandar",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.05,
+  "lng": 99.75
+ },
+ {
+  "id": "G1650319",
+  "name": "Bangil",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.599,
+  "lng": 112.819
+ },
+ {
+  "id": "G1650232",
+  "name": "Banjar",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.19,
+  "lng": 114.968
+ },
+ {
+  "id": "G1650227",
+  "name": "Banjaran",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.045,
+  "lng": 107.588
+ },
+ {
+  "id": "G1650064",
+  "name": "Barabai",
+  "province": "Kalimantan Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.583,
+  "lng": 115.383
+ },
+ {
+  "id": "G1215468",
+  "name": "Barus",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.011,
+  "lng": 98.398
+ },
+ {
+  "id": "G8224233",
+  "name": "Batubulan",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.624,
+  "lng": 115.262
+ },
+ {
+  "id": "G1649595",
+  "name": "Baturaden",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.3,
+  "lng": 109.217
+ },
+ {
+  "id": "G1649593",
+  "name": "Baturaja",
+  "province": "Sumatera Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.129,
+  "lng": 104.167
+ },
+ {
+  "id": "G1649575",
+  "name": "Batusangkar",
+  "province": "Sumatera Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.461,
+  "lng": 100.611
+ },
+ {
+  "id": "G7087175",
+  "name": "Bedugul",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.45,
+  "lng": 115.593
+ },
+ {
+  "id": "G1649383",
+  "name": "Bejubang Dua",
+  "province": "Jambi",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.792,
+  "lng": 103.317
+ },
+ {
+  "id": "G1215412",
+  "name": "Belawan",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.776,
+  "lng": 98.683
+ },
+ {
+  "id": "G1649125",
+  "name": "Benoa",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.755,
+  "lng": 115.218
+ },
+ {
+  "id": "G1215395",
+  "name": "Berastagi",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.195,
+  "lng": 98.509
+ },
+ {
+  "id": "G1648918",
+  "name": "Besuki",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.734,
+  "lng": 113.698
+ },
+ {
+  "id": "G1648844",
+  "name": "Biak",
+  "province": "Papua",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.177,
+  "lng": 136.082
+ },
+ {
+  "id": "G1648691",
+  "name": "Bintuni",
+  "province": "Papua Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.11,
+  "lng": 133.525
+ },
+ {
+  "id": "G1215350",
+  "name": "Bireun",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 5.203,
+  "lng": 96.701
+ },
+ {
+  "id": "G1215326",
+  "name": "Blangpidie",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.74,
+  "lng": 96.836
+ },
+ {
+  "id": "G1648082",
+  "name": "Boyolangu",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.118,
+  "lng": 111.894
+ },
+ {
+  "id": "G1647991",
+  "name": "Buaran",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.05,
+  "lng": 109.55
+ },
+ {
+  "id": "G1647936",
+  "name": "Buduran",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.428,
+  "lng": 112.723
+ },
+ {
+  "id": "G1647834",
+  "name": "Bulakamba",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.875,
+  "lng": 108.956
+ },
+ {
+  "id": "G1647638",
+  "name": "Bungku",
+  "province": "Sulawesi Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.547,
+  "lng": 121.972
+ },
+ {
+  "id": "G1630681",
+  "name": "Candi Prambanan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.75,
+  "lng": 110.494
+ },
+ {
+  "id": "G1647298",
+  "name": "Caringin",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.706,
+  "lng": 106.821
+ },
+ {
+  "id": "G1647187",
+  "name": "Ceper",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.674,
+  "lng": 110.679
+ },
+ {
+  "id": "G1647179",
+  "name": "Cepu",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.147,
+  "lng": 111.591
+ },
+ {
+  "id": "G1647383",
+  "name": "Ciampea",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.555,
+  "lng": 106.701
+ },
+ {
+  "id": "G1647003",
+  "name": "Cibinong",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.482,
+  "lng": 106.854
+ },
+ {
+  "id": "G1646893",
+  "name": "Cicurug",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.781,
+  "lng": 106.783
+ },
+ {
+  "id": "G1646698",
+  "name": "Cikampek",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.42,
+  "lng": 107.456
+ },
+ {
+  "id": "G1646678",
+  "name": "Cikarang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.261,
+  "lng": 107.153
+ },
+ {
+  "id": "G1985663",
+  "name": "Cikupa",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.236,
+  "lng": 106.508
+ },
+ {
+  "id": "G1646494",
+  "name": "Cileungsir",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.395,
+  "lng": 106.959
+ },
+ {
+  "id": "G1646492",
+  "name": "Cileunyi",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.939,
+  "lng": 107.753
+ },
+ {
+  "id": "G1646194",
+  "name": "Ciputat",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.237,
+  "lng": 106.696
+ },
+ {
+  "id": "G1964032",
+  "name": "Ciranjang-hilir",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.82,
+  "lng": 107.257
+ },
+ {
+  "id": "G1646034",
+  "name": "Citeureup",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.486,
+  "lng": 106.882
+ },
+ {
+  "id": "G1645978",
+  "name": "Colomadu",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.533,
+  "lng": 110.75
+ },
+ {
+  "id": "G1645976",
+  "name": "Comal",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.905,
+  "lng": 109.535
+ },
+ {
+  "id": "G1645895",
+  "name": "Curug",
+  "province": "Banten",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.266,
+  "lng": 106.556
+ },
+ {
+  "id": "G1645875",
+  "name": "Curup",
+  "province": "Bengkulu",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.47,
+  "lng": 102.521
+ },
+ {
+  "id": "G1639520",
+  "name": "Dabo",
+  "province": "Kepulauan Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.493,
+  "lng": 104.563
+ },
+ {
+  "id": "G13645283",
+  "name": "Dalung",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.626,
+  "lng": 115.17
+ },
+ {
+  "id": "G1645749",
+  "name": "Dampit",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.212,
+  "lng": 112.749
+ },
+ {
+  "id": "G1645663",
+  "name": "Daruba",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.05,
+  "lng": 128.294
+ },
+ {
+  "id": "G1645565",
+  "name": "Delanggu",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.617,
+  "lng": 110.683
+ },
+ {
+  "id": "G1215199",
+  "name": "Deli Tua",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.508,
+  "lng": 98.684
+ },
+ {
+  "id": "G1645518",
+  "name": "Depok",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.762,
+  "lng": 110.432
+ },
+ {
+  "id": "G1645428",
+  "name": "Diwek",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.579,
+  "lng": 112.231
+ },
+ {
+  "id": "G1645413",
+  "name": "Dobo",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -5.761,
+  "lng": 134.234
+ },
+ {
+  "id": "G1645220",
+  "name": "Driyorejo",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.366,
+  "lng": 112.622
+ },
+ {
+  "id": "G1645154",
+  "name": "Dukuhturi",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.9,
+  "lng": 109.083
+ },
+ {
+  "id": "G11023936",
+  "name": "Elelim",
+  "province": "Papua Pegunungan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.759,
+  "lng": 139.708
+ },
+ {
+  "id": "G1644833",
+  "name": "Fakfak",
+  "province": "Papua",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.925,
+  "lng": 132.298
+ },
+ {
+  "id": "G1644608",
+  "name": "Galela",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.823,
+  "lng": 127.789
+ },
+ {
+  "id": "G1644605",
+  "name": "Galesong",
+  "province": "Sulawesi Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -5.317,
+  "lng": 119.366
+ },
+ {
+  "id": "G1644557",
+  "name": "Gambiran Satu",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.394,
+  "lng": 114.146
+ },
+ {
+  "id": "G1644522",
+  "name": "Gampengrejo",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.764,
+  "lng": 112.035
+ },
+ {
+  "id": "G2005057",
+  "name": "Gamping Lor",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.796,
+  "lng": 110.326
+ },
+ {
+  "id": "G2011457",
+  "name": "Gatak",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.591,
+  "lng": 110.704
+ },
+ {
+  "id": "G1644360",
+  "name": "Gebog",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.735,
+  "lng": 110.844
+ },
+ {
+  "id": "G1644349",
+  "name": "Gedangan",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.391,
+  "lng": 112.727
+ },
+ {
+  "id": "G1644178",
+  "name": "Genteng",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.367,
+  "lng": 114.15
+ },
+ {
+  "id": "G1643981",
+  "name": "Godean",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.77,
+  "lng": 110.294
+ },
+ {
+  "id": "G1643920",
+  "name": "Gombong",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.607,
+  "lng": 109.514
+ },
+ {
+  "id": "G1643898",
+  "name": "Gongdanglegi Kulon",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.175,
+  "lng": 112.636
+ },
+ {
+  "id": "G1643761",
+  "name": "Grogol",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.601,
+  "lng": 110.819
+ },
+ {
+  "id": "G1643089",
+  "name": "Indralaya",
+  "province": "Sumatera Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.252,
+  "lng": 104.676
+ },
+ {
+  "id": "G1642911",
+  "name": "Jakarta",
+  "province": "Jakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.215,
+  "lng": 106.845
+ },
+ {
   "id": "Q10116",
   "name": "Jakarta Barat",
   "province": "Jakarta",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.185,
   "lng": 106.731
  },
@@ -12,6 +841,7 @@
   "name": "Jakarta Pusat",
   "province": "Jakarta",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.17,
   "lng": 106.82
  },
@@ -20,6 +850,7 @@
   "name": "Jakarta Selatan",
   "province": "Jakarta",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.25,
   "lng": 106.8
  },
@@ -28,6 +859,7 @@
   "name": "Jakarta Timur",
   "province": "Jakarta",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.21,
   "lng": 106.94
  },
@@ -36,14 +868,115 @@
   "name": "Jakarta Utara",
   "province": "Jakarta",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.12,
   "lng": 106.9
+ },
+ {
+  "id": "G13715595",
+  "name": "Japan",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.499,
+  "lng": 112.42
+ },
+ {
+  "id": "G1642754",
+  "name": "Jaten",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.577,
+  "lng": 110.898
+ },
+ {
+  "id": "G1642726",
+  "name": "Jatibarang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.475,
+  "lng": 108.315
+ },
+ {
+  "id": "G1642692",
+  "name": "Jatiroto",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.883,
+  "lng": 111.117
+ },
+ {
+  "id": "G1642684",
+  "name": "Jatiwangi",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.734,
+  "lng": 108.263
+ },
+ {
+  "id": "G1642628",
+  "name": "Jekulo",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.806,
+  "lng": 110.926
+ },
+ {
+  "id": "G1642468",
+  "name": "Jimbaran",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.95,
+  "lng": 110.767
+ },
+ {
+  "id": "G1642467",
+  "name": "Jimbaran",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.791,
+  "lng": 115.16
+ },
+ {
+  "id": "G1642437",
+  "name": "Jogonalan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.704,
+  "lng": 110.536
+ },
+ {
+  "id": "G1642317",
+  "name": "Juwana",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.715,
+  "lng": 111.151
+ },
+ {
+  "id": "G1214965",
+  "name": "Kabanjahe",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.1,
+  "lng": 98.491
  },
  {
   "id": "Q5778",
   "name": "Kabupaten Aceh Barat",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.45,
   "lng": 96.183333333
  },
@@ -52,6 +985,7 @@
   "name": "Kabupaten Aceh Barat Daya",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.791111111,
   "lng": 95.916666666
  },
@@ -60,6 +994,7 @@
   "name": "Kabupaten Aceh Besar",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 5.366666666,
   "lng": 95.533333333
  },
@@ -68,6 +1003,7 @@
   "name": "Kabupaten Aceh Jaya",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.816666666,
   "lng": 95.666666666
  },
@@ -76,6 +1012,7 @@
   "name": "Kabupaten Aceh Selatan",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.133333333,
   "lng": 97.45
  },
@@ -84,6 +1021,7 @@
   "name": "Kabupaten Aceh Singkil",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.333333333,
   "lng": 97.666666666
  },
@@ -92,6 +1030,7 @@
   "name": "Kabupaten Aceh Tamiang",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.274905555,
   "lng": 97.872161111
  },
@@ -100,6 +1039,7 @@
   "name": "Kabupaten Aceh Tengah",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.333333333,
   "lng": 96.333333333
  },
@@ -108,6 +1048,7 @@
   "name": "Kabupaten Aceh Tenggara",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.47307993,
   "lng": 97.819210378
  },
@@ -116,6 +1057,7 @@
   "name": "Kabupaten Aceh Timur",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.616666666,
   "lng": 97.616666666
  },
@@ -124,6 +1066,7 @@
   "name": "Kabupaten Aceh Utara",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.916666666,
   "lng": 97
  },
@@ -132,6 +1075,7 @@
   "name": "Kabupaten Agam",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.266666666,
   "lng": 100
  },
@@ -140,6 +1084,7 @@
   "name": "Kabupaten Alor",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.25,
   "lng": 124.75
  },
@@ -148,6 +1093,7 @@
   "name": "Kabupaten Asahan",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3,
   "lng": 99.1667
  },
@@ -156,6 +1102,7 @@
   "name": "Kabupaten Asmat",
   "province": "Papua Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.3795,
   "lng": 138.46344
  },
@@ -164,6 +1111,7 @@
   "name": "Kabupaten Badung",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.58333333,
   "lng": 115.18333333
  },
@@ -172,6 +1120,7 @@
   "name": "Kabupaten Balangan",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.364000766,
   "lng": 115.470513594
  },
@@ -180,6 +1129,7 @@
   "name": "Kabupaten Bandung",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.021935402,
   "lng": 107.528074678
  },
@@ -188,6 +1138,7 @@
   "name": "Kabupaten Bandung Barat",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.841117137,
   "lng": 107.512583203
  },
@@ -196,6 +1147,7 @@
   "name": "Kabupaten Banggai",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.957091,
   "lng": 122.558593
  },
@@ -204,6 +1156,7 @@
   "name": "Kabupaten Banggai Kepulauan",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.408619,
   "lng": 123.206363
  },
@@ -212,6 +1165,7 @@
   "name": "Kabupaten Banggai Laut",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.5888,
   "lng": 123.5008
  },
@@ -220,6 +1174,7 @@
   "name": "Kabupaten Bangka",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.9,
   "lng": 105.883333333
  },
@@ -228,6 +1183,7 @@
   "name": "Kabupaten Bangka Barat",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.95839,
   "lng": 105.53741
  },
@@ -236,6 +1192,7 @@
   "name": "Kabupaten Bangka Selatan",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.766666666,
   "lng": 106.333333333
  },
@@ -244,6 +1201,7 @@
   "name": "Kabupaten Bangka Tengah",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.416666666,
   "lng": 106.233333333
  },
@@ -252,6 +1210,7 @@
   "name": "Kabupaten Bangkalan",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.029193591,
   "lng": 112.746131568
  },
@@ -260,6 +1219,7 @@
   "name": "Kabupaten Bangli",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.28325,
   "lng": 115.33278
  },
@@ -268,6 +1228,7 @@
   "name": "Kabupaten Banjar",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.408131341,
   "lng": 114.848541656
  },
@@ -276,6 +1237,7 @@
   "name": "Kabupaten Banjarnegara",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.39611,
   "lng": 109.757
  },
@@ -284,6 +1246,7 @@
   "name": "Kabupaten Bantaeng",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.53333,
   "lng": 119.933
  },
@@ -292,6 +1255,7 @@
   "name": "Kabupaten Bantul",
   "province": "Yogyakarta",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.884611,
   "lng": 110.334111
  },
@@ -300,6 +1264,7 @@
   "name": "Kabupaten Banyuasin",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.88333333,
   "lng": 104.38305556
  },
@@ -308,6 +1273,7 @@
   "name": "Kabupaten Banyumas",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.425,
   "lng": 109.23
  },
@@ -316,6 +1282,7 @@
   "name": "Kabupaten Banyuwangi",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.226666666,
   "lng": 114.366388888
  },
@@ -324,6 +1291,7 @@
   "name": "Kabupaten Barito Kuala",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.981143052,
   "lng": 114.766778772
  },
@@ -332,6 +1300,7 @@
   "name": "Kabupaten Barito Selatan",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.86667,
   "lng": 114.73333
  },
@@ -340,6 +1309,7 @@
   "name": "Kabupaten Barito Timur",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.93333,
   "lng": 115.1
  },
@@ -348,6 +1318,7 @@
   "name": "Kabupaten Barito Utara",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.98333,
   "lng": 115.1
  },
@@ -356,6 +1327,7 @@
   "name": "Kabupaten Barru",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.24333,
   "lng": 119.681
  },
@@ -364,6 +1336,7 @@
   "name": "Kabupaten Batang",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.908111626,
   "lng": 109.730418769
  },
@@ -372,6 +1345,7 @@
   "name": "Kabupaten Batang Hari",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.7137948,
   "lng": 103.2616673
  },
@@ -380,6 +1354,7 @@
   "name": "Kabupaten Batu Bara",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.16166,
   "lng": 99.52652
  },
@@ -388,6 +1363,7 @@
   "name": "Kabupaten Bekasi",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.3659088,
   "lng": 107.1730863
  },
@@ -396,6 +1372,7 @@
   "name": "Kabupaten Belitung",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.866666666,
   "lng": 107.7
  },
@@ -404,6 +1381,7 @@
   "name": "Kabupaten Belitung Timur",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.9,
   "lng": 108.05
  },
@@ -412,6 +1390,7 @@
   "name": "Kabupaten Belu",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.1,
   "lng": 124.9
  },
@@ -420,6 +1399,7 @@
   "name": "Kabupaten Bener Meriah",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.75,
   "lng": 97
  },
@@ -428,6 +1408,7 @@
   "name": "Kabupaten Bengkalis",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.489722222,
   "lng": 102.079722222
  },
@@ -436,6 +1417,7 @@
   "name": "Kabupaten Bengkayang",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.06911,
   "lng": 109.66393
  },
@@ -444,6 +1426,7 @@
   "name": "Kabupaten Bengkulu Selatan",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.463481566,
   "lng": 102.917003379
  },
@@ -452,6 +1435,7 @@
   "name": "Kabupaten Bengkulu Tengah",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.20679,
   "lng": 102.12616
  },
@@ -460,6 +1444,7 @@
   "name": "Kabupaten Bengkulu Utara",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.33333,
   "lng": 102.05
  },
@@ -468,6 +1453,7 @@
   "name": "Kabupaten Berau",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2,
   "lng": 117.3
  },
@@ -476,6 +1462,7 @@
   "name": "Kabupaten Biak Numfor",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.03333,
   "lng": 136
  },
@@ -484,6 +1471,7 @@
   "name": "Kabupaten Bima",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.57444444,
   "lng": 119.0375
  },
@@ -492,6 +1480,7 @@
   "name": "Kabupaten Bintan",
   "province": "Kepulauan Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.95,
   "lng": 104.61944
  },
@@ -500,6 +1489,7 @@
   "name": "Kabupaten Bireuen",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 5.083333333,
   "lng": 96.6
  },
@@ -508,6 +1498,7 @@
   "name": "Kabupaten Blitar",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.13333,
   "lng": 112.25
  },
@@ -516,6 +1507,7 @@
   "name": "Kabupaten Blora",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.06667,
   "lng": 111.38333
  },
@@ -524,6 +1516,7 @@
   "name": "Kabupaten Boalemo",
   "province": "Gorontalo",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.65,
   "lng": 122.31666667
  },
@@ -532,6 +1525,7 @@
   "name": "Kabupaten Bogor",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.4803,
   "lng": 106.8247
  },
@@ -540,6 +1534,7 @@
   "name": "Kabupaten Bojonegoro",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.275,
   "lng": 111.795
  },
@@ -548,6 +1543,7 @@
   "name": "Kabupaten Bolaang Mongondow",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.75,
   "lng": 124.08333
  },
@@ -556,6 +1552,7 @@
   "name": "Kabupaten Bolaang Mongondow Selatan",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.35277778,
   "lng": 123.79916667
  },
@@ -564,6 +1561,7 @@
   "name": "Kabupaten Bolaang Mongondow Timur",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.77,
   "lng": 124.61388889
  },
@@ -572,6 +1570,7 @@
   "name": "Kabupaten Bolaang Mongondow Utara",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.78527,
   "lng": 123.41766
  },
@@ -580,6 +1579,7 @@
   "name": "Kabupaten Bombana",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.625555555,
   "lng": 121.816388888
  },
@@ -588,6 +1588,7 @@
   "name": "Kabupaten Bondowoso",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.9404,
   "lng": 113.9834
  },
@@ -596,6 +1597,7 @@
   "name": "Kabupaten Bone",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.53861111,
   "lng": 120.32972222
  },
@@ -604,6 +1606,7 @@
   "name": "Kabupaten Bone Bolango",
   "province": "Gorontalo",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.55,
   "lng": 123.2
  },
@@ -612,6 +1615,7 @@
   "name": "Kabupaten Boven Digoel",
   "province": "Papua Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6,
   "lng": 140
  },
@@ -620,6 +1624,7 @@
   "name": "Kabupaten Boyolali",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.532222222,
   "lng": 110.6025
  },
@@ -628,6 +1633,7 @@
   "name": "Kabupaten Brebes",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.05,
   "lng": 108.9
  },
@@ -636,6 +1642,7 @@
   "name": "Kabupaten Buleleng",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.2,
   "lng": 114.95
  },
@@ -644,6 +1651,7 @@
   "name": "Kabupaten Bulukumba",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.416666666,
   "lng": 120.233333333
  },
@@ -652,6 +1660,7 @@
   "name": "Kabupaten Bulungan",
   "province": "Kalimantan Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3,
   "lng": 117.16667
  },
@@ -660,6 +1669,7 @@
   "name": "Kabupaten Bungo",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.5160595,
   "lng": 102.1187566
  },
@@ -668,6 +1678,7 @@
   "name": "Kabupaten Buol",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.010469,
   "lng": 121.35425
  },
@@ -676,6 +1687,7 @@
   "name": "Kabupaten Buru",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.25983,
   "lng": 127.10289
  },
@@ -684,6 +1696,7 @@
   "name": "Kabupaten Buru Selatan",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.8380966,
   "lng": 126.7345922
  },
@@ -692,6 +1705,7 @@
   "name": "Kabupaten Buton",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.31667,
   "lng": 122.58333
  },
@@ -700,6 +1714,7 @@
   "name": "Kabupaten Buton Selatan",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.56667,
   "lng": 122.7
  },
@@ -708,6 +1723,7 @@
   "name": "Kabupaten Buton Tengah",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.31667,
   "lng": 122.33333
  },
@@ -716,6 +1732,7 @@
   "name": "Kabupaten Buton Utara",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.01457,
   "lng": 122.93015
  },
@@ -724,6 +1741,7 @@
   "name": "Kabupaten Ciamis",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.326664181,
   "lng": 108.353107319
  },
@@ -732,6 +1750,7 @@
   "name": "Kabupaten Cianjur",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.821222211,
   "lng": 107.140101112
  },
@@ -740,6 +1759,7 @@
   "name": "Kabupaten Cilacap",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.733333333,
   "lng": 109
  },
@@ -748,6 +1768,7 @@
   "name": "Kabupaten Cirebon",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.7578369,
   "lng": 108.4804624
  },
@@ -756,6 +1777,7 @@
   "name": "Kabupaten Dairi",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.86667,
   "lng": 98.23333
  },
@@ -764,6 +1786,7 @@
   "name": "Kabupaten Deiyai",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.100318,
   "lng": 136.435068
  },
@@ -772,6 +1795,7 @@
   "name": "Kabupaten Deli Serdang",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.55,
   "lng": 98.85
  },
@@ -780,6 +1804,7 @@
   "name": "Kabupaten Demak",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.88333333,
   "lng": 110.66666667
  },
@@ -788,6 +1813,7 @@
   "name": "Kabupaten Dharmasraya",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.05,
   "lng": 101.367
  },
@@ -796,6 +1822,7 @@
   "name": "Kabupaten Dogiyai",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.057,
   "lng": 135.709
  },
@@ -804,6 +1831,7 @@
   "name": "Kabupaten Dompu",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.53333333,
   "lng": 118.46666667
  },
@@ -812,6 +1840,7 @@
   "name": "Kabupaten Donggala",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.694444444,
   "lng": 119.730555555
  },
@@ -820,6 +1849,7 @@
   "name": "Kabupaten Empat Lawang",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.75,
   "lng": 103
  },
@@ -828,6 +1858,7 @@
   "name": "Kabupaten Ende",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.840555555,
   "lng": 121.663888888
  },
@@ -836,6 +1867,7 @@
   "name": "Kabupaten Enrekang",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.5,
   "lng": 119.866666666
  },
@@ -844,6 +1876,7 @@
   "name": "Kabupaten Fakfak",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.9167,
   "lng": 132.3
  },
@@ -852,6 +1885,7 @@
   "name": "Kabupaten Flores Timur",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.341208303,
   "lng": 122.988115175
  },
@@ -860,6 +1894,7 @@
   "name": "Kabupaten Garut",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.204694066,
   "lng": 107.887589935
  },
@@ -868,6 +1903,7 @@
   "name": "Kabupaten Gayo Lues",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4,
   "lng": 97
  },
@@ -876,6 +1912,7 @@
   "name": "Kabupaten Gianyar",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.466666666,
   "lng": 115.283333333
  },
@@ -884,6 +1921,7 @@
   "name": "Kabupaten Gorontalo",
   "province": "Gorontalo",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.5728,
   "lng": 122.2337
  },
@@ -892,6 +1930,7 @@
   "name": "Kabupaten Gorontalo Utara",
   "province": "Gorontalo",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.7909577,
   "lng": 122.8686597
  },
@@ -900,6 +1939,7 @@
   "name": "Kabupaten Gowa",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.33333333,
   "lng": 119.66666667
  },
@@ -908,6 +1948,7 @@
   "name": "Kabupaten Gresik",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.1933,
   "lng": 112.553
  },
@@ -916,6 +1957,7 @@
   "name": "Kabupaten Grobogan",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.03,
   "lng": 110.921111111
  },
@@ -924,6 +1966,7 @@
   "name": "Kabupaten Gunung Mas",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.95,
   "lng": 113.5
  },
@@ -932,6 +1975,7 @@
   "name": "Kabupaten Gunungkidul",
   "province": "Yogyakarta",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.965,
   "lng": 110.6
  },
@@ -940,6 +1984,7 @@
   "name": "Kabupaten Halmahera Barat",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.41709,
   "lng": 127.55264
  },
@@ -948,6 +1993,7 @@
   "name": "Kabupaten Halmahera Selatan",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.3955,
   "lng": 127.90833
  },
@@ -956,6 +2002,7 @@
   "name": "Kabupaten Halmahera Tengah",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.48056,
   "lng": 128.25
  },
@@ -964,6 +2011,7 @@
   "name": "Kabupaten Halmahera Timur",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.33517,
   "lng": 128.48627
  },
@@ -972,6 +2020,7 @@
   "name": "Kabupaten Halmahera Utara",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.73194444,
   "lng": 128.00777778
  },
@@ -980,6 +2029,7 @@
   "name": "Kabupaten Hulu Sungai Selatan",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.786670057,
   "lng": 115.265919764
  },
@@ -988,6 +2038,7 @@
   "name": "Kabupaten Hulu Sungai Tengah",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.584655749,
   "lng": 115.38517139
  },
@@ -996,6 +2047,7 @@
   "name": "Kabupaten Hulu Sungai Utara",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.419284393,
   "lng": 115.254279665
  },
@@ -1004,6 +2056,7 @@
   "name": "Kabupaten Humbang Hasundutan",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.26551,
   "lng": 98.50376
  },
@@ -1012,6 +2065,7 @@
   "name": "Kabupaten Indragiri Hilir",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.315555555,
   "lng": 103.158055555
  },
@@ -1020,6 +2074,7 @@
   "name": "Kabupaten Indragiri Hulu",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.55,
   "lng": 102.316666666
  },
@@ -1028,6 +2083,7 @@
   "name": "Kabupaten Indramayu",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.326944444,
   "lng": 108.322222222
  },
@@ -1036,6 +2092,7 @@
   "name": "Kabupaten Intan Jaya",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.41016,
   "lng": 136.70837
  },
@@ -1044,6 +2101,7 @@
   "name": "Kabupaten Jayapura",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3,
   "lng": 139.95
  },
@@ -1052,6 +2110,7 @@
   "name": "Kabupaten Jayawijaya",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.08333,
   "lng": 139.08333
  },
@@ -1060,6 +2119,7 @@
   "name": "Kabupaten Jember",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.168888888,
   "lng": 113.702222222
  },
@@ -1068,6 +2128,7 @@
   "name": "Kabupaten Jembrana",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.3,
   "lng": 114.66666667
  },
@@ -1076,6 +2137,7 @@
   "name": "Kabupaten Jeneponto",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.63333,
   "lng": 119.73333
  },
@@ -1084,6 +2146,7 @@
   "name": "Kabupaten Jepara",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.533333333,
   "lng": 110.666666666
  },
@@ -1092,6 +2155,7 @@
   "name": "Kabupaten Jombang",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.466666666,
   "lng": 112.233333333
  },
@@ -1100,6 +2164,7 @@
   "name": "Kabupaten Kaimana",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.66093,
   "lng": 133.77451
  },
@@ -1108,6 +2173,7 @@
   "name": "Kabupaten Kampar",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.313609,
   "lng": 101.0185247
  },
@@ -1116,6 +2182,7 @@
   "name": "Kabupaten Kapuas",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3,
   "lng": 114.38
  },
@@ -1124,6 +2191,7 @@
   "name": "Kabupaten Kapuas Hulu",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.81667,
   "lng": 112.76667
  },
@@ -1132,6 +2200,7 @@
   "name": "Kabupaten Karanganyar",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.596111111,
   "lng": 110.950833333
  },
@@ -1140,6 +2209,7 @@
   "name": "Kabupaten Karangasem",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.36666667,
   "lng": 115.51666667
  },
@@ -1148,6 +2218,7 @@
   "name": "Kabupaten Karawang",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.3050853,
   "lng": 107.3002579
  },
@@ -1156,6 +2227,7 @@
   "name": "Kabupaten Karimun",
   "province": "Kepulauan Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.80764,
   "lng": 103.41911
  },
@@ -1164,6 +2236,7 @@
   "name": "Kabupaten Karo",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.11667,
   "lng": 98.3
  },
@@ -1172,6 +2245,7 @@
   "name": "Kabupaten Katingan",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.06667,
   "lng": 113.4
  },
@@ -1180,6 +2254,7 @@
   "name": "Kabupaten Kaur",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.589298,
   "lng": 103.4167585
  },
@@ -1188,6 +2263,7 @@
   "name": "Kabupaten Kayong Utara",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.43711,
   "lng": 110.79781
  },
@@ -1196,6 +2272,7 @@
   "name": "Kabupaten Kebumen",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.629444444,
   "lng": 109.570555555
  },
@@ -1204,6 +2281,7 @@
   "name": "Kabupaten Kediri",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.83333,
   "lng": 112.16667
  },
@@ -1212,6 +2290,7 @@
   "name": "Kabupaten Keerom",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.883693975,
   "lng": 140.743570085
  },
@@ -1220,6 +2299,7 @@
   "name": "Kabupaten Kendal",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.0256,
   "lng": 110.1685
  },
@@ -1228,6 +2308,7 @@
   "name": "Kabupaten Kepahiang",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.601944444,
   "lng": 102.564166666
  },
@@ -1236,6 +2317,7 @@
   "name": "Kabupaten Kepulauan Anambas",
   "province": "Kepulauan Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3,
   "lng": 106
  },
@@ -1244,6 +2326,7 @@
   "name": "Kabupaten Kepulauan Aru",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.2,
   "lng": 134.5
  },
@@ -1252,6 +2335,7 @@
   "name": "Kabupaten Kepulauan Mentawai",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.183333333,
   "lng": 99.65
  },
@@ -1260,6 +2344,7 @@
   "name": "Kabupaten Kepulauan Meranti",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.97488,
   "lng": 102.69539
  },
@@ -1268,6 +2353,7 @@
   "name": "Kabupaten Kepulauan Sangihe",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3,
   "lng": 125.5
  },
@@ -1276,6 +2362,7 @@
   "name": "Kabupaten Kepulauan Selayar",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.81667,
   "lng": 120.8
  },
@@ -1284,6 +2371,7 @@
   "name": "Kabupaten Kepulauan Seribu",
   "province": "Jakarta",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.6629,
   "lng": 106.5683
  },
@@ -1292,6 +2380,7 @@
   "name": "Kabupaten Kepulauan Siau Tagulandang Biaro",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.35,
   "lng": 125.416666666
  },
@@ -1300,6 +2389,7 @@
   "name": "Kabupaten Kepulauan Sula",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.84916667,
   "lng": 125.31444444
  },
@@ -1308,6 +2398,7 @@
   "name": "Kabupaten Kepulauan Talaud",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.31178,
   "lng": 126.78085
  },
@@ -1316,6 +2407,7 @@
   "name": "Kabupaten Kepulauan Tanimbar",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.9849042,
   "lng": 131.3043958
  },
@@ -1324,6 +2416,7 @@
   "name": "Kabupaten Kepulauan Yapen",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.78773,
   "lng": 136.27716
  },
@@ -1332,6 +2425,7 @@
   "name": "Kabupaten Kerinci",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.936083333,
   "lng": 101.342527777
  },
@@ -1340,6 +2434,7 @@
   "name": "Kabupaten Ketapang",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.58333,
   "lng": 110.5
  },
@@ -1348,6 +2443,7 @@
   "name": "Kabupaten Klaten",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.683333333,
   "lng": 110.616666666
  },
@@ -1356,6 +2452,7 @@
   "name": "Kabupaten Klungkung",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.538922222,
   "lng": 115.404511111
  },
@@ -1364,6 +2461,7 @@
   "name": "Kabupaten Kolaka",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.04917,
   "lng": 121.616
  },
@@ -1372,6 +2470,7 @@
   "name": "Kabupaten Kolaka Timur",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.01807,
   "lng": 121.86172
  },
@@ -1380,6 +2479,7 @@
   "name": "Kabupaten Kolaka Utara",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.33722,
   "lng": 121.044
  },
@@ -1388,6 +2488,7 @@
   "name": "Kabupaten Konawe",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.91717,
   "lng": 122.08823
  },
@@ -1396,6 +2497,7 @@
   "name": "Kabupaten Konawe Kepulauan",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.11656,
   "lng": 123.10181
  },
@@ -1404,6 +2506,7 @@
   "name": "Kabupaten Konawe Selatan",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.4114145,
   "lng": 122.0199645
  },
@@ -1412,6 +2515,7 @@
   "name": "Kabupaten Konawe Utara",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.4114145,
   "lng": 122.0199645
  },
@@ -1420,6 +2524,7 @@
   "name": "Kabupaten Kotabaru",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3,
   "lng": 116
  },
@@ -1428,6 +2533,7 @@
   "name": "Kabupaten Kotawaringin Barat",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.4,
   "lng": 111.73333
  },
@@ -1436,6 +2542,7 @@
   "name": "Kabupaten Kotawaringin Timur",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.08333,
   "lng": 112.75
  },
@@ -1444,6 +2551,7 @@
   "name": "Kabupaten Kuantan Singingi",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.47532,
   "lng": 101.45857
  },
@@ -1452,6 +2560,7 @@
   "name": "Kabupaten Kubu Raya",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.01637,
   "lng": 109.33731
  },
@@ -1460,6 +2569,7 @@
   "name": "Kabupaten Kudus",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.8,
   "lng": 110.866666666
  },
@@ -1468,6 +2578,7 @@
   "name": "Kabupaten Kulon Progo",
   "province": "Yogyakarta",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.8596,
   "lng": 110.1579
  },
@@ -1476,6 +2587,7 @@
   "name": "Kabupaten Kuningan",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.9766048,
   "lng": 108.4849021
  },
@@ -1484,6 +2596,7 @@
   "name": "Kabupaten Kupang",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -10.163611,
   "lng": 123.590278
  },
@@ -1492,6 +2605,7 @@
   "name": "Kabupaten Kutai Barat",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.511666666,
   "lng": 115.777222222
  },
@@ -1500,6 +2614,7 @@
   "name": "Kabupaten Kutai Kartanegara",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.44019,
   "lng": 116.98139
  },
@@ -1508,6 +2623,7 @@
   "name": "Kabupaten Kutai Timur",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.03769,
   "lng": 117.83112
  },
@@ -1516,6 +2632,7 @@
   "name": "Kabupaten Labuhanbatu",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.26667,
   "lng": 100.1
  },
@@ -1524,6 +2641,7 @@
   "name": "Kabupaten Labuhanbatu Selatan",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.982777777,
   "lng": 100.0975
  },
@@ -1532,6 +2650,7 @@
   "name": "Kabupaten Labuhanbatu Utara",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.333333333,
   "lng": 99.6375
  },
@@ -1540,6 +2659,7 @@
   "name": "Kabupaten Lahat",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.786389,
   "lng": 103.542778
  },
@@ -1548,6 +2668,7 @@
   "name": "Kabupaten Lamandau",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.83828,
   "lng": 111.2869
  },
@@ -1556,6 +2677,7 @@
   "name": "Kabupaten Lamongan",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.116666666,
   "lng": 112.416666666
  },
@@ -1564,6 +2686,7 @@
   "name": "Kabupaten Lampung Barat",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.14904,
   "lng": 104.19309
  },
@@ -1572,6 +2695,7 @@
   "name": "Kabupaten Lampung Selatan",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.5624299,
   "lng": 105.5475311
  },
@@ -1580,6 +2704,7 @@
   "name": "Kabupaten Lampung Tengah",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.86667,
   "lng": 105.26667
  },
@@ -1588,6 +2713,7 @@
   "name": "Kabupaten Lampung Timur",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.10273,
   "lng": 105.68003
  },
@@ -1596,6 +2722,7 @@
   "name": "Kabupaten Lampung Utara",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.81667,
   "lng": 104.8
  },
@@ -1604,6 +2731,7 @@
   "name": "Kabupaten Landak",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.42373,
   "lng": 109.75917
  },
@@ -1612,6 +2740,7 @@
   "name": "Kabupaten Langkat",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.766666666,
   "lng": 98.216666666
  },
@@ -1620,6 +2749,7 @@
   "name": "Kabupaten Lanny Jaya",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.9125,
   "lng": 138.287777777
  },
@@ -1628,6 +2758,7 @@
   "name": "Kabupaten Lebak",
   "province": "Banten",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.65,
   "lng": 106.21667
  },
@@ -1636,6 +2767,7 @@
   "name": "Kabupaten Lebong",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.24278,
   "lng": 102.3349
  },
@@ -1644,6 +2776,7 @@
   "name": "Kabupaten Lembata",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.41396,
   "lng": 123.55225
  },
@@ -1652,6 +2785,7 @@
   "name": "Kabupaten Lima Puluh Kota",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.0168,
   "lng": 100.5872
  },
@@ -1660,6 +2794,7 @@
   "name": "Kabupaten Lingga",
   "province": "Kepulauan Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.266666666,
   "lng": 104.483333333
  },
@@ -1668,6 +2803,7 @@
   "name": "Kabupaten Lombok Barat",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.71666667,
   "lng": 116.1166667
  },
@@ -1676,6 +2812,7 @@
   "name": "Kabupaten Lombok Tengah",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.7,
   "lng": 116.26666667
  },
@@ -1684,6 +2821,7 @@
   "name": "Kabupaten Lombok Timur",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.65,
   "lng": 116.53333333
  },
@@ -1692,6 +2830,7 @@
   "name": "Kabupaten Lombok Utara",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.35,
   "lng": 116.15
  },
@@ -1700,6 +2839,7 @@
   "name": "Kabupaten Lumajang",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.13333333,
   "lng": 113.21666667
  },
@@ -1708,6 +2848,7 @@
   "name": "Kabupaten Luwu",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.348333333,
   "lng": 120.221111111
  },
@@ -1716,6 +2857,7 @@
   "name": "Kabupaten Luwu Timur",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.531944444,
   "lng": 121.123055555
  },
@@ -1724,6 +2866,7 @@
   "name": "Kabupaten Luwu Utara",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.6,
   "lng": 120.25
  },
@@ -1732,6 +2875,7 @@
   "name": "Kabupaten Madiun",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.61667,
   "lng": 111.65
  },
@@ -1740,6 +2884,7 @@
   "name": "Kabupaten Magelang",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.6575,
   "lng": 110.273055555
  },
@@ -1748,6 +2893,7 @@
   "name": "Kabupaten Magetan",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.65,
   "lng": 111.366666666
  },
@@ -1756,6 +2902,7 @@
   "name": "Kabupaten Mahakam Ulu",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.5,
   "lng": 115.28
  },
@@ -1764,6 +2911,7 @@
   "name": "Kabupaten Majalengka",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.8352731,
   "lng": 108.2276548
  },
@@ -1772,6 +2920,7 @@
   "name": "Kabupaten Majene",
   "province": "Sulawesi Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.547545,
   "lng": 118.957853
  },
@@ -1780,6 +2929,7 @@
   "name": "Kabupaten Malaka",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.56722222,
   "lng": 124.9075
  },
@@ -1788,6 +2938,7 @@
   "name": "Kabupaten Malang",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.9797,
   "lng": 112.6304
  },
@@ -1796,6 +2947,7 @@
   "name": "Kabupaten Malinau",
   "province": "Kalimantan Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.45,
   "lng": 115.683333333
  },
@@ -1804,6 +2956,7 @@
   "name": "Kabupaten Maluku Barat Daya",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.17024,
   "lng": 127.788938
  },
@@ -1812,6 +2965,7 @@
   "name": "Kabupaten Maluku Tengah",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.2996704,
   "lng": 128.9565238
  },
@@ -1820,6 +2974,7 @@
   "name": "Kabupaten Maluku Tenggara",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.655972222,
   "lng": 132.7439869
  },
@@ -1828,6 +2983,7 @@
   "name": "Kabupaten Mamasa",
   "province": "Sulawesi Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.11306,
   "lng": 119.383
  },
@@ -1836,6 +2992,7 @@
   "name": "Kabupaten Mamberamo Raya",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.23561,
   "lng": 137.78229
  },
@@ -1844,6 +3001,7 @@
   "name": "Kabupaten Mamberamo Tengah",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.88333,
   "lng": 139.16667
  },
@@ -1852,6 +3010,7 @@
   "name": "Kabupaten Mamuju",
   "province": "Sulawesi Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.68333333,
   "lng": 118.9
  },
@@ -1860,6 +3019,7 @@
   "name": "Kabupaten Mamuju Tengah",
   "province": "Sulawesi Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.0901046,
   "lng": 119.4880718
  },
@@ -1868,6 +3028,7 @@
   "name": "Kabupaten Mandailing Natal",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.78378,
   "lng": 99.25495
  },
@@ -1876,6 +3037,7 @@
   "name": "Kabupaten Manggarai",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.612651,
   "lng": 120.462584
  },
@@ -1884,6 +3046,7 @@
   "name": "Kabupaten Manggarai Barat",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.64484,
   "lng": 119.88281
  },
@@ -1892,6 +3055,7 @@
   "name": "Kabupaten Manggarai Timur",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.75,
   "lng": 120.608611111
  },
@@ -1900,6 +3064,7 @@
   "name": "Kabupaten Manokwari",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.86291,
   "lng": 134.06402
  },
@@ -1908,6 +3073,7 @@
   "name": "Kabupaten Manokwari Selatan",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.0798,
   "lng": 133.96729
  },
@@ -1916,6 +3082,7 @@
   "name": "Kabupaten Mappi",
   "province": "Papua Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.49971,
   "lng": 139.34441
  },
@@ -1924,6 +3091,7 @@
   "name": "Kabupaten Maros",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.016494444,
   "lng": 119.574466666
  },
@@ -1932,6 +3100,7 @@
   "name": "Kabupaten Maybrat",
   "province": "Papua Barat Daya",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.2155,
   "lng": 132.35092
  },
@@ -1940,6 +3109,7 @@
   "name": "Kabupaten Melawi",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.336111111,
   "lng": 111.698055555
  },
@@ -1948,6 +3118,7 @@
   "name": "Kabupaten Mempawah",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.25,
   "lng": 109.16667
  },
@@ -1956,6 +3127,7 @@
   "name": "Kabupaten Merangin",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.069166666,
   "lng": 102.132777777
  },
@@ -1964,6 +3136,7 @@
   "name": "Kabupaten Merauke",
   "province": "Papua Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.66667,
   "lng": 139.66667
  },
@@ -1972,6 +3145,7 @@
   "name": "Kabupaten Mesuji",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.0439,
   "lng": 105.4013
  },
@@ -1980,6 +3154,7 @@
   "name": "Kabupaten Mimika",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.54357,
   "lng": 136.56555
  },
@@ -1988,6 +3163,7 @@
   "name": "Kabupaten Minahasa",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.2537,
   "lng": 124.83
  },
@@ -1996,6 +3172,7 @@
   "name": "Kabupaten Minahasa Selatan",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.58333333,
   "lng": 124.3
  },
@@ -2004,6 +3181,7 @@
   "name": "Kabupaten Minahasa Tenggara",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.05633,
   "lng": 124.7925
  },
@@ -2012,6 +3190,7 @@
   "name": "Kabupaten Minahasa Utara",
   "province": "Sulawesi Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.4025,
   "lng": 124.96
  },
@@ -2020,6 +3199,7 @@
   "name": "Kabupaten Mojokerto",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.55,
   "lng": 112.5
  },
@@ -2028,6 +3208,7 @@
   "name": "Kabupaten Morowali",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.818536,
   "lng": 121.860786
  },
@@ -2036,6 +3217,7 @@
   "name": "Kabupaten Morowali Utara",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.7207,
   "lng": 121.24649
  },
@@ -2044,6 +3226,7 @@
   "name": "Kabupaten Muara Enim",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.2327,
   "lng": 103.6141
  },
@@ -2052,6 +3235,7 @@
   "name": "Kabupaten Muaro Jambi",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.4495102,
   "lng": 103.5160995
  },
@@ -2060,6 +3244,7 @@
   "name": "Kabupaten Mukomuko",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.552914648,
   "lng": 101.104217567
  },
@@ -2068,6 +3253,7 @@
   "name": "Kabupaten Muna",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.8425,
   "lng": 122.648
  },
@@ -2076,6 +3262,7 @@
   "name": "Kabupaten Muna Barat",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.83333,
   "lng": 122.48333
  },
@@ -2084,6 +3271,7 @@
   "name": "Kabupaten Murung Raya",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.40833333,
   "lng": 115.13333333
  },
@@ -2092,6 +3280,7 @@
   "name": "Kabupaten Musi Banyuasin",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.89388889,
   "lng": 103.8125
  },
@@ -2100,6 +3289,7 @@
   "name": "Kabupaten Musi Rawas",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.08333,
   "lng": 103.2
  },
@@ -2108,6 +3298,7 @@
   "name": "Kabupaten Musi Rawas Utara",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.7351502,
   "lng": 102.9014652
  },
@@ -2116,6 +3307,7 @@
   "name": "Kabupaten Nabire",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.54016,
   "lng": 135.55511
  },
@@ -2124,6 +3316,7 @@
   "name": "Kabupaten Nagan Raya",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.16887999,
   "lng": 96.32438
  },
@@ -2132,6 +3325,7 @@
   "name": "Kabupaten Nagekeo",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.8721,
   "lng": 121.20963
  },
@@ -2140,6 +3334,7 @@
   "name": "Kabupaten Natuna",
   "province": "Kepulauan Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4,
   "lng": 108.25
  },
@@ -2148,6 +3343,7 @@
   "name": "Kabupaten Nduga",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.45093,
   "lng": 138.10089
  },
@@ -2156,6 +3352,7 @@
   "name": "Kabupaten Ngada",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.66667,
   "lng": 121
  },
@@ -2164,6 +3361,7 @@
   "name": "Kabupaten Nganjuk",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.6,
   "lng": 111.933333333
  },
@@ -2172,6 +3370,7 @@
   "name": "Kabupaten Ngawi",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.463611111,
   "lng": 111.298333333
  },
@@ -2180,6 +3379,7 @@
   "name": "Kabupaten Nias",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.03333,
   "lng": 97.76667
  },
@@ -2188,6 +3388,7 @@
   "name": "Kabupaten Nias Barat",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.05966,
   "lng": 97.58606
  },
@@ -2196,6 +3397,7 @@
   "name": "Kabupaten Nias Selatan",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.583352913,
   "lng": 97.77766689
  },
@@ -2204,6 +3406,7 @@
   "name": "Kabupaten Nias Utara",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.3875,
   "lng": 97.36
  },
@@ -2212,6 +3415,7 @@
   "name": "Kabupaten Nunukan",
   "province": "Kalimantan Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 4.133333333,
   "lng": 116.7
  },
@@ -2220,6 +3424,7 @@
   "name": "Kabupaten Ogan Ilir",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.43186,
   "lng": 104.62727
  },
@@ -2228,6 +3433,7 @@
   "name": "Kabupaten Ogan Komering Ilir",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.36667,
   "lng": 105.36667
  },
@@ -2236,6 +3442,7 @@
   "name": "Kabupaten Ogan Komering Ulu",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.13333,
   "lng": 104.03333
  },
@@ -2244,6 +3451,7 @@
   "name": "Kabupaten Ogan Komering Ulu Selatan",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.65728,
   "lng": 104.00659
  },
@@ -2252,6 +3460,7 @@
   "name": "Kabupaten Ogan Komering Ulu Timur",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.85679,
   "lng": 104.75209
  },
@@ -2260,6 +3469,7 @@
   "name": "Kabupaten Pacitan",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.13333,
   "lng": 111.16667
  },
@@ -2268,6 +3478,7 @@
   "name": "Kabupaten Padang Lawas",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.126026,
   "lng": 99.813309
  },
@@ -2276,6 +3487,7 @@
   "name": "Kabupaten Padang Lawas Utara",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.46011,
   "lng": 99.67346
  },
@@ -2284,6 +3496,7 @@
   "name": "Kabupaten Padang Pariaman",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.6,
   "lng": 100.28333
  },
@@ -2292,6 +3505,7 @@
   "name": "Kabupaten Pakpak Bharat",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.56667,
   "lng": 98.28333
  },
@@ -2300,6 +3514,7 @@
   "name": "Kabupaten Pamekasan",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.066666666,
   "lng": 113.5
  },
@@ -2308,6 +3523,7 @@
   "name": "Kabupaten Pandeglang",
   "province": "Banten",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.309166666,
   "lng": 106.104722222
  },
@@ -2316,6 +3532,7 @@
   "name": "Kabupaten Pangandaran",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.7016552,
   "lng": 108.4942204
  },
@@ -2324,6 +3541,7 @@
   "name": "Kabupaten Pangkajene dan Kepulauan",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.75,
   "lng": 119.5
  },
@@ -2332,6 +3550,7 @@
   "name": "Kabupaten Paniai",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.9,
   "lng": 136.6
  },
@@ -2340,6 +3559,7 @@
   "name": "Kabupaten Parigi Moutong",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.3368,
   "lng": 120.17841
  },
@@ -2348,6 +3568,7 @@
   "name": "Kabupaten Pasaman",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.166666666,
   "lng": 100.117
  },
@@ -2356,6 +3577,7 @@
   "name": "Kabupaten Pasaman Barat",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.28152,
   "lng": 99.51965
  },
@@ -2364,6 +3586,7 @@
   "name": "Kabupaten Pasangkayu",
   "province": "Sulawesi Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.3180615,
   "lng": 119.37507
  },
@@ -2372,6 +3595,7 @@
   "name": "Kabupaten Paser",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.43517,
   "lng": 116.23535
  },
@@ -2380,6 +3604,7 @@
   "name": "Kabupaten Pasuruan",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.73333,
   "lng": 112.83333
  },
@@ -2388,6 +3613,7 @@
   "name": "Kabupaten Pati",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.76667,
   "lng": 111.1
  },
@@ -2396,6 +3622,7 @@
   "name": "Kabupaten Pegunungan Arfak",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.93523,
   "lng": 133.89587
  },
@@ -2404,6 +3631,7 @@
   "name": "Kabupaten Pegunungan Bintang",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.52167,
   "lng": 140.29541
  },
@@ -2412,6 +3640,7 @@
   "name": "Kabupaten Pekalongan",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.8825,
   "lng": 109.67
  },
@@ -2420,6 +3649,7 @@
   "name": "Kabupaten Pelalawan",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.20822,
   "lng": 102.18607
  },
@@ -2428,6 +3658,7 @@
   "name": "Kabupaten Pemalang",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.033333333,
   "lng": 109.4
  },
@@ -2436,6 +3667,7 @@
   "name": "Kabupaten Penajam Paser Utara",
   "province": "Kalimantan Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.291709,
   "lng": 116.513796
  },
@@ -2444,6 +3676,7 @@
   "name": "Kabupaten Penukal Abab Lematang Ilir",
   "province": "Sumatera Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.21342,
   "lng": 104.08722
  },
@@ -2452,6 +3685,7 @@
   "name": "Kabupaten Pesawaran",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.4298,
   "lng": 105.17899
  },
@@ -2460,6 +3694,7 @@
   "name": "Kabupaten Pesisir Barat",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.1888355,
   "lng": 103.9358518
  },
@@ -2468,6 +3703,7 @@
   "name": "Kabupaten Pesisir Selatan",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.35,
   "lng": 100.567
  },
@@ -2476,6 +3712,7 @@
   "name": "Kabupaten Pidie",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 5.08,
   "lng": 96.11
  },
@@ -2484,6 +3721,7 @@
   "name": "Kabupaten Pidie Jaya",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 5.15,
   "lng": 96.21667
  },
@@ -2492,6 +3730,7 @@
   "name": "Kabupaten Pinrang",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.78333,
   "lng": 119.633
  },
@@ -2500,6 +3739,7 @@
   "name": "Kabupaten Pohuwato",
   "province": "Gorontalo",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.7098,
   "lng": 121.59582
  },
@@ -2508,6 +3748,7 @@
   "name": "Kabupaten Polewali Mandar",
   "province": "Sulawesi Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.41333,
   "lng": 119.325
  },
@@ -2516,6 +3757,7 @@
   "name": "Kabupaten Ponorogo",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.868611111,
   "lng": 111.461944444
  },
@@ -2524,6 +3766,7 @@
   "name": "Kabupaten Poso",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.4,
   "lng": 120.75
  },
@@ -2532,6 +3775,7 @@
   "name": "Kabupaten Pringsewu",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.42211,
   "lng": 104.93454
  },
@@ -2540,6 +3784,7 @@
   "name": "Kabupaten Probolinggo",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.73527778,
   "lng": 113.47166667
  },
@@ -2548,6 +3793,7 @@
   "name": "Kabupaten Pulang Pisau",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.11858,
   "lng": 113.8623
  },
@@ -2556,6 +3802,7 @@
   "name": "Kabupaten Pulau Morotai",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.3,
   "lng": 128.4
  },
@@ -2564,6 +3811,7 @@
   "name": "Kabupaten Pulau Taliabu",
   "province": "Maluku Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.8,
   "lng": 124.8
  },
@@ -2572,6 +3820,7 @@
   "name": "Kabupaten Puncak",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.14204,
   "lng": 137.09702
  },
@@ -2580,6 +3829,7 @@
   "name": "Kabupaten Puncak Jaya",
   "province": "Papua Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.5107,
   "lng": 137.8661
  },
@@ -2588,6 +3838,7 @@
   "name": "Kabupaten Purbalingga",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.28333333,
   "lng": 109.35
  },
@@ -2596,6 +3847,7 @@
   "name": "Kabupaten Purwakarta",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.538564,
   "lng": 107.4435572
  },
@@ -2604,6 +3856,7 @@
   "name": "Kabupaten Purworejo",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.716666666,
   "lng": 110.016666666
  },
@@ -2612,6 +3865,7 @@
   "name": "Kabupaten Raja Ampat",
   "province": "Papua Barat Daya",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.5,
   "lng": 130
  },
@@ -2620,6 +3874,7 @@
   "name": "Kabupaten Rejang Lebong",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.433333333,
   "lng": 102.716666666
  },
@@ -2628,6 +3883,7 @@
   "name": "Kabupaten Rembang",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.71666667,
   "lng": 111.35
  },
@@ -2636,6 +3892,7 @@
   "name": "Kabupaten Rokan Hilir",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.16599,
   "lng": 100.82514
  },
@@ -2644,6 +3901,7 @@
   "name": "Kabupaten Rokan Hulu",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.933333333,
   "lng": 100.5
  },
@@ -2652,6 +3910,7 @@
   "name": "Kabupaten Rote Ndao",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -10.46666667,
   "lng": 123.38333333
  },
@@ -2660,6 +3919,7 @@
   "name": "Kabupaten Sabu Raijua",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -10.56286,
   "lng": 121.78894
  },
@@ -2668,6 +3928,7 @@
   "name": "Kabupaten Sambas",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.41667,
   "lng": 109.33333
  },
@@ -2676,6 +3937,7 @@
   "name": "Kabupaten Samosir",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.64025,
   "lng": 98.71525
  },
@@ -2684,6 +3946,7 @@
   "name": "Kabupaten Sampang",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.05,
   "lng": 113.25
  },
@@ -2692,6 +3955,7 @@
   "name": "Kabupaten Sanggau",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.123424,
   "lng": 110.597
  },
@@ -2700,6 +3964,7 @@
   "name": "Kabupaten Sarmi",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.41667,
   "lng": 139.08333
  },
@@ -2708,6 +3973,7 @@
   "name": "Kabupaten Sarolangun",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.3,
   "lng": 102.65
  },
@@ -2716,6 +3982,7 @@
   "name": "Kabupaten Sekadau",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.03485,
   "lng": 110.95066
  },
@@ -2724,6 +3991,7 @@
   "name": "Kabupaten Seluma",
   "province": "Bengkulu",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.96644,
   "lng": 102.47429
  },
@@ -2732,6 +4000,7 @@
   "name": "Kabupaten Semarang",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.265555555,
   "lng": 110.335833333
  },
@@ -2740,6 +4009,7 @@
   "name": "Kabupaten Seram Bagian Barat",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.069100739,
   "lng": 128.20290785
  },
@@ -2748,6 +4018,7 @@
   "name": "Kabupaten Seram Bagian Timur",
   "province": "Maluku",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.103132956,
   "lng": 130.490832165
  },
@@ -2756,6 +4027,7 @@
   "name": "Kabupaten Serang",
   "province": "Banten",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.15,
   "lng": 106
  },
@@ -2764,6 +4036,7 @@
   "name": "Kabupaten Serdang Bedagai",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.36667,
   "lng": 99.03333
  },
@@ -2772,6 +4045,7 @@
   "name": "Kabupaten Seruyan",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.33333,
   "lng": 112.25
  },
@@ -2780,6 +4054,7 @@
   "name": "Kabupaten Siak",
   "province": "Riau",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 0.974444444,
   "lng": 102.013333333
  },
@@ -2788,6 +4063,7 @@
   "name": "Kabupaten Sidenreng Rappang",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.92694,
   "lng": 119.796
  },
@@ -2796,6 +4072,7 @@
   "name": "Kabupaten Sidoarjo",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.453028,
   "lng": 112.717333
  },
@@ -2804,6 +4081,7 @@
   "name": "Kabupaten Sigi",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.385,
   "lng": 119.967
  },
@@ -2812,6 +4090,7 @@
   "name": "Kabupaten Sijunjung",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.700555555,
   "lng": 100.9775
  },
@@ -2820,6 +4099,7 @@
   "name": "Kabupaten Sikka",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.616388888,
   "lng": 122.208055555
  },
@@ -2828,6 +4108,7 @@
   "name": "Kabupaten Simalungun",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.9,
   "lng": 99
  },
@@ -2836,6 +4117,7 @@
   "name": "Kabupaten Simeulue",
   "province": "Aceh",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.61667,
   "lng": 96.08333
  },
@@ -2844,6 +4126,7 @@
   "name": "Kabupaten Sinjai",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.1993,
   "lng": 120.1544
  },
@@ -2852,6 +4135,7 @@
   "name": "Kabupaten Sintang",
   "province": "Kalimantan Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.083333333,
   "lng": 112.083333333
  },
@@ -2860,6 +4144,7 @@
   "name": "Kabupaten Situbondo",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.71667,
   "lng": 114.05
  },
@@ -2868,6 +4153,7 @@
   "name": "Kabupaten Sleman",
   "province": "Yogyakarta",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.68167,
   "lng": 110.32333
  },
@@ -2876,6 +4162,7 @@
   "name": "Kabupaten Solok",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.96667,
   "lng": 100.81667
  },
@@ -2884,6 +4171,7 @@
   "name": "Kabupaten Solok Selatan",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.233330555,
   "lng": 101.417
  },
@@ -2892,6 +4180,7 @@
   "name": "Kabupaten Soppeng",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.34861111,
   "lng": 119.8825
  },
@@ -2900,6 +4189,7 @@
   "name": "Kabupaten Sorong",
   "province": "Papua Barat Daya",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.1,
   "lng": 131.51667
  },
@@ -2908,6 +4198,7 @@
   "name": "Kabupaten Sorong Selatan",
   "province": "Papua Barat Daya",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.50495,
   "lng": 132.28638
  },
@@ -2916,6 +4207,7 @@
   "name": "Kabupaten Sragen",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.41278,
   "lng": 110.935
  },
@@ -2924,6 +4216,7 @@
   "name": "Kabupaten Subang",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.56985,
   "lng": 107.7628313
  },
@@ -2932,6 +4225,7 @@
   "name": "Kabupaten Sukabumi",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.9872757,
   "lng": 106.5510934
  },
@@ -2940,6 +4234,7 @@
   "name": "Kabupaten Sukamara",
   "province": "Kalimantan Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.62675,
   "lng": 111.23681
  },
@@ -2948,6 +4243,7 @@
   "name": "Kabupaten Sukoharjo",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.68333,
   "lng": 110.83333
  },
@@ -2956,6 +4252,7 @@
   "name": "Kabupaten Sumba Barat",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.56667,
   "lng": 119.45
  },
@@ -2964,6 +4261,7 @@
   "name": "Kabupaten Sumba Barat Daya",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.56216,
   "lng": 119.08905
  },
@@ -2972,6 +4270,7 @@
   "name": "Kabupaten Sumba Tengah",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.62941,
   "lng": 119.61914
  },
@@ -2980,6 +4279,7 @@
   "name": "Kabupaten Sumba Timur",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.88333,
   "lng": 120.25
  },
@@ -2988,6 +4288,7 @@
   "name": "Kabupaten Sumbawa",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.744805555,
   "lng": 117.671527777
  },
@@ -2996,6 +4297,7 @@
   "name": "Kabupaten Sumbawa Barat",
   "province": "Nusa Tenggara Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.78737,
   "lng": 116.926
  },
@@ -3004,6 +4306,7 @@
   "name": "Kabupaten Sumedang",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.85,
   "lng": 107.916666666
  },
@@ -3012,6 +4315,7 @@
   "name": "Kabupaten Sumenep",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.016666666,
   "lng": 113.866666666
  },
@@ -3020,6 +4324,7 @@
   "name": "Kabupaten Supiori",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.733333,
   "lng": 135.583
  },
@@ -3028,6 +4333,7 @@
   "name": "Kabupaten Tabalong",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.164735675,
   "lng": 115.382213269
  },
@@ -3036,6 +4342,7 @@
   "name": "Kabupaten Tabanan",
   "province": "Bali",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.551147222,
   "lng": 115.121613888
  },
@@ -3044,6 +4351,7 @@
   "name": "Kabupaten Takalar",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.41666667,
   "lng": 119.58333333
  },
@@ -3052,6 +4360,7 @@
   "name": "Kabupaten Tambrauw",
   "province": "Papua Barat Daya",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.60515,
   "lng": 132.48962
  },
@@ -3060,6 +4369,7 @@
   "name": "Kabupaten Tana Tidung",
   "province": "Kalimantan Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 3.55,
   "lng": 117.25
  },
@@ -3068,6 +4378,7 @@
   "name": "Kabupaten Tana Toraja",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.16666667,
   "lng": 119.75
  },
@@ -3076,6 +4387,7 @@
   "name": "Kabupaten Tanah Bumbu",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.483633907,
   "lng": 115.947938395
  },
@@ -3084,6 +4396,7 @@
   "name": "Kabupaten Tanah Datar",
   "province": "Sumatera Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.45,
   "lng": 100.583
  },
@@ -3092,6 +4405,7 @@
   "name": "Kabupaten Tanah Laut",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.799739239,
   "lng": 114.782593377
  },
@@ -3100,6 +4414,7 @@
   "name": "Kabupaten Tangerang",
   "province": "Banten",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.2,
   "lng": 106.49
  },
@@ -3108,6 +4423,7 @@
   "name": "Kabupaten Tanggamus",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.481456,
   "lng": 104.6824048
  },
@@ -3116,6 +4432,7 @@
   "name": "Kabupaten Tanjung Jabung Barat",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.826341,
   "lng": 103.4614765
  },
@@ -3124,6 +4441,7 @@
   "name": "Kabupaten Tanjung Jabung Timur",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.13198,
   "lng": 103.61755
  },
@@ -3132,6 +4450,7 @@
   "name": "Kabupaten Tapanuli Selatan",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.517652,
   "lng": 99.30107
  },
@@ -3140,6 +4459,7 @@
   "name": "Kabupaten Tapanuli Tengah",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.9,
   "lng": 98.66667
  },
@@ -3148,6 +4468,7 @@
   "name": "Kabupaten Tapanuli Utara",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.0028,
   "lng": 99.0707
  },
@@ -3156,6 +4477,7 @@
   "name": "Kabupaten Tapin",
   "province": "Kalimantan Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.930897396,
   "lng": 115.156682378
  },
@@ -3164,6 +4486,7 @@
   "name": "Kabupaten Tasikmalaya",
   "province": "Jawa Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.365833333,
   "lng": 108.101944444
  },
@@ -3172,6 +4495,7 @@
   "name": "Kabupaten Tebo",
   "province": "Jambi",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.38333,
   "lng": 102.317
  },
@@ -3180,6 +4504,7 @@
   "name": "Kabupaten Tegal",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.86666667,
   "lng": 109.15
  },
@@ -3188,6 +4513,7 @@
   "name": "Kabupaten Teluk Bintuni",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -1.88037,
   "lng": 133.33105
  },
@@ -3196,6 +4522,7 @@
   "name": "Kabupaten Teluk Wondama",
   "province": "Papua Barat",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.7,
   "lng": 134.5
  },
@@ -3204,6 +4531,7 @@
   "name": "Kabupaten Temanggung",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.3,
   "lng": 110.166666666
  },
@@ -3212,6 +4540,7 @@
   "name": "Kabupaten Timor Tengah Selatan",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.471666666,
   "lng": 124.804722222
  },
@@ -3220,6 +4549,7 @@
   "name": "Kabupaten Timor Tengah Utara",
   "province": "Nusa Tenggara Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -9.446666666,
   "lng": 124.478055555
  },
@@ -3228,6 +4558,7 @@
   "name": "Kabupaten Toba",
   "province": "Sumatera Utara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 2.39793,
   "lng": 99.21678
  },
@@ -3236,6 +4567,7 @@
   "name": "Kabupaten Tojo Una-Una",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -0.875556,
   "lng": 121.63
  },
@@ -3244,6 +4576,7 @@
   "name": "Kabupaten Toli-Toli",
   "province": "Sulawesi Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": 1.03861,
   "lng": 120.818
  },
@@ -3252,6 +4585,7 @@
   "name": "Kabupaten Tolikara",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.46667,
   "lng": 138.61667
  },
@@ -3260,6 +4594,7 @@
   "name": "Kabupaten Toraja Utara",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.927222222,
   "lng": 119.791944444
  },
@@ -3268,6 +4603,7 @@
   "name": "Kabupaten Trenggalek",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.05,
   "lng": 111.716666666
  },
@@ -3276,6 +4612,7 @@
   "name": "Kabupaten Tuban",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -6.88333,
   "lng": 112.05
  },
@@ -3284,6 +4621,7 @@
   "name": "Kabupaten Tulang Bawang",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.20604,
   "lng": 105.57999
  },
@@ -3292,6 +4630,7 @@
   "name": "Kabupaten Tulang Bawang Barat",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.43975,
   "lng": 105.0444
  },
@@ -3300,6 +4639,7 @@
   "name": "Kabupaten Tulungagung",
   "province": "Jawa Timur",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -8.066666666,
   "lng": 111.9
  },
@@ -3308,6 +4648,7 @@
   "name": "Kabupaten Wajo",
   "province": "Sulawesi Selatan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.12638889,
   "lng": 120.0319444
  },
@@ -3316,6 +4657,7 @@
   "name": "Kabupaten Wakatobi",
   "province": "Sulawesi Tenggara",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -5.31934,
   "lng": 123.5948
  },
@@ -3324,6 +4666,7 @@
   "name": "Kabupaten Waropen",
   "province": "Papua",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -2.286,
   "lng": 137.01837
  },
@@ -3332,6 +4675,7 @@
   "name": "Kabupaten Way Kanan",
   "province": "Lampung",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.44705,
   "lng": 104.52753
  },
@@ -3340,6 +4684,7 @@
   "name": "Kabupaten Wonogiri",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.91667,
   "lng": 111
  },
@@ -3348,6 +4693,7 @@
   "name": "Kabupaten Wonosobo",
   "province": "Jawa Tengah",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -7.361388888,
   "lng": 109.926669444
  },
@@ -3356,6 +4702,7 @@
   "name": "Kabupaten Yahukimo",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -4.886998993,
   "lng": 139.520008078
  },
@@ -3364,14 +4711,277 @@
   "name": "Kabupaten Yalimo",
   "province": "Papua Pegunungan",
   "kind": "kabupaten",
+  "country": "ID",
   "lat": -3.785,
   "lng": 139.447
+ },
+ {
+  "id": "G1642069",
+  "name": "Kalabahi",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.215,
+  "lng": 124.546
+ },
+ {
+  "id": "G1641977",
+  "name": "Kalianget",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.054,
+  "lng": 113.942
+ },
+ {
+  "id": "G1641792",
+  "name": "Kamal",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.168,
+  "lng": 112.719
+ },
+ {
+  "id": "G1641547",
+  "name": "Kandangan",
+  "province": "Kalimantan Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.784,
+  "lng": 115.277
+ },
+ {
+  "id": "G1641342",
+  "name": "Karangampel",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.462,
+  "lng": 108.452
+ },
+ {
+  "id": "G1641333",
+  "name": "Karanganom",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.649,
+  "lng": 110.625
+ },
+ {
+  "id": "G1999251",
+  "name": "Karangnongko",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.796,
+  "lng": 110.587
+ },
+ {
+  "id": "G1641184",
+  "name": "Karangsembung",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.849,
+  "lng": 108.642
+ },
+ {
+  "id": "G2010985",
+  "name": "Kartasura",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.552,
+  "lng": 110.738
+ },
+ {
+  "id": "G8531221",
+  "name": "Karubaga",
+  "province": "Papua Pegunungan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.699,
+  "lng": 138.458
+ },
+ {
+  "id": "G2005237",
+  "name": "Kasihan",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.827,
+  "lng": 110.329
+ },
+ {
+  "id": "G1640972",
+  "name": "Katobu",
+  "province": "Sulawesi Tenggara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.83,
+  "lng": 122.726
+ },
+ {
+  "id": "G1640902",
+  "name": "Kawalu",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.382,
+  "lng": 108.208
+ },
+ {
+  "id": "G1640889",
+  "name": "Kawasi",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.591,
+  "lng": 127.407
+ },
+ {
+  "id": "G1640765",
+  "name": "Kebomas",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.167,
+  "lng": 112.633
+ },
+ {
+  "id": "G1640755",
+  "name": "Kebonarun",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.7,
+  "lng": 110.563
+ },
+ {
+  "id": "G1640585",
+  "name": "Kedungwaru",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.067,
+  "lng": 111.917
+ },
+ {
+  "id": "G1640581",
+  "name": "Kedungwuni",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.97,
+  "lng": 109.648
+ },
+ {
+  "id": "G1640576",
+  "name": "Kefamenanu",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -9.447,
+  "lng": 124.478
+ },
+ {
+  "id": "G1640354",
+  "name": "Kencong",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.283,
+  "lng": 113.367
+ },
+ {
+  "id": "G11012573",
+  "name": "Kenyam",
+  "province": "Papua Pegunungan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.6,
+  "lng": 138.384
+ },
+ {
+  "id": "G1640296",
+  "name": "Kepanjen",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.13,
+  "lng": 112.573
+ },
+ {
+  "id": "G1640293",
+  "name": "Kepi",
+  "province": "Papua Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.525,
+  "lng": 139.322
+ },
+ {
+  "id": "G1640185",
+  "name": "Kertosono",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.583,
+  "lng": 112.1
+ },
+ {
+  "id": "G1640138",
+  "name": "Ketanggungan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.938,
+  "lng": 108.891
+ },
+ {
+  "id": "G1214882",
+  "name": "Kisaran",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.985,
+  "lng": 99.616
+ },
+ {
+  "id": "G1639941",
+  "name": "Klakah",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.996,
+  "lng": 113.253
+ },
+ {
+  "id": "G1639925",
+  "name": "Klangenan",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.709,
+  "lng": 108.44
+ },
+ {
+  "id": "G11012571",
+  "name": "Kobakma",
+  "province": "Papua Pegunungan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.664,
+  "lng": 139.065
  },
  {
   "id": "Q18970",
   "name": "Kota Ambon",
   "province": "Maluku",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.696666666,
   "lng": 128.178333333
  },
@@ -3380,6 +4990,7 @@
   "name": "Kota Balikpapan",
   "province": "Kalimantan Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -1.237926111,
   "lng": 116.856251111
  },
@@ -3388,6 +4999,7 @@
   "name": "Kota Banda Aceh",
   "province": "Aceh",
   "kind": "kota",
+  "country": "ID",
   "lat": 5.55,
   "lng": 95.3175
  },
@@ -3396,6 +5008,7 @@
   "name": "Kota Bandar Lampung",
   "province": "Lampung",
   "kind": "kota",
+  "country": "ID",
   "lat": -5.429444444,
   "lng": 105.2625
  },
@@ -3404,6 +5017,7 @@
   "name": "Kota Bandung",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.921944444,
   "lng": 107.606944444
  },
@@ -3412,6 +5026,7 @@
   "name": "Kota Banjar",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.366666666,
   "lng": 108.533333333
  },
@@ -3420,6 +5035,7 @@
   "name": "Kota Banjarbaru",
   "province": "Kalimantan Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.438903059,
   "lng": 114.830880915
  },
@@ -3428,6 +5044,7 @@
   "name": "Kota Banjarmasin",
   "province": "Kalimantan Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.314429472,
   "lng": 114.592253736
  },
@@ -3436,6 +5053,7 @@
   "name": "Kota Batam",
   "province": "Kepulauan Riau",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.13,
   "lng": 104.053055555
  },
@@ -3444,6 +5062,7 @@
   "name": "Kota Batu",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.8672,
   "lng": 112.5239
  },
@@ -3452,6 +5071,7 @@
   "name": "Kota Bau Bau",
   "province": "Sulawesi Tenggara",
   "kind": "kota",
+  "country": "ID",
   "lat": -5.462222222,
   "lng": 122.605833333
  },
@@ -3460,6 +5080,7 @@
   "name": "Kota Bekasi",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.233333333,
   "lng": 107
  },
@@ -3468,6 +5089,7 @@
   "name": "Kota Bengkulu",
   "province": "Bengkulu",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.795555555,
   "lng": 102.259166666
  },
@@ -3476,6 +5098,7 @@
   "name": "Kota Bima",
   "province": "Nusa Tenggara Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -8.46,
   "lng": 118.726666666
  },
@@ -3484,6 +5107,7 @@
   "name": "Kota Binjai",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 3.6,
   "lng": 98.485277777
  },
@@ -3492,6 +5116,7 @@
   "name": "Kota Bitung",
   "province": "Sulawesi Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.447222222,
   "lng": 125.197777777
  },
@@ -3500,6 +5125,7 @@
   "name": "Kota Blitar",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -8.1,
   "lng": 112.166666666
  },
@@ -3508,6 +5134,7 @@
   "name": "Kota Bogor",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.597802777,
   "lng": 106.799263333
  },
@@ -3516,6 +5143,7 @@
   "name": "Kota Bontang",
   "province": "Kalimantan Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.133333333,
   "lng": 117.5
  },
@@ -3524,6 +5152,7 @@
   "name": "Kota Bukittinggi",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.309722222,
   "lng": 100.375277777
  },
@@ -3532,6 +5161,7 @@
   "name": "Kota Cilegon",
   "province": "Banten",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.016666666,
   "lng": 106.016666666
  },
@@ -3540,6 +5170,7 @@
   "name": "Kota Cimahi",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.8800382,
   "lng": 107.5385202
  },
@@ -3548,6 +5179,7 @@
   "name": "Kota Cirebon",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.7396903,
   "lng": 108.5529678
  },
@@ -3556,6 +5188,7 @@
   "name": "Kota Denpasar",
   "province": "Bali",
   "kind": "kota",
+  "country": "ID",
   "lat": -8.671666666,
   "lng": 115.233888888
  },
@@ -3564,6 +5197,7 @@
   "name": "Kota Depok",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.405031,
   "lng": 106.8173077
  },
@@ -3572,6 +5206,7 @@
   "name": "Kota Dumai",
   "province": "Riau",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.666666666,
   "lng": 101.45
  },
@@ -3580,6 +5215,7 @@
   "name": "Kota Gorontalo",
   "province": "Gorontalo",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.542222222,
   "lng": 123.061388888
  },
@@ -3588,6 +5224,7 @@
   "name": "Kota Gunungsitoli",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.116666666,
   "lng": 97.566666666
  },
@@ -3596,6 +5233,7 @@
   "name": "Kota Jambi",
   "province": "Jambi",
   "kind": "kota",
+  "country": "ID",
   "lat": -1.628794452,
   "lng": 103.608227492
  },
@@ -3604,6 +5242,7 @@
   "name": "Kota Jayapura",
   "province": "Papua",
   "kind": "kota",
+  "country": "ID",
   "lat": -2.5425,
   "lng": 140.704478888
  },
@@ -3612,6 +5251,7 @@
   "name": "Kota Kediri",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.811111111,
   "lng": 112.004722222
  },
@@ -3620,6 +5260,7 @@
   "name": "Kota Kendari",
   "province": "Sulawesi Tenggara",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.9675,
   "lng": 122.594722222
  },
@@ -3628,6 +5269,7 @@
   "name": "Kota Kotamobagu",
   "province": "Sulawesi Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.73333333,
   "lng": 124.31666667
  },
@@ -3636,6 +5278,7 @@
   "name": "Kota Kupang",
   "province": "Nusa Tenggara Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -10.163333333,
   "lng": 123.577777777
  },
@@ -3644,6 +5287,7 @@
   "name": "Kota Langsa",
   "province": "Aceh",
   "kind": "kota",
+  "country": "ID",
   "lat": 4.466666666,
   "lng": 97.95
  },
@@ -3652,6 +5296,7 @@
   "name": "Kota Lhokseumawe",
   "province": "Aceh",
   "kind": "kota",
+  "country": "ID",
   "lat": 5.18,
   "lng": 97.150555555
  },
@@ -3660,6 +5305,7 @@
   "name": "Kota Lubuk Linggau",
   "province": "Sumatera Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.296666666,
   "lng": 102.861666666
  },
@@ -3668,6 +5314,7 @@
   "name": "Kota Madiun",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.63,
   "lng": 111.523055555
  },
@@ -3676,6 +5323,7 @@
   "name": "Kota Magelang",
   "province": "Jawa Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.470555555,
   "lng": 110.217777777
  },
@@ -3684,6 +5332,7 @@
   "name": "Kota Makassar",
   "province": "Sulawesi Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -5.133055555,
   "lng": 119.413611111
  },
@@ -3692,6 +5341,7 @@
   "name": "Kota Malang",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.96893041,
   "lng": 112.632727716
  },
@@ -3700,6 +5350,7 @@
   "name": "Kota Manado",
   "province": "Sulawesi Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.493055555,
   "lng": 124.841261111
  },
@@ -3708,6 +5359,7 @@
   "name": "Kota Mataram",
   "province": "Nusa Tenggara Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -8.583333333,
   "lng": 116.116666666
  },
@@ -3716,6 +5368,7 @@
   "name": "Kota Medan",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 3.589444444,
   "lng": 98.673888888
  },
@@ -3724,6 +5377,7 @@
   "name": "Kota Metro",
   "province": "Lampung",
   "kind": "kota",
+  "country": "ID",
   "lat": -5.116666666,
   "lng": 105.3
  },
@@ -3732,6 +5386,7 @@
   "name": "Kota Mojokerto",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.472222222,
   "lng": 112.433611111
  },
@@ -3740,6 +5395,7 @@
   "name": "Kota Padang",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.955556,
   "lng": 100.360556
  },
@@ -3748,6 +5404,7 @@
   "name": "Kota Padang Panjang",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.464444444,
   "lng": 100.400833333
  },
@@ -3756,6 +5413,7 @@
   "name": "Kota Padangsidimpuan",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.366666666,
   "lng": 99.266666666
  },
@@ -3764,6 +5422,7 @@
   "name": "Kota Pagar Alam",
   "province": "Sumatera Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -4.021666666,
   "lng": 103.252222222
  },
@@ -3772,6 +5431,7 @@
   "name": "Kota Palangka Raya",
   "province": "Kalimantan Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -2.21,
   "lng": 113.92
  },
@@ -3780,6 +5440,7 @@
   "name": "Kota Palembang",
   "province": "Sumatera Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -2.983333333,
   "lng": 104.764444444
  },
@@ -3788,6 +5449,7 @@
   "name": "Kota Palopo",
   "province": "Sulawesi Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -3,
   "lng": 120.2
  },
@@ -3796,6 +5458,7 @@
   "name": "Kota Palu",
   "province": "Sulawesi Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.895,
   "lng": 119.859444444
  },
@@ -3804,6 +5467,7 @@
   "name": "Kota Pangkal Pinang",
   "province": "Kepulauan Bangka Belitung",
   "kind": "kota",
+  "country": "ID",
   "lat": -2.1,
   "lng": 106.1
  },
@@ -3812,6 +5476,7 @@
   "name": "Kota Parepare",
   "province": "Sulawesi Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -4.016666666,
   "lng": 119.623611111
  },
@@ -3820,6 +5485,7 @@
   "name": "Kota Pariaman",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.626111111,
   "lng": 100.120555555
  },
@@ -3828,6 +5494,7 @@
   "name": "Kota Pasuruan",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.640622222,
   "lng": 112.906477777
  },
@@ -3836,6 +5503,7 @@
   "name": "Kota Payakumbuh",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.224444444,
   "lng": 100.6325
  },
@@ -3844,6 +5512,7 @@
   "name": "Kota Pekalongan",
   "province": "Jawa Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.888333333,
   "lng": 109.675277777
  },
@@ -3852,6 +5521,7 @@
   "name": "Kota Pekanbaru",
   "province": "Riau",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.533333333,
   "lng": 101.45
  },
@@ -3860,6 +5530,7 @@
   "name": "Kota Pematang Siantar",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 2.96,
   "lng": 99.06
  },
@@ -3868,6 +5539,7 @@
   "name": "Kota Pontianak",
   "province": "Kalimantan Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.020555555,
   "lng": 109.341388888
  },
@@ -3876,6 +5548,7 @@
   "name": "Kota Prabumulih",
   "province": "Sumatera Selatan",
   "kind": "kota",
+  "country": "ID",
   "lat": -3.432777777,
   "lng": 104.235555555
  },
@@ -3884,6 +5557,7 @@
   "name": "Kota Probolinggo",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.75,
   "lng": 113.216666666
  },
@@ -3892,6 +5566,7 @@
   "name": "Kota Sabang",
   "province": "Aceh",
   "kind": "kota",
+  "country": "ID",
   "lat": 5.893055555,
   "lng": 95.32
  },
@@ -3900,6 +5575,7 @@
   "name": "Kota Salatiga",
   "province": "Jawa Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.338888888,
   "lng": 110.502222222
  },
@@ -3908,6 +5584,7 @@
   "name": "Kota Samarinda",
   "province": "Kalimantan Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.502222222,
   "lng": 117.153611111
  },
@@ -3916,6 +5593,7 @@
   "name": "Kota Sawahlunto",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.682777777,
   "lng": 100.778333333
  },
@@ -3924,6 +5602,7 @@
   "name": "Kota Semarang",
   "province": "Jawa Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.99,
   "lng": 110.4225
  },
@@ -3932,6 +5611,7 @@
   "name": "Kota Serang",
   "province": "Banten",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.12,
   "lng": 106.150277777
  },
@@ -3940,6 +5620,7 @@
   "name": "Kota Sibolga",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.7425,
   "lng": 98.779166666
  },
@@ -3948,6 +5629,7 @@
   "name": "Kota Singkawang",
   "province": "Kalimantan Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.9,
   "lng": 108.983333333
  },
@@ -3956,6 +5638,7 @@
   "name": "Kota Solok",
   "province": "Sumatera Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.788333333,
   "lng": 100.654166666
  },
@@ -3964,6 +5647,7 @@
   "name": "Kota Sorong",
   "province": "Papua Barat Daya",
   "kind": "kota",
+  "country": "ID",
   "lat": -0.87956,
   "lng": 131.26104
  },
@@ -3972,6 +5656,7 @@
   "name": "Kota Subulussalam",
   "province": "Aceh",
   "kind": "kota",
+  "country": "ID",
   "lat": 2.642222222,
   "lng": 98.004166666
  },
@@ -3980,6 +5665,7 @@
   "name": "Kota Sukabumi",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.9320004,
   "lng": 106.9185638
  },
@@ -3988,6 +5674,7 @@
   "name": "Kota Sungai Penuh",
   "province": "Jambi",
   "kind": "kota",
+  "country": "ID",
   "lat": -2.063611111,
   "lng": 101.396111111
  },
@@ -3996,6 +5683,7 @@
   "name": "Kota Surabaya",
   "province": "Jawa Timur",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.246283611,
   "lng": 112.737767222
  },
@@ -4004,6 +5692,7 @@
   "name": "Kota Surakarta",
   "province": "Jawa Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.566666666,
   "lng": 110.816666666
  },
@@ -4012,6 +5701,7 @@
   "name": "Kota Tangerang",
   "province": "Banten",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.170277777,
   "lng": 106.640277777
  },
@@ -4020,6 +5710,7 @@
   "name": "Kota Tangerang Selatan",
   "province": "Banten",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.288888888,
   "lng": 106.718055555
  },
@@ -4028,6 +5719,7 @@
   "name": "Kota Tanjung Balai",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 2.966666666,
   "lng": 99.8
  },
@@ -4036,6 +5728,7 @@
   "name": "Kota Tanjungpinang",
   "province": "Kepulauan Riau",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.918777777,
   "lng": 104.455416666
  },
@@ -4044,6 +5737,7 @@
   "name": "Kota Tarakan",
   "province": "Kalimantan Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 3.3,
   "lng": 117.633333333
  },
@@ -4052,6 +5746,7 @@
   "name": "Kota Tasikmalaya",
   "province": "Jawa Barat",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.3258023,
   "lng": 108.2201805
  },
@@ -4060,6 +5755,7 @@
   "name": "Kota Tebing Tinggi",
   "province": "Sumatera Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 3.328333333,
   "lng": 99.1625
  },
@@ -4068,6 +5764,7 @@
   "name": "Kota Tegal",
   "province": "Jawa Tengah",
   "kind": "kota",
+  "country": "ID",
   "lat": -6.8675,
   "lng": 109.1375
  },
@@ -4076,6 +5773,7 @@
   "name": "Kota Ternate",
   "province": "Maluku Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.783333333,
   "lng": 127.366666666
  },
@@ -4084,6 +5782,7 @@
   "name": "Kota Tidore Kepulauan",
   "province": "Maluku Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 0.609444444,
   "lng": 127.569722222
  },
@@ -4092,6 +5791,7 @@
   "name": "Kota Tomohon",
   "province": "Sulawesi Utara",
   "kind": "kota",
+  "country": "ID",
   "lat": 1.324421,
   "lng": 124.82254
  },
@@ -4100,6 +5800,7 @@
   "name": "Kota Tual",
   "province": "Maluku",
   "kind": "kota",
+  "country": "ID",
   "lat": -5.64257741,
   "lng": 132.742992993
  },
@@ -4108,7 +5809,1889 @@
   "name": "Kota Yogyakarta",
   "province": "Yogyakarta",
   "kind": "kota",
+  "country": "ID",
   "lat": -7.800456766,
   "lng": 110.391280229
+ },
+ {
+  "id": "G1639524",
+  "name": "Kotabumi",
+  "province": "Lampung",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.825,
+  "lng": 104.882
+ },
+ {
+  "id": "G1639431",
+  "name": "Kraksaan",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.758,
+  "lng": 113.396
+ },
+ {
+  "id": "G1639362",
+  "name": "Kresek",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.131,
+  "lng": 106.38
+ },
+ {
+  "id": "G1639356",
+  "name": "Krian",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.41,
+  "lng": 112.579
+ },
+ {
+  "id": "G1639337",
+  "name": "Kroya",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.633,
+  "lng": 109.246
+ },
+ {
+  "id": "G1639307",
+  "name": "Kuala Cenaku",
+  "province": "Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.471,
+  "lng": 102.683
+ },
+ {
+  "id": "G1639286",
+  "name": "Kuala Tungkal",
+  "province": "Jambi",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.816,
+  "lng": 103.461
+ },
+ {
+  "id": "G1639304",
+  "name": "Kualakapuas",
+  "province": "Kalimantan Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.009,
+  "lng": 114.388
+ },
+ {
+  "id": "G1639002",
+  "name": "Kuta",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.723,
+  "lng": 115.172
+ },
+ {
+  "id": "G1638981",
+  "name": "Kutoarjo",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.717,
+  "lng": 109.913
+ },
+ {
+  "id": "G1638870",
+  "name": "Labuan",
+  "province": "Banten",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.378,
+  "lng": 105.83
+ },
+ {
+  "id": "G1638868",
+  "name": "Labuan Bajo",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.496,
+  "lng": 119.888
+ },
+ {
+  "id": "G1637372",
+  "name": "Labuan Lombok",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.5,
+  "lng": 116.667
+ },
+ {
+  "id": "G1638874",
+  "name": "Labuha",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.625,
+  "lng": 127.478
+ },
+ {
+  "id": "G1214800",
+  "name": "Labuhan Deli",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.879,
+  "lng": 98.633
+ },
+ {
+  "id": "G1214776",
+  "name": "Lahewa",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.394,
+  "lng": 97.168
+ },
+ {
+  "id": "G1638754",
+  "name": "Laikit, Laikit II (Dimembe)",
+  "province": "Sulawesi Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.488,
+  "lng": 124.974
+ },
+ {
+  "id": "G1638352",
+  "name": "Lasem",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.692,
+  "lng": 111.453
+ },
+ {
+  "id": "G1638284",
+  "name": "Lawang",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.835,
+  "lng": 112.695
+ },
+ {
+  "id": "G1638217",
+  "name": "Lebaksiu",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.05,
+  "lng": 109.144
+ },
+ {
+  "id": "G7302172",
+  "name": "Legian",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.704,
+  "lng": 115.17
+ },
+ {
+  "id": "G1638063",
+  "name": "Lembang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.812,
+  "lng": 107.618
+ },
+ {
+  "id": "G1638059",
+  "name": "Lembar",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.726,
+  "lng": 116.074
+ },
+ {
+  "id": "G1966184",
+  "name": "Leuwiliang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.117,
+  "lng": 107.502
+ },
+ {
+  "id": "G1637833",
+  "name": "Lewoleba",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.372,
+  "lng": 123.418
+ },
+ {
+  "id": "G1214660",
+  "name": "Lhoknga",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 5.477,
+  "lng": 95.245
+ },
+ {
+  "id": "G1637510",
+  "name": "Loa Janan",
+  "province": "Kalimantan Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.583,
+  "lng": 117.095
+ },
+ {
+  "id": "G8051286",
+  "name": "Lovina",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.149,
+  "lng": 115.04
+ },
+ {
+  "id": "G1637001",
+  "name": "Luwuk",
+  "province": "Sulawesi Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.952,
+  "lng": 122.788
+ },
+ {
+  "id": "G1636990",
+  "name": "Maba",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 0.701,
+  "lng": 128.292
+ },
+ {
+  "id": "G1636808",
+  "name": "Majenang",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.297,
+  "lng": 108.764
+ },
+ {
+  "id": "G1636798",
+  "name": "Makale",
+  "province": "Sulawesi Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.102,
+  "lng": 119.854
+ },
+ {
+  "id": "G1636426",
+  "name": "Manggar",
+  "province": "Kepulauan Bangka Belitung",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.883,
+  "lng": 108.267
+ },
+ {
+  "id": "G1636322",
+  "name": "Manismata",
+  "province": "Kalimantan Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.467,
+  "lng": 111.033
+ },
+ {
+  "id": "G1636125",
+  "name": "Margahayukencana",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.971,
+  "lng": 107.568
+ },
+ {
+  "id": "G1636121",
+  "name": "Margasari",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.095,
+  "lng": 109.025
+ },
+ {
+  "id": "G1636022",
+  "name": "Martapura",
+  "province": "Kalimantan Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.411,
+  "lng": 114.864
+ },
+ {
+  "id": "G1635984",
+  "name": "Masamba",
+  "province": "Sulawesi Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.554,
+  "lng": 120.328
+ },
+ {
+  "id": "G8667930",
+  "name": "Masohi",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.298,
+  "lng": 128.969
+ },
+ {
+  "id": "G1635815",
+  "name": "Maumere",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.62,
+  "lng": 122.211
+ },
+ {
+  "id": "G1635660",
+  "name": "Melati",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.733,
+  "lng": 110.367
+ },
+ {
+  "id": "G1636507",
+  "name": "Mendaha",
+  "province": "Jambi",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.016,
+  "lng": 103.593
+ },
+ {
+  "id": "G1635342",
+  "name": "Mertoyudan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.52,
+  "lng": 110.226
+ },
+ {
+  "id": "G1214488",
+  "name": "Meulaboh",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 4.144,
+  "lng": 96.127
+ },
+ {
+  "id": "G1635164",
+  "name": "Mlonggo",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.533,
+  "lng": 110.7
+ },
+ {
+  "id": "G12493528",
+  "name": "Modisi",
+  "province": "Sulawesi Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 0.452,
+  "lng": 124.437
+ },
+ {
+  "id": "G1635116",
+  "name": "Mojoagung",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.567,
+  "lng": 112.35
+ },
+ {
+  "id": "G1634954",
+  "name": "Mranggen",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.027,
+  "lng": 110.516
+ },
+ {
+  "id": "G1634904",
+  "name": "Muara Bungo",
+  "province": "Jambi",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.49,
+  "lng": 102.115
+ },
+ {
+  "id": "G1634788",
+  "name": "Muara Teweh",
+  "province": "Kalimantan Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.947,
+  "lng": 114.896
+ },
+ {
+  "id": "G1634739",
+  "name": "Mulia",
+  "province": "Papua Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.715,
+  "lng": 137.985
+ },
+ {
+  "id": "G1634718",
+  "name": "Muncar",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.433,
+  "lng": 114.333
+ },
+ {
+  "id": "G1634710",
+  "name": "Munduk",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.269,
+  "lng": 115.079
+ },
+ {
+  "id": "G1634680",
+  "name": "Muntilan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.581,
+  "lng": 110.293
+ },
+ {
+  "id": "G1634678",
+  "name": "Muntok",
+  "province": "Kepulauan Bangka Belitung",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.067,
+  "lng": 105.162
+ },
+ {
+  "id": "G1214428",
+  "name": "Nainggolan",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.436,
+  "lng": 98.885
+ },
+ {
+  "id": "G1634519",
+  "name": "Namlea",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.262,
+  "lng": 127.093
+ },
+ {
+  "id": "G1634511",
+  "name": "Namrole",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.845,
+  "lng": 126.726
+ },
+ {
+  "id": "G1634266",
+  "name": "Negara",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.357,
+  "lng": 114.617
+ },
+ {
+  "id": "G2010971",
+  "name": "Ngemplak",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.55,
+  "lng": 110.716
+ },
+ {
+  "id": "G1634010",
+  "name": "Ngoro",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.684,
+  "lng": 112.258
+ },
+ {
+  "id": "G1633986",
+  "name": "Ngunut",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.106,
+  "lng": 112.016
+ },
+ {
+  "id": "G7290162",
+  "name": "Nusa Dua",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.8,
+  "lng": 115.233
+ },
+ {
+  "id": "G13680164",
+  "name": "Nusantara",
+  "province": "Kalimantan Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.973,
+  "lng": 116.709
+ },
+ {
+  "id": "G8355852",
+  "name": "Pabean",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.65,
+  "lng": 115.239
+ },
+ {
+  "id": "G1633442",
+  "name": "Paciran",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.877,
+  "lng": 112.376
+ },
+ {
+  "id": "G1963770",
+  "name": "Padalarang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.838,
+  "lng": 107.473
+ },
+ {
+  "id": "G1633411",
+  "name": "Padangbai",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.532,
+  "lng": 115.507
+ },
+ {
+  "id": "G1633182",
+  "name": "Pakisaji",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.066,
+  "lng": 112.598
+ },
+ {
+  "id": "G1633056",
+  "name": "Palimanan",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.707,
+  "lng": 108.424
+ },
+ {
+  "id": "G1632998",
+  "name": "Pamanukan",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.284,
+  "lng": 107.811
+ },
+ {
+  "id": "G1632974",
+  "name": "Pameungpeuk",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.018,
+  "lng": 107.604
+ },
+ {
+  "id": "G1632937",
+  "name": "Pamulang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.343,
+  "lng": 106.738
+ },
+ {
+  "id": "G1632903",
+  "name": "Panarukan",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.702,
+  "lng": 113.918
+ },
+ {
+  "id": "G1632859",
+  "name": "Pandaan",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.653,
+  "lng": 112.688
+ },
+ {
+  "id": "G1632861",
+  "name": "Pandak",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.913,
+  "lng": 110.294
+ },
+ {
+  "id": "G1214302",
+  "name": "Pangkalan Brandan",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 4.024,
+  "lng": 98.278
+ },
+ {
+  "id": "G1632694",
+  "name": "Pangkalanbuun",
+  "province": "Kalimantan Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.683,
+  "lng": 111.626
+ },
+ {
+  "id": "G1214294",
+  "name": "Pangururan",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.608,
+  "lng": 98.696
+ },
+ {
+  "id": "G1632566",
+  "name": "Panji",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.725,
+  "lng": 114.1
+ },
+ {
+  "id": "G1214135",
+  "name": "Parapat",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.663,
+  "lng": 98.935
+ },
+ {
+  "id": "G1632358",
+  "name": "Pare",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.768,
+  "lng": 112.198
+ },
+ {
+  "id": "G1214257",
+  "name": "Parmonangan",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.397,
+  "lng": 99.052
+ },
+ {
+  "id": "G1214256",
+  "name": "Paropo",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.866,
+  "lng": 98.521
+ },
+ {
+  "id": "G1632276",
+  "name": "Parung",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.421,
+  "lng": 106.733
+ },
+ {
+  "id": "G1632228",
+  "name": "Pasarkemis",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.17,
+  "lng": 106.53
+ },
+ {
+  "id": "G1632197",
+  "name": "Paseh",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.068,
+  "lng": 107.794
+ },
+ {
+  "id": "G1631851",
+  "name": "Pecangaan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.698,
+  "lng": 110.711
+ },
+ {
+  "id": "G8449493",
+  "name": "Pekan Bahapal",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.113,
+  "lng": 99.174
+ },
+ {
+  "id": "G1631733",
+  "name": "Pelabuhanratu",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.987,
+  "lng": 106.551
+ },
+ {
+  "id": "G1631637",
+  "name": "Pemangkat",
+  "province": "Kalimantan Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.167,
+  "lng": 108.967
+ },
+ {
+  "id": "G1214191",
+  "name": "Perbaungan",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.568,
+  "lng": 98.956
+ },
+ {
+  "id": "G1214189",
+  "name": "Percut",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.625,
+  "lng": 98.864
+ },
+ {
+  "id": "G1630997",
+  "name": "Plumbon",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.705,
+  "lng": 108.473
+ },
+ {
+  "id": "G1630935",
+  "name": "Polewali",
+  "province": "Sulawesi Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.432,
+  "lng": 119.344
+ },
+ {
+  "id": "G1631962",
+  "name": "Pototano",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.413,
+  "lng": 117.481
+ },
+ {
+  "id": "G1630662",
+  "name": "Praya",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.705,
+  "lng": 116.27
+ },
+ {
+  "id": "G1630649",
+  "name": "Prigen",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.683,
+  "lng": 112.617
+ },
+ {
+  "id": "G1630416",
+  "name": "Pundong",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.952,
+  "lng": 110.349
+ },
+ {
+  "id": "G1630333",
+  "name": "Purwodadi",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.087,
+  "lng": 110.916
+ },
+ {
+  "id": "G1630328",
+  "name": "Purwokerto",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.421,
+  "lng": 109.234
+ },
+ {
+  "id": "G1630238",
+  "name": "Raha",
+  "province": "Sulawesi Tenggara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.838,
+  "lng": 122.721
+ },
+ {
+  "id": "G1630200",
+  "name": "Rajapolah",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.221,
+  "lng": 108.19
+ },
+ {
+  "id": "G13118656",
+  "name": "Ranai Kota",
+  "province": "Kepulauan Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.94,
+  "lng": 108.378
+ },
+ {
+  "id": "G1630088",
+  "name": "Randudongkal",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.098,
+  "lng": 109.324
+ },
+ {
+  "id": "G1630058",
+  "name": "Rangkasbitung",
+  "province": "Banten",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.359,
+  "lng": 106.249
+ },
+ {
+  "id": "G1630034",
+  "name": "Ransiki",
+  "province": "Papua Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.508,
+  "lng": 134.171
+ },
+ {
+  "id": "G1214073",
+  "name": "Rantauprapat",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.1,
+  "lng": 99.833
+ },
+ {
+  "id": "G1629974",
+  "name": "Rantepao",
+  "province": "Sulawesi Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.97,
+  "lng": 119.898
+ },
+ {
+  "id": "G1629749",
+  "name": "Rembangan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.704,
+  "lng": 111.342
+ },
+ {
+  "id": "G1629710",
+  "name": "Rengasdengklok",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.159,
+  "lng": 107.298
+ },
+ {
+  "id": "G1214055",
+  "name": "Reuleuet",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 5.217,
+  "lng": 96.283
+ },
+ {
+  "id": "G1629380",
+  "name": "Ruteng",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.611,
+  "lng": 120.464
+ },
+ {
+  "id": "G1628884",
+  "name": "Sampit",
+  "province": "Kalimantan Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.531,
+  "lng": 112.95
+ },
+ {
+  "id": "G1628858",
+  "name": "Sanana",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.059,
+  "lng": 125.978
+ },
+ {
+  "id": "G1628767",
+  "name": "Sangkapura",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -5.845,
+  "lng": 112.652
+ },
+ {
+  "id": "G1902387",
+  "name": "Sanur",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.675,
+  "lng": 115.261
+ },
+ {
+  "id": "G1628673",
+  "name": "Sape",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.567,
+  "lng": 118.983
+ },
+ {
+  "id": "G1628501",
+  "name": "Saumlaki",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.986,
+  "lng": 131.297
+ },
+ {
+  "id": "G1628453",
+  "name": "Sawangan",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.403,
+  "lng": 106.774
+ },
+ {
+  "id": "G1627969",
+  "name": "Selogiri",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.783,
+  "lng": 110.867
+ },
+ {
+  "id": "G1627957",
+  "name": "Selong",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.65,
+  "lng": 116.532
+ },
+ {
+  "id": "G7083717",
+  "name": "Semarapura",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.535,
+  "lng": 115.402
+ },
+ {
+  "id": "G6692272",
+  "name": "Senggigi",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.492,
+  "lng": 116.042
+ },
+ {
+  "id": "G1626921",
+  "name": "Sengkang",
+  "province": "Sulawesi Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.128,
+  "lng": 120.03
+ },
+ {
+  "id": "G2082460",
+  "name": "Sentani",
+  "province": "Papua",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.569,
+  "lng": 140.513
+ },
+ {
+  "id": "G1627610",
+  "name": "Sepatan",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.119,
+  "lng": 106.575
+ },
+ {
+  "id": "G7084521",
+  "name": "Seririt",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.193,
+  "lng": 114.939
+ },
+ {
+  "id": "G1627459",
+  "name": "Serpong",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.317,
+  "lng": 106.664
+ },
+ {
+  "id": "G1627453",
+  "name": "Serui",
+  "province": "Papua",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.88,
+  "lng": 136.243
+ },
+ {
+  "id": "G1627357",
+  "name": "Sewon",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.876,
+  "lng": 110.359
+ },
+ {
+  "id": "G1627342",
+  "name": "Siak Sri Indrapura",
+  "province": "Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 0.793,
+  "lng": 102.051
+ },
+ {
+  "id": "G1627267",
+  "name": "Sidareja",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.485,
+  "lng": 108.792
+ },
+ {
+  "id": "G1213840",
+  "name": "Sidikalang",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.749,
+  "lng": 98.313
+ },
+ {
+  "id": "G1213821",
+  "name": "Sigli",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 5.385,
+  "lng": 95.961
+ },
+ {
+  "id": "G1627035",
+  "name": "Simpang",
+  "province": "Jambi",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.264,
+  "lng": 104.097
+ },
+ {
+  "id": "G1213721",
+  "name": "Sinabang",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.48,
+  "lng": 96.38
+ },
+ {
+  "id": "G1626936",
+  "name": "Singaparna",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.351,
+  "lng": 108.111
+ },
+ {
+  "id": "G1626932",
+  "name": "Singaraja",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.112,
+  "lng": 115.088
+ },
+ {
+  "id": "G1213713",
+  "name": "Singkil",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.287,
+  "lng": 97.788
+ },
+ {
+  "id": "G1626903",
+  "name": "Singojuruh",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.317,
+  "lng": 114.233
+ },
+ {
+  "id": "G1626899",
+  "name": "Singosari",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.892,
+  "lng": 112.666
+ },
+ {
+  "id": "G1626758",
+  "name": "Slawi",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.982,
+  "lng": 109.141
+ },
+ {
+  "id": "G1626703",
+  "name": "Soe",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -9.861,
+  "lng": 124.284
+ },
+ {
+  "id": "G1626698",
+  "name": "Sofifi",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 0.737,
+  "lng": 127.559
+ },
+ {
+  "id": "G1626312",
+  "name": "Sokaraja",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.458,
+  "lng": 109.288
+ },
+ {
+  "id": "G1626673",
+  "name": "Soko",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.483,
+  "lng": 112.427
+ },
+ {
+  "id": "G1626560",
+  "name": "Soreang",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.033,
+  "lng": 107.518
+ },
+ {
+  "id": "G1626493",
+  "name": "Srandakan",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.939,
+  "lng": 110.251
+ },
+ {
+  "id": "G1626486",
+  "name": "Srono",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.4,
+  "lng": 114.267
+ },
+ {
+  "id": "G1213655",
+  "name": "Stabat",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.733,
+  "lng": 98.45
+ },
+ {
+  "id": "G1626294",
+  "name": "Sukasada",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.139,
+  "lng": 115.103
+ },
+ {
+  "id": "G7334948",
+  "name": "Sukawati",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.491,
+  "lng": 115.046
+ },
+ {
+  "id": "G1626185",
+  "name": "Sumbawa Besar",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.493,
+  "lng": 117.42
+ },
+ {
+  "id": "G1626183",
+  "name": "Sumber",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.76,
+  "lng": 108.483
+ },
+ {
+  "id": "G1626134",
+  "name": "Sumberpucung",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.159,
+  "lng": 112.483
+ },
+ {
+  "id": "G1625908",
+  "name": "Sungai Raya",
+  "province": "Kalimantan Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 0.7,
+  "lng": 108.9
+ },
+ {
+  "id": "G1625958",
+  "name": "Sungailiat",
+  "province": "Kepulauan Bangka Belitung",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.854,
+  "lng": 106.122
+ },
+ {
+  "id": "G1213614",
+  "name": "Sunggal",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.577,
+  "lng": 98.615
+ },
+ {
+  "id": "G1625585",
+  "name": "Tahuna",
+  "province": "Sulawesi Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.611,
+  "lng": 125.486
+ },
+ {
+  "id": "G1213593",
+  "name": "Takengon",
+  "province": "Aceh",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 4.621,
+  "lng": 96.847
+ },
+ {
+  "id": "G1625420",
+  "name": "Taliwang",
+  "province": "Nusa Tenggara Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.745,
+  "lng": 116.853
+ },
+ {
+  "id": "G7336548",
+  "name": "Tambolaka",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -9.428,
+  "lng": 119.238
+ },
+ {
+  "id": "G1625067",
+  "name": "Tanggulangin",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.5,
+  "lng": 112.7
+ },
+ {
+  "id": "G1625014",
+  "name": "Tanjung",
+  "province": "Kalimantan Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.171,
+  "lng": 115.408
+ },
+ {
+  "id": "G1624974",
+  "name": "Tanjung Balai",
+  "province": "Kepulauan Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1,
+  "lng": 103.422
+ },
+ {
+  "id": "G1624877",
+  "name": "Tanjung Pandan",
+  "province": "Kepulauan Bangka Belitung",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.734,
+  "lng": 107.635
+ },
+ {
+  "id": "G1624827",
+  "name": "Tanjung Selor",
+  "province": "Kalimantan Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.838,
+  "lng": 117.365
+ },
+ {
+  "id": "G1624987",
+  "name": "Tanjungagung",
+  "province": "Sumatera Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.937,
+  "lng": 103.805
+ },
+ {
+  "id": "G1213530",
+  "name": "Tanjungtiram",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 4.061,
+  "lng": 98.37
+ },
+ {
+  "id": "G1624668",
+  "name": "Tarub",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.933,
+  "lng": 109.167
+ },
+ {
+  "id": "G1213504",
+  "name": "Tarutung",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.015,
+  "lng": 98.965
+ },
+ {
+  "id": "G1624545",
+  "name": "Tayu",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.54,
+  "lng": 111.052
+ },
+ {
+  "id": "G1213495",
+  "name": "Teluk Dalam",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 0.573,
+  "lng": 97.803
+ },
+ {
+  "id": "G1213493",
+  "name": "Teluk Nibung",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.001,
+  "lng": 99.816
+ },
+ {
+  "id": "G1990589",
+  "name": "Teluknaga",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.099,
+  "lng": 106.638
+ },
+ {
+  "id": "G1624196",
+  "name": "Teminabuan",
+  "province": "Papua Barat Daya",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -1.442,
+  "lng": 132.014
+ },
+ {
+  "id": "G1624058",
+  "name": "Terbanggi Besar",
+  "province": "Lampung",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.879,
+  "lng": 105.218
+ },
+ {
+  "id": "G11010427",
+  "name": "Tiakur",
+  "province": "Maluku",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.15,
+  "lng": 127.795
+ },
+ {
+  "id": "G1623834",
+  "name": "Timika",
+  "province": "Papua Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.614,
+  "lng": 136.677
+ },
+ {
+  "id": "G1623772",
+  "name": "Tiom",
+  "province": "Papua Pegunungan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -3.924,
+  "lng": 138.455
+ },
+ {
+  "id": "G1623651",
+  "name": "Tobelo",
+  "province": "Maluku Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.728,
+  "lng": 128.009
+ },
+ {
+  "id": "G8433052",
+  "name": "Tobong",
+  "province": "Kepulauan Riau",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 3.291,
+  "lng": 106.291
+ },
+ {
+  "id": "G1213443",
+  "name": "Tomok Bolon",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.652,
+  "lng": 98.861
+ },
+ {
+  "id": "G1623424",
+  "name": "Tondano",
+  "province": "Sulawesi Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 1.305,
+  "lng": 124.913
+ },
+ {
+  "id": "G1213442",
+  "name": "Tongging",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.899,
+  "lng": 98.523
+ },
+ {
+  "id": "G1623223",
+  "name": "Trucuk",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.718,
+  "lng": 110.659
+ },
+ {
+  "id": "G11033761",
+  "name": "Tuapejat",
+  "province": "Sumatera Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -2.028,
+  "lng": 99.589
+ },
+ {
+  "id": "G7529299",
+  "name": "Tuban",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.743,
+  "lng": 115.172
+ },
+ {
+  "id": "G7743160",
+  "name": "Tuktuk Sonak",
+  "province": "Sumatera Utara",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": 2.669,
+  "lng": 98.858
+ },
+ {
+  "id": "G1623096",
+  "name": "Tulangan Utara",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.474,
+  "lng": 112.651
+ },
+ {
+  "id": "G1622846",
+  "name": "Ubud",
+  "province": "Bali",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -8.51,
+  "lng": 115.265
+ },
+ {
+  "id": "G1622636",
+  "name": "Ungaran",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.14,
+  "lng": 110.405
+ },
+ {
+  "id": "G1622552",
+  "name": "Utan",
+  "province": "Jakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.177,
+  "lng": 106.947
+ },
+ {
+  "id": "G1622351",
+  "name": "Waikabubak",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -9.647,
+  "lng": 119.389
+ },
+ {
+  "id": "G1622318",
+  "name": "Waingapu",
+  "province": "Nusa Tenggara Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -9.657,
+  "lng": 120.264
+ },
+ {
+  "id": "G1622293",
+  "name": "Waisai",
+  "province": "Papua Barat Daya",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -0.238,
+  "lng": 130.507
+ },
+ {
+  "id": "G1622167",
+  "name": "Wamena",
+  "province": "Papua Pegunungan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.096,
+  "lng": 138.948
+ },
+ {
+  "id": "G1622138",
+  "name": "Wanaraja",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.175,
+  "lng": 107.981
+ },
+ {
+  "id": "G1622090",
+  "name": "Wangon",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.516,
+  "lng": 109.054
+ },
+ {
+  "id": "G1621884",
+  "name": "Watampone",
+  "province": "Sulawesi Selatan",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -4.539,
+  "lng": 120.328
+ },
+ {
+  "id": "G1621678",
+  "name": "Wedi",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.743,
+  "lng": 110.579
+ },
+ {
+  "id": "G1621659",
+  "name": "Welahan",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.8,
+  "lng": 110.717
+ },
+ {
+  "id": "G1621655",
+  "name": "Weleri",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.971,
+  "lng": 110.067
+ },
+ {
+  "id": "G1621613",
+  "name": "Weru",
+  "province": "Jawa Barat",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.711,
+  "lng": 108.504
+ },
+ {
+  "id": "G1621520",
+  "name": "Wiradesa",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.892,
+  "lng": 109.619
+ },
+ {
+  "id": "G1621439",
+  "name": "Wongsorejo",
+  "province": "Jawa Timur",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.991,
+  "lng": 114.401
+ },
+ {
+  "id": "G1621416",
+  "name": "Wonopringgo",
+  "province": "Jawa Tengah",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -6.983,
+  "lng": 109.617
+ },
+ {
+  "id": "G1621399",
+  "name": "Wonosari",
+  "province": "Yogyakarta",
+  "kind": "kawasan",
+  "country": "ID",
+  "lat": -7.966,
+  "lng": 110.604
  }
 ]

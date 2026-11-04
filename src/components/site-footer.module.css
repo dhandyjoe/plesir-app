@@ -7,11 +7,28 @@
   min-height: 2.5rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
   padding-block: 0.5rem;
   font-size: var(--type-label-md);
   line-height: 1.5;
+}
+
+.footerCredit {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--color-on-surface-variant);
+  text-align: center;
+}
+
+.footerCredit a {
+  color: inherit;
+  text-underline-offset: 0.2em;
+}
+
+.footerCredit a:hover {
+  color: var(--color-on-surface);
 }
 
 .footerMeta {
